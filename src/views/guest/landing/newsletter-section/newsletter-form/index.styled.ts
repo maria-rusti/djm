@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { OutlinedInput, OutlinedInputProps, styled } from '@mui/material';
+import { OutlinedInput, OutlinedInputProps, TextField, styled } from '@mui/material';
 import { ButtonPropsSG } from '../../../../../components/common/button/base/index.interfaces';
 import { ButtonSG } from '../../../../../components/common';
 
@@ -23,6 +23,27 @@ const StyledNewsletterInput: FC<OutlinedInputProps> = styled(OutlinedInput)(({ t
 	},
 
 }));
+const StyledNewsletterSelect = styled(TextField)(({ theme }) => ({
+	background: theme.palette.background.paper,
+	borderTopLeftRadius: '32px 32px',
+	borderBottomLeftRadius: '32px 32px',
+	borderTopRightRadius: '32px 32px',
+	borderBottomRightRadius: '32px 32px',
+	width: '100%',
+	height: '100%',
+	outline: 'none',
+	':hover': {
+		border: 'none',
+		outline: 'none'
+	},
+	[theme.breakpoints.down('md')]: {
+		width: '100%',
+	},
+	'& .MuiOutlinedInput-input': {
+		padding: 0,
+	},
+
+}));
 
 interface NewsletterButtonProps extends ButtonPropsSG {
 	inside?: boolean;
@@ -31,6 +52,7 @@ interface NewsletterButtonProps extends ButtonPropsSG {
 const NewsletterButton: FC<NewsletterButtonProps> = styled(ButtonSG as FC<NewsletterButtonProps>, {
 	shouldForwardProp: (prop: string) => prop !== 'inside',
 })(({ theme, inside }) => ({
+
 	backgroundColor: inside ? theme.palette.primary.main : theme.palette.common.white,
 	justifySelf: 'center',
 	':hover': {
@@ -59,4 +81,4 @@ const NewsletterFormWrapper = styled('form')(({ theme }) => ({
 	},
 }));
 
-export { StyledNewsletterInput, NewsletterButton, NewsletterFormWrapper };
+export { StyledNewsletterInput, NewsletterButton, NewsletterFormWrapper, StyledNewsletterSelect };

@@ -1,67 +1,75 @@
-import { CircularProgress, useMediaQuery, useTheme } from '@mui/material';
-import { Resolver, useForm } from 'react-hook-form';
-import { Icon } from '@iconify/react';
+import { useForm } from 'react-hook-form';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { yupResolver } from '@hookform/resolvers/yup';
-import useSubscribe from '../../../../../hooks/fetch-hooks/use-subscribe';
-import { schema } from './index.form';
-import { NewsletterButton, StyledNewsletterInput, NewsletterFormWrapper } from './index.styled';
+import { CircularProgress, FormControl, ListSubheader, MenuItem, TextField } from '@mui/material';
+import { Icon } from '@iconify/react';
+import { useState } from 'react';
+import { StyledNewsletterInput, NewsletterFormWrapper, NewsletterButton } from './index.styled';
 
-export interface IValuesProps {
-	email: string;
-};
-
-interface SendButtonProps {
-	isValid: boolean,
-	loadingSubscribe: boolean,
-	inside?: boolean
+export interface IValueReview {
+	service: string;
+	name: string;
+	review: string;
 }
 
-const SendButton: React.FC<SendButtonProps>
-	= ({ isValid, loadingSubscribe, inside }): JSX.Element => (
-		<NewsletterButton type='submit' variant={inside ? 'contained' : 'outlined'}
-			disabled={!isValid} inside={!!inside} >
-			{loadingSubscribe ?
-				<CircularProgress size='24px' /> :
-				<>Send < Icon icon='material-symbols:double-arrow' width={30} /></>}
-		</NewsletterButton>
-	);
+interface SendButtonProps {
+	loadingSubscribe: boolean;
+	inside?: boolean;
+}
+
+const SendButton: React.FC<SendButtonProps> = ({ loadingSubscribe, inside }): JSX.Element => (
+	<NewsletterButton type='submit' variant={inside ? 'contained' : 'outlined'} inside={!!inside}>
+		{loadingSubscribe ? (
+			<CircularProgress size='24px' />
+		) : (
+			<>
+				Send <Icon icon='material-symbols:double-arrow' width={30} />
+			</>
+		)}
+	</NewsletterButton>
+);
 
 const NewsletterForm: React.FC = (): JSX.Element => {
-	const { sendSubscribe, loadingSubscribe } = useSubscribe();
-
-	const theme = useTheme();
-	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
-
-	const {
-		formState: { isValid },
-		handleSubmit,
-		register,
-		reset
-	} = useForm<IValuesProps>({
+	const [value, setValue] = useState<string>('');
+	const { handleSubmit, register, reset } = useForm<IValueReview>({
 		mode: 'onBlur',
 		reValidateMode: 'onChange',
-		resolver: yupResolver(schema) as Resolver<IValuesProps>,
 	});
 
-	const submitAction = (values: IValuesProps): void => {
-		const sendData = { ...values, categories: ['All'] };
-		sendSubscribe(sendData);
+	const submitAction = (values: IValueReview): void => {
+		const sendData = { ...values, service: '' };
+		console.log(sendData);
 		reset();
 	};
 
 	return (
 		<NewsletterFormWrapper onSubmit={handleSubmit(submitAction, console.error)}>
-			<StyledNewsletterInput
-				placeholder='example.mail@socialgod.com'
-				endAdornment={!isMobile &&
-					<SendButton inside isValid={isValid} loadingSubscribe={loadingSubscribe} />
-				}
-				{...register('email')}
-			/>
-			{isMobile && (
-				<SendButton isValid={isValid} loadingSubscribe={loadingSubscribe} />
-			)}
+			<StyledNewsletterInput placeholder='Name' {...register('name')} sx={{ width: '50%' }} />
+			<FormControl sx={{ width: '100%' }}>
+				<TextField
+					sx={{
+						background: '#fff',
+						borderTopLeftRadius: '32px 32px',
+						borderBottomLeftRadius: '32px 32px',
+						borderTopRightRadius: '32px 32px',
+						borderBottomRightRadius: '32px 32px',
+						width: '100%',
+					}}
+					id='outlined-select-currency'
+					select
+					label='Select Service'
+					value={value}
+					onChange={(e): void => setValue(e.target.value as unknown as string)}
+				>
+					<ListSubheader>Select Service</ListSubheader>
+					{['dj', 'Fresh360', 'lights']?.map((option) => (
+						<MenuItem key={option} value={option}>
+							{option}
+						</MenuItem>
+					))}
+				</TextField>
+			</FormControl>
+			<StyledNewsletterInput placeholder='Review' {...register('review')} />
+			<SendButton loadingSubscribe={false} />
 		</NewsletterFormWrapper>
 	);
 };

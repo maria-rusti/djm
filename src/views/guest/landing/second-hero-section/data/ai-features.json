@@ -1,0 +1,15 @@
+[
+    {
+        "title": "Inbuilt AI chat",
+        "icon": "fluent:chat-12-filled"
+    }, {
+        "title": "Trained for writing",
+        "icon": "mingcute:pen-fill"
+    }, {
+        "title": "Fine-tuned AI model",
+        "icon": "arcticons:ask-ai"
+    }, {
+        "title": "Based on GPT-4",
+        "icon": "arcticons:gptassist"
+    }
+]

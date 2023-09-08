@@ -1,0 +1,62 @@
+[
+	{
+		"icon": "fluent-mdl2:robot",
+		"title": "SocialGod AI Assistant",
+		"description": "Your divine companion in the world of social media, empowering you to achieve extraordinary success with AI-driven insights and support."
+	},
+	{
+		"icon": "grommet-icons:plan",
+		"title": "Smart Scheduling",
+		"description": "Effortlessly manage and optimize your social media posting with AI-driven intelligence for increased efficiency and audience engagement."
+	},
+	{
+		"icon": "fad:automation-4p",
+		"title": "Automated Social Engagement",
+		"description": "Effortlessly interact with posts by auto-commenting, retweeting, and liking using AI automation for increased engagement and reach."
+	},
+	{
+		"icon": "ri:grid-fill",
+		"title": "Social Grid Preview",
+		"description": "Preview and organize your social media content in a grid format to maintain a visually cohesive and attractive profile."
+	},
+	{
+		"icon": "bx:analyse",
+		"title": "Social Media Analytics",
+		"description": "Gather and analyze data from your social media accounts to uncover valuable insights, track performance, and refine your marketing strategies for optimal results."
+	},
+	{
+		"icon": "tabler:template",
+		"title": "Design Templates",
+		"description": "Utilize a variety of design templates for social media, presentations, and more, simplifying your creative process and enhancing visual appeal."
+	},
+	{
+		"icon": "icon-park-outline:toolkit",
+		"title": "Media Toolkit",
+		"description": "Unlock a suite of powerful tools for editing and enhancing your media content, allowing you to create eye-catching visuals and videos for impactful social media posts."
+	},
+	{
+		"icon": "solar:hashtag-chat-linear",
+		"title": "Hashtag & Keyword Insights",
+		"description": "Discover trending hashtags and relevant keywords to optimize your social media content for higher visibility and audience engagement."
+	},
+	{
+		"icon": "material-symbols:strategy-outline",
+		"title": "Content Strategy Optimization",
+		"description": "Leverage data-driven insights to refine and enhance your social media content strategy, ensuring maximum impact and audience engagement."
+	},
+	{
+		"icon": "clarity:recycle-line",
+		"title": "Smart Content Recycling",
+		"description": "Intelligently repurpose and reshare your top-performing content across various platforms to maximize reach and maintain a consistent online presence."
+	},
+	{
+		"icon": "iconoir:reports",
+		"title": "Performance Tracking & Reports",
+		"description": "Monitor and evaluate your social media campaigns' effectiveness with comprehensive reports, providing valuable insights to improve strategies and measure success."
+	},
+	{
+		"icon": "file-icons:dashboard",
+		"title": "Insights Dashboard",
+		"description": "Unlock valuable data and real-time analytics to make informed decisions and maximize social media impact."
+	}
+]

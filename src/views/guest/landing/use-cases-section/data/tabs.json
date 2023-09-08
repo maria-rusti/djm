@@ -1,0 +1,18 @@
+[
+    {
+        "icon": "arcticons:ask-ai",
+        "title": "AI Writing Assistant"
+    },
+    {
+        "icon": "fad:automation-4p",
+        "title": "Automation"
+    },
+    {
+        "icon": "icon-park-solid:inbox",
+        "title": "Social Inbox"
+    },
+    {
+        "icon": "raphael:people",
+        "title": "Collaboration & Approval"
+    }
+]

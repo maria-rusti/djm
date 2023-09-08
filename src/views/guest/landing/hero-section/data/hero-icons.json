@@ -1,0 +1,18 @@
+[
+    {
+        "icon": "logos:reddit-icon",
+        "type": "reddit"
+    },
+    {
+        "icon": "logos:twitter",
+        "type": "twitter"
+    },
+    {
+        "icon": "logos:youtube-icon",
+        "type": "youtube"
+    },
+    {
+        "icon": "logos:tiktok-icon",
+        "type": "tiktok"
+    }
+]

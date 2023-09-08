@@ -1,0 +1,30 @@
+[
+    {
+        "icon": "arcticons:ask-ai",
+        "title": "AI Writing Assistant",
+        "description": "Our fine-tuned AI Writing assistant is only a click away, ready to help you come up with ideas and improve your posts./n Spike new ideas in seconds./br Never get stuck in writer's-block again!",
+        "replaces": ["ChatGPT", "Copy.ai", "PepperType"],
+        "image": "https://images.unsplash.com/photo-1690394472903-23ce57cb5953?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+    },
+    {
+        "icon": "fad:automation-4p",
+        "title": "Automation",
+        "description": "Create follow-up comments in your best performing posts triggered by number of likes, engagement rate, and more./n Use triggers and notifications to build a content machine using tools like Zapier and Airtable.",
+        "replaces": ["Buffer", "Hootsuite", "IFTTT"],
+        "image": "https://images.unsplash.com/photo-1690394472903-23ce57cb5953?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+    },
+    {
+        "icon": "icon-park-solid:inbox",
+        "title": "Social Inbox",
+        "description": "Turn your followers into true fans./br Collect all comments, replies and mentions across your social channels./n Make sure everyone gets a reply, a like or even a retweet or a quote.",
+        "replaces": [" Sprout Social", "Agorapulse"],
+        "image": "https://images.unsplash.com/photo-1690394472903-23ce57cb5953?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+    },
+    {
+        "icon": "raphael:people",
+        "title": "Collaboration & Approval",
+        "description": "Two heads think better than one!/br Invite your entire team to help you create amazing results./n Specify which team members need to approve a post before going live.",
+        "replaces": ["Falcon.io", "Slack", "MS Teams"],
+        "image": "https://images.unsplash.com/photo-1690394472903-23ce57cb5953?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+    }
+]

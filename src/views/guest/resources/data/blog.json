@@ -1,0 +1,90 @@
+{
+    "title": "Articles & Resources",
+    "description": "Learn how to improve your social strategy with our many resources and articles 🚀",
+    "data": [
+        {
+            "information": {
+                "badge": "Blog",
+                "title": "Blog your social media content",
+                "subTitle": "Visually blog your content delivery with click, \n\t\t\t\tdrag and drop. It's as easy as that.",
+                "features": [
+                    {
+                        "icon": "wpf:statistics",
+                        "title": "statistics"
+                    },
+                    {
+                        "icon": "wpf:statistics",
+                        "title": "statistics"
+                    },
+                    {
+                        "icon": "wpf:statistics",
+                        "title": "statistics"
+                    },
+                    {
+                        "icon": "wpf:statistics",
+                        "title": "statistics"
+                    }
+                ]
+            },
+            "images": [
+                {
+                    "top": 0,
+                    "left": "",
+                    "above": false,
+                    "width": "50%",
+                    "src": "https://images.unsplash.com/photo-16826\n\t\t\t86581740-2c5f76eb86d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fG\n\t\t\tVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                },
+                {
+                    "top": "-40%",
+                    "left": "50%",
+                    "above": true,
+                    "width": "50%",
+                    "src": "https://images.unsplash.com/photo-1658988958556-723\n\t\t\t42117610f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D&aut\n\t\t\to=format&fit=crop&w=500&q=60"
+                }
+            ],
+            "reverse": true
+        },
+        {
+                "information": {
+                    "badge": "Blog",
+                    "title": "Blog your social media content",
+                    "subTitle": "Visually blog your content delivery with click, \n\t\t\t\tdrag and drop. It's as easy as that.",
+                    "features": [
+                    {
+                        "icon": "wpf:statistics",
+                        "title": "statistics"
+                    },
+                    {
+                        "icon": "wpf:statistics",
+                        "title": "statistics"
+                    },
+                    {
+                        "icon": "wpf:statistics",
+                        "title": "statistics"
+                    },
+                    {
+                        "icon": "wpf:statistics",
+                        "title": "statistics"
+                    }
+                ]
+            },
+            "images": [
+                {
+                    "top": "-10%",
+                    "left": "50%",
+                    "above": true,
+                    "width": "50%",
+                    "src": "https://images.unsplash.com/photo-16826\n\t\t\t86581740-2c5f76eb86d1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDF8MHxwaG90by1wYWdlfHx8fG\n\t\t\tVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80"
+                },
+                {
+                    "top": "-50%",
+                    "left": 0,
+                    "above": true,
+                    "width": "50%",
+                    "src": "https://images.unsplash.com/photo-1658988958556-723\n\t\t\t42117610f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0M3x8fGVufDB8fHx8fA%3D%3D&aut\n\t\t\to=format&fit=crop&w=500&q=60"
+                }
+            ],
+            "reverse": false
+        }
+    ]
+}

@@ -1,0 +1,48 @@
+{
+    "title": "",
+    "description": "",
+    "data": [
+        {
+            "information": {
+                "badge": "",
+                "title": "",
+                "subTitle": "",
+                "features": [
+                    {
+                        "icon": "",
+                        "title": ""
+                    },
+                    {
+                        "icon": "",
+                        "title": ""
+                    },
+                    {
+                        "icon": "",
+                        "title": ""
+                    },
+                    {
+                        "icon": "",
+                        "title": ""
+                    }
+                ]
+            },
+            "images": [
+                {
+                    "top": 0,
+                    "left": "",
+                    "above": false,
+                    "width": "",
+                    "src": ""
+                },
+                {
+                    "top": "-",
+                    "left": "",
+                    "above": true,
+                    "width": "",
+                    "src": ""
+                }
+            ],
+            "reverse": true
+        }
+    ]
+}

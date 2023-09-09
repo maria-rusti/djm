@@ -4,12 +4,17 @@ import { CircularProgress, FormControl, ListSubheader, MenuItem, TextField } fro
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import { StyledNewsletterInput, NewsletterFormWrapper, NewsletterButton } from './index.styled';
+import useReview from '../../../../../hooks/fetch-hooks/use-review';
 
 export interface IValueReview {
-	service: string;
 	name: string;
-	review: string;
+	content: string;
+	service: string;
 }
+// dj = 'Deejay',
+// fresh360 = 'Fresh360',
+// lights = 'Lights',
+// bar = 'Cocktail Bar',
 
 interface SendButtonProps {
 	loadingSubscribe: boolean;
@@ -29,14 +34,17 @@ const SendButton: React.FC<SendButtonProps> = ({ loadingSubscribe, inside }): JS
 );
 
 const NewsletterForm: React.FC = (): JSX.Element => {
-	const [value, setValue] = useState<string>('');
+	const { addReview, loadingAdd } = useReview();
+
+	const [value, setValue] = useState<string>('Fresh360');
 	const { handleSubmit, register, reset } = useForm<IValueReview>({
 		mode: 'onBlur',
 		reValidateMode: 'onChange',
 	});
 
 	const submitAction = (values: IValueReview): void => {
-		const sendData = { ...values, service: '' };
+		const sendData = { ...values, service: value };
+		addReview(sendData);
 		console.log(sendData);
 		reset();
 	};
@@ -58,18 +66,19 @@ const NewsletterForm: React.FC = (): JSX.Element => {
 					select
 					label='Select Service'
 					value={value}
+					// SelectProps={{ multiple: true }}
 					onChange={(e): void => setValue(e.target.value as unknown as string)}
 				>
 					<ListSubheader>Select Service</ListSubheader>
-					{['dj', 'Fresh360', 'lights']?.map((option) => (
+					{['Deejay', 'Fresh360', 'Lights', 'Cocktail Bar']?.map((option) => (
 						<MenuItem key={option} value={option}>
 							{option}
 						</MenuItem>
 					))}
 				</TextField>
 			</FormControl>
-			<StyledNewsletterInput placeholder='Review' {...register('review')} />
-			<SendButton loadingSubscribe={false} />
+			<StyledNewsletterInput placeholder='Review' {...register('content')} />
+			<SendButton loadingSubscribe={loadingAdd} />
 		</NewsletterFormWrapper>
 	);
 };

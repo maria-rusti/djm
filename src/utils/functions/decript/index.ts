@@ -13,6 +13,7 @@ export const decryptJS = (encrypted: string): string => {
 };
 
 export const encryptData = (sentData: any): { data: string } => {
+	console.log(sentData);
 	const stringData = JSON.stringify(sentData);
 	const encData = encryptJS(stringData);
 

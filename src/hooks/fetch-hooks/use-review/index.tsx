@@ -5,7 +5,7 @@ import { IValueReview } from '../../../views/guest/landing/newsletter-section/ne
 import useNotifications from '../../use-notifications';
 
 export interface IReview {
-	reviewer: string;
+	name: string;
 	position: string;
 	content: string;
 	rating: number;
@@ -29,7 +29,7 @@ export interface UseReviewReturnType {
 	loadingGet: boolean;
 	loadingAdd: boolean;
 	getReviews: () => void;
-	useAddReview: (values: IValueReview) => void;
+	addReview: (values: IValueReview) => void;
 }
 
 function useReview(): UseReviewReturnType {
@@ -53,7 +53,7 @@ function useReview(): UseReviewReturnType {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [setData, toggleLoadGet]);
 
-	const useAddReview = useCallback(
+	const addReview = useCallback(
 		async (partnership: IValueReview) => {
 			try {
 				toggleLoading(0);
@@ -81,7 +81,7 @@ function useReview(): UseReviewReturnType {
 		loadingGet,
 		loadingAdd,
 		getReviews,
-		useAddReview,
+		addReview,
 	};
 }
 

@@ -4,7 +4,7 @@ import { Flex } from '../../../../common';
 import { uuid } from '../../../../../utils/functions';
 
 interface IProps {
-	features: IFeatureItem[]
+	features: IFeatureItem[];
 }
 
 const InformationSectionFeatures: FC<IProps> = ({ features }): JSX.Element => (

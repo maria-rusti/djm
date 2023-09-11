@@ -1,27 +1,19 @@
 [
     {
         "icon": "solar:calendar-line-duotone",
-        "title": "Scheduling",
+        "title": "Dj",
         "description": "Visually plan and schedule your content."
     },{
         "icon": "octicon:inbox-16",
-        "title": "Social Inbox",
+        "title": "Fresh360",
         "description": "Engage with your followers directly from FeedHive."
     },{
         "icon": "arcticons:ask-ai",
-        "title": "SocialGod AI",
+        "title": "Lights",
         "description": "Pick up your superpowers with a bit of help from AI."
     },{
         "icon": "ic:outline-analytics",
-        "title": "Analytics",
+        "title": "Cocktail bar",
         "description": "Our AI analyzes your followers activity and engagement."
-    },{
-        "icon": "ic:baseline-people",
-        "title": "Collaboration",
-        "description": "Invite and collaborate with your team and clients."
-    },{
-        "icon": "ic:baseline-label",
-        "title": "White Label",
-        "description": "Host FeedHive on your own domain, with your own logo and brand."
     }
 ]

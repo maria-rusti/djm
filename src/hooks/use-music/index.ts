@@ -1,12 +1,9 @@
-import { useCallback, useContext, useMemo, useRef, useState } from 'react';
+import { Dispatch, SetStateAction, useCallback, useContext, useEffect, useMemo, useRef, useState } from 'react';
 import MusicContext, { MusicContextType } from '../../utils/context/video';
 
 interface UseMusicReturnType extends MusicContextType {
-  music: string;
-}
-
-export enum notifify {
-  play,
+	setMusic: Dispatch<SetStateAction<string>>;
+	music: string;
 }
 
 export function useMusicContext(): MusicContextType {
@@ -14,26 +11,41 @@ export function useMusicContext(): MusicContextType {
 }
 
 function useMusic(): UseMusicReturnType {
-	const [music, setMusic] = useState<string>('');
+	const [music, setMusic] = useState<string>(() => {
+		// Încercați să obțineți muzica din local storage la încărcarea componentei
+		const storedMusic = localStorage.getItem('music');
+		return storedMusic || '';
+	});
 	const isPlayingRef = useRef(false);
 	const currentMusicNameRef = useRef<string>('');
 
+	useEffect(() => {
+		// Salvarea stării muzicii în local storage la fiecare actualizare
+		localStorage.setItem('music', music);
+	}, [music]);
+
 	const play = useCallback((musicName: string) => {
-		if (!isPlayingRef.current) {
-			if (currentMusicNameRef.current !== musicName) {
-				setMusic(musicName);
-				currentMusicNameRef.current = musicName;
-			}
+		if (!isPlayingRef.current || currentMusicNameRef.current !== musicName) {
+			setMusic(musicName);
+			currentMusicNameRef.current = musicName;
 			isPlayingRef.current = true;
 		}
-	}, [setMusic]);
+	}, []);
+
+	const stop = useCallback(() => {
+		setMusic('');
+		currentMusicNameRef.current = '';
+		isPlayingRef.current = false;
+	}, []);
 
 	return useMemo(
 		() => ({
 			music,
 			play,
+			stop,
+			setMusic
 		}),
-		[music, play]
+		[music, play, stop]
 	);
 }
 

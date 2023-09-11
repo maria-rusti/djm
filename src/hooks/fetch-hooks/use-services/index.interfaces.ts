@@ -13,6 +13,7 @@ interface IServiceResponse {
     platform: string
     icon: ISourceIcons
     products: IProduct[]
+    path: string
 }
 
 export type { IServiceResponse, ISourceIcons, IProduct };

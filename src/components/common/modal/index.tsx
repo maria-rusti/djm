@@ -40,9 +40,8 @@ const PopoverComponent: React.FC<PopoverComponentProps> = ({ data, displayArrow 
 	};
 
 	const anchors: IAnchor[] = [
-		{ id: 1, anchor: <NavText>Products</NavText> },
-		{ id: 2, anchor: <NavText>Socials</NavText> },
-		{ id: 3, anchor: <NavText>Resources</NavText> },
+		{ id: 1, anchor: <NavText>Servicii</NavText> },
+		{ id: 2, anchor: <NavText>Resources</NavText> },
 	];
 
 	const selectedItem = data.find((item) => item.id === selectedItemId);
@@ -63,8 +62,11 @@ const PopoverComponent: React.FC<PopoverComponentProps> = ({ data, displayArrow 
 		<>
 			<List sx={{ display: 'flex', flexDirection: 'row', gap: theme.spacing(2) }} disablePadding>
 				{anchors.map((anchor, index) => (
-					<ListItem key={`${anchor.id}-header-anchor`} sx={{ m: 0, p: 0}}
-						onClick={(event): void => handleClick(event, data[index].id)}>
+					<ListItem
+						key={`${anchor.id}-header-anchor`}
+						sx={{ m: 0, p: 0 }}
+						onClick={(event): void => handleClick(event, data[index].id)}
+					>
 						{anchor.anchor}
 						{displayArrow && (
 							<IconButton
@@ -72,8 +74,7 @@ const PopoverComponent: React.FC<PopoverComponentProps> = ({ data, displayArrow 
 								color='primary'
 								aria-label='expand menu'
 								sx={{
-									transform: open &&
-										selectedItemId === data[index].id ? 'rotate(180deg)' : 'none',
+									transform: open && selectedItemId === data[index].id ? 'rotate(180deg)' : 'none',
 									transition: 'transform 0.3s ease-in-out',
 									mt: theme.spacing(2),
 									p: theme.spacing(0),
@@ -113,7 +114,7 @@ const PopoverComponent: React.FC<PopoverComponentProps> = ({ data, displayArrow 
 							{typeof selectedItem.content === 'string' ? (
 								<ListItemText primary={selectedItem.title} secondary={selectedItem.content} />
 							) : (
-								<Box onClick={(): void => handleClose()} >{selectedItem.content}</Box>
+								<Box onClick={(): void => handleClose()}>{selectedItem.content}</Box>
 							)}
 						</ListItem>
 					)}

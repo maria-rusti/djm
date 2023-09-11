@@ -31,6 +31,7 @@ experiență în muzică, creează atmosfera perfectă la
 				},
 			],
 			_id: '64c36ea54e0df0804e2359ef',
+			path: '/servicii/dj',
 		},
 		{
 			icon: { source: 'Iconify', name: 'teenyicons:360-outline' },
@@ -44,6 +45,7 @@ experiență în muzică, creează atmosfera perfectă la
 				},
 			],
 			_id: '64c36ea54egfdf0804e2359ef',
+			path: '/servicii/fresh360',
 		},
 		{
 			icon: { source: 'Iconify', name: 'mdi:string-lights' },
@@ -58,6 +60,7 @@ experiență în muzică, creează atmosfera perfectă la
 				},
 			],
 			_id: '64c36ea54gfdhdf0804e2359ef',
+			path: '/servicii/lights',
 		},
 		{
 			icon: { source: 'Iconify', name: 'fontisto:cocktail' },
@@ -71,6 +74,7 @@ experiență în muzică, creează atmosfera perfectă la
 				},
 			],
 			_id: '64c36ea54e0df08gdf4e2359ef',
+			path: '/servicii/cocktail-bar',
 		},
 	];
 	const data = isArray(services) ? services : [];

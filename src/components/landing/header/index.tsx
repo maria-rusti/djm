@@ -41,8 +41,8 @@ const navLinks: ILinkButton[] = [
 const dataArray: DataItem[] = [
 	{
 		id: 1,
-		title: <Typography>Solutions</Typography>,
-		content: <HeaderLinks links={productsLinks} page='products' />,
+		title: <Typography>Servicii</Typography>,
+		content: <HeaderLinks links={productsLinks} page='servicii' />,
 	},
 	{
 		id: 2,

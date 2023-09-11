@@ -5,12 +5,12 @@ import { IFeature } from '../../../../../views/guest/landing/feature-section/ind
 
 interface IProps {
 	links: IFeature[];
-	page: 'products' | 'socials' | 'resources';
+	page: 'servicii' | 'resources';
 }
 
 const HeaderLinks: React.FC<IProps> = ({ links, page }): JSX.Element => (
 	// eslint-disable-next-line no-unneeded-ternary
-	<ProductsLinksWrapper column={(page === 'resources') ? 'true' : undefined}>
+	<ProductsLinksWrapper column={page === 'resources' ? 'true' : undefined}>
 		{links.map((item) => (
 			<ProductLinkCard props={item} key={uuid()} page={page} />
 		))}

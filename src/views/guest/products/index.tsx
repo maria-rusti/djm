@@ -3,12 +3,10 @@ import { useParams } from 'react-router-dom';
 import { Box, Divider } from '@mui/material';
 import { Flex } from '../../../components/common';
 import { IProductContent } from './index.interfaces';
-import SchedulingContent from './data/scheduling.json';
-import AnalyticsContent from './data/analytics.json';
-import SocialInboxContent from './data/social-inbox.json';
-import SocialGodAIContent from './data/socialgod-ai.json';
-import CollaborationContent from './data/collaboration.json';
-import WhiteLabelContent from './data/white-label.json';
+import DJContent from './data/DJContent.json';
+import FreshContent from './data/FreshContent.json';
+import LightsContent from './data/LightsContent.json';
+import BarContent from './data/BarContent.json';
 import DefaultContent from './data/default.json';
 import { uuid } from '../../../utils/functions';
 import ProductsPageSection from '../../../components/landing/products-page-section';
@@ -17,23 +15,17 @@ import { ProductsPageWrapper } from './index.styled';
 
 const handlePageContent = (page: string | undefined): IProductContent => {
 	switch (page) {
-		case 'scheduling': {
-			return SchedulingContent;
+		case 'dj': {
+			return DJContent;
 		}
-		case 'analytics': {
-			return AnalyticsContent;
+		case 'fresh360': {
+			return FreshContent;
 		}
-		case 'social-inbox': {
-			return SocialInboxContent;
+		case 'lights': {
+			return LightsContent;
 		}
-		case 'socialgod-ai': {
-			return SocialGodAIContent;
-		}
-		case 'collaboration': {
-			return CollaborationContent;
-		}
-		case 'white-label': {
-			return WhiteLabelContent;
+		case 'cocktail-bar': {
+			return BarContent;
 		}
 		default: {
 			return DefaultContent;
@@ -48,9 +40,15 @@ const Products: FC = () => {
 
 	const { title, description, data } = pageContent;
 	const dataLength = data.length;
-
+	// const newDate = [
+	// 	data[0].information.features.map((item) => ({
+	// 		...item,
+	// 		music: nunta,
+	// 	})),
+	// 	data[1],
+	// ];
 	return (
-		<ProductsPageWrapper >
+		<ProductsPageWrapper>
 			<HeroSection title={title} description={description} />
 			<Flex gap={10} justifyCenter column width='100%'>
 				{data.map((item, index) => (

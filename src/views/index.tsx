@@ -28,7 +28,7 @@ const Views: FC = () => (
 				<Route path='/terms-of-service' element={<TermsOfService />} />
 				<Route path='/faq' element={<Faq />} />
 				<Route path='/products' element={<Products />} />
-				<Route path='/products/:page' element={<Products />} />
+				<Route path='/servicii/:page' element={<Products />} />
 				<Route path='/resources/:page' element={<Resources />} />
 				<Route path='/prices' element={<Prices />} />
 				<Route path='/socials/:platform' element={<Socials />} />

@@ -11,10 +11,10 @@ const RenderCardService = ({
 	serviceSelected,
 	onSelect,
 }: {
-    service: IServiceResponse;
-    index: number;
-    serviceSelected: string;
-    onSelect: (value: string) => void;
+	service: IServiceResponse;
+	index: number;
+	serviceSelected: string;
+	onSelect: (value: string) => void;
 }): JSX.Element => {
 	const { t } = useTranslation();
 	return (
@@ -24,7 +24,7 @@ const RenderCardService = ({
 			onClick={(): void => onSelect(service.platform)}
 		>
 			<Icon icon={service.icon.name} width={50} height={40} />
-			<Typography variant="h6" component="h3" sx={{ paddingLeft: '10px' }}>
+			<Typography variant='h6' component='h3' sx={{ paddingLeft: '10px' }}>
 				{t(service.platform, [index])}
 			</Typography>
 		</StyledCardPlatform>
@@ -36,14 +36,15 @@ const MapRenderServices = ({
 	serviceSelected,
 	onSelect,
 }: {
-    dataArr: IServiceResponse[];
-    serviceSelected: string;
-    onSelect: (value: string) => void;
+	dataArr: IServiceResponse[];
+	serviceSelected: string;
+	onSelect: (value: string) => void;
 }): JSX.Element => (
 	<>
 		{dataArr
 			?.concat([
 				{
+					path: '',
 					platform: 'All',
 					_id: '',
 					icon: {

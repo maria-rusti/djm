@@ -6,7 +6,7 @@ interface IFeature {
 
 interface IProductLinkCard {
 	props: IFeature,
-	page:  'products' | 'socials' | 'resources'
+	page:  'servicii' | 'resources'
 }
 
 export type { IProductLinkCard, IFeature };

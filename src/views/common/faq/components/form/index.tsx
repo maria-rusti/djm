@@ -87,6 +87,7 @@ const FormFaq: FC<IFormFaqProps> = ({
 										source: 'Iconify',
 									},
 									products: [],
+									path: '',
 								},
 							])
 							.reverse()

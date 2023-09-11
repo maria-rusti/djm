@@ -1,13 +1,12 @@
-import React, { FC, useContext } from 'react';
+import React, { FC } from 'react';
 import { Box, Typography } from '@mui/material';
 // import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router';
 import { ButtonSG, Flex } from '../../../../../../components/common';
 import SourceIcon from '../../../../../../components/common/source-icon';
 import { capitalize, uuid } from '../../../../../../utils/functions';
 import { IProduct, IServiceResponse } from '../../../../../../hooks/fetch-hooks/use-services/index.interfaces';
 import { ServicesCardTitle } from './index.styled';
-import nunta from '../../../../../../assets/video/music.mp3';
-import MusicContext from '../../../../../../utils/context/video';
 
 interface IProps {
 	service: IServiceResponse;
@@ -16,7 +15,7 @@ interface IProps {
 const ServicesCardContent: FC<IProps> = (props: IProps) => {
 	const { service } = props;
 	const hovered = true;
-	const { play } = useContext(MusicContext);
+	const navigate = useNavigate();
 
 	return (
 		<Flex width='100%' minHeight='100%' justifyContent='space-between' gap={3}>
@@ -33,7 +32,7 @@ const ServicesCardContent: FC<IProps> = (props: IProps) => {
 				))}
 			</Box>
 			<Flex width='100%' justifyCenter gap={2}>
-				<ButtonSG variant='text' onClick={(): void => play(nunta)}>
+				<ButtonSG variant='text' onClick={(): void => navigate(`${service.path}`)}>
 					Read more
 				</ButtonSG>
 			</Flex>

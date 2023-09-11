@@ -5,10 +5,10 @@ import { SectionBadgeSG } from '../../section-badge';
 import InformationSectionFeatures from '../components/information-section-features';
 
 export interface InformationSectionProps {
-	badge: string,
-	title: string,
-	subTitle: string,
-	features: IFeatureItem[]
+	badge: string;
+	title: string;
+	subTitle: string;
+	features: IFeatureItem[];
 }
 
 const InformationSection: React.FC<InformationSectionProps> = ({ badge, title, subTitle, features }): JSX.Element => {

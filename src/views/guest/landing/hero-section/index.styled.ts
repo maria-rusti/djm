@@ -11,6 +11,21 @@ const RotatingCanvas: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => 
 		transform: ' rotate3d(0, 0, 0, 0deg)',
 	},
 }));
+const StyledHeroImage = styled('img')(({ theme }) => ({
+	maxWidth: '100%',
+	height: 'auto',
+	width: '100%',
+	maxHeight: theme.spacing(96),
+	minHeight: theme.spacing(25),
+	minWidth: '100%',
+	borderRadius: theme.shape.borderRadius,
+	transform: ' rotate3d(0, -1, 0, -5deg)',
+	transition: theme.transitions.create(['transform']),
+	zIndex: 1,
+	':hover': {
+		transform: ' rotate3d(0, 0, 0, 0deg)',
+	},
+}));
 
 const HeroSectionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => ({
 	display: 'flex',
@@ -130,5 +145,5 @@ const AnimatedSection: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) =>
 export {
 	RotatingCanvas, FlyingIcon, RedditIcon, TwitterIcon,
 	YoutubeIcon, TiktokIcon, AnimatedSection, HeroSectionWrapper,
-	LikesAndHeartsWrapper, Image
+	LikesAndHeartsWrapper, Image, StyledHeroImage
 };

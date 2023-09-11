@@ -1,8 +1,7 @@
 import { FC } from 'react';
 import { Typography, TypographyProps, styled } from '@mui/material';
 
-const SectionTitleTypho: FC<TypographyProps> = styled(Typography as FC<TypographyProps>)
-(({ theme }) => ({
+const SectionTitleTypho: FC<TypographyProps> = styled(Typography as FC<TypographyProps>)(({ theme }) => ({
 	maxWidth: '700px',
 	[theme.breakpoints.down('sm')]: {
 		marginBottom: theme.spacing(1),
@@ -10,10 +9,12 @@ const SectionTitleTypho: FC<TypographyProps> = styled(Typography as FC<Typograph
 	},
 }));
 
-const SectionTitleDistinctSG = styled('span')
-(({ theme }) => ({
+const SectionTitleDistinctSG = styled('span')(({ theme }) => ({
 	position: 'relative',
-	color: theme.palette.primary.main
+	width: '100%',
+	color: theme.palette.primary.main,
+	display: 'flex',
+	alignSelf: 'flex-start',
 }));
 
 export { SectionTitleTypho, SectionTitleDistinctSG };

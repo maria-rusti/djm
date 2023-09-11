@@ -8,9 +8,9 @@ import { SectionTitleSG } from '../../../../../../components/landing/section-tit
 import { NextButton } from './move-button/index.styled';
 
 interface ITitleProps {
-	isDragged: DragSG
-	dataLength: number
-	handleNext: (action: 'prev' | 'next') => void
+	isDragged: DragSG;
+	dataLength: number;
+	handleNext: (action: 'prev' | 'next') => void;
 }
 
 const TitleComponent: FC<ITitleProps> = (props: ITitleProps) => {
@@ -21,23 +21,36 @@ const TitleComponent: FC<ITitleProps> = (props: ITitleProps) => {
 	return (
 		<Flex width='100%' justifyCenter alignItems='center' gap={{ xs: 2, sm: 5 }}>
 			<Flex column>
-				<SectionTitleSG>Discover our services</SectionTitleSG>
-				<ServicesSubtitle>
-					Explore our diverse services !
-				</ServicesSubtitle>
+				<SectionTitleSG>Descoperiți serviciile noastre</SectionTitleSG>
+				<ServicesSubtitle>Explorați diversele noastre servicii!</ServicesSubtitle>
 			</Flex>
 			<Flex gap={3}>
-				<NextButton aria-labelledby='previous-slide' aria-label='previous-slide' title='previous'
-					shadow hover variant='contained'
+				<NextButton
+					aria-labelledby='previous-slide'
+					aria-label='previous-slide'
+					title='previous'
+					shadow
+					hover
+					variant='contained'
 					disabled={isDragged?.prevScrollLeft > (matchDownLG ? -10 : 330)}
 					sx={{ minWidth: '60px' }}
-					onClick={(): void => handleNext('prev')}><ArrowBack /></NextButton>
-				<NextButton aria-labelledby='next-slide' aria-label='next-slide' title='next'
-					shadow hover variant='contained'
-					disabled={isDragged?.prevScrollLeft <
-						-((dataLength || 0) * 330 - 700)}
+					onClick={(): void => handleNext('prev')}
+				>
+					<ArrowBack />
+				</NextButton>
+				<NextButton
+					aria-labelledby='next-slide'
+					aria-label='next-slide'
+					title='next'
+					shadow
+					hover
+					variant='contained'
+					disabled={isDragged?.prevScrollLeft < -((dataLength || 0) * 380 - 650)}
 					sx={{ minWidth: '60px' }}
-					onClick={(): void => handleNext('next')}><ArrowForward /></NextButton>
+					onClick={(): void => handleNext('next')}
+				>
+					<ArrowForward />
+				</NextButton>
 			</Flex>
 		</Flex>
 	);

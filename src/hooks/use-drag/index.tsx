@@ -23,6 +23,8 @@ function useDrag(dataLength: number): UseDragReturnType {
 		const dragObject: DragSG =
 			{ isDragged: true, prevPageX: e.pageX, prevScrollLeft: isDragged?.prevScrollLeft, position: 0 };
 		setIsDragged((dragObject));
+		console.log('start');
+
 	};
 
 	const handleDrag = (e: React.MouseEvent<HTMLDivElement, MouseEvent>, isDraggedProp: DragSG): void => {
@@ -35,6 +37,8 @@ function useDrag(dataLength: number): UseDragReturnType {
 
 	const handleDragStop = (): void => {
 		setIsDragged((prev) => ({ ...prev, isDragged: false }));
+		console.log('stop');
+		
 	};
 
 	const handleNext = (action: 'prev' | 'next'): void => {

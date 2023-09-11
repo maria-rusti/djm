@@ -8,24 +8,57 @@ import { SectionBadgeSG } from '../../../../components/landing/section-badge';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 import { SectionDivider } from '../components/section-divider/index.styled';
 import { uuid } from '../../../../utils/functions';
-import usePartners from '../../../../hooks/fetch-hooks/use-partners';
 import { IPartner } from '../../../../hooks/fetch-hooks/use-partners/index.interfaces';
 
-const doubleArr = (data: IPartner[]): IPartner[] => [...data, ...data];
+const doubleArr = (data: IPartner[]): IPartner[] => [...data, ...data, ...data, ...data];
 
 const PartnersSliderContent: FC = (): JSX.Element => {
-	const { data } = usePartners<IPartner[]>(undefined, true);
+	const numarDeTelefon = '+40730375108';
 
+	const message = 'Salut, am o întrebare!';
+
+	const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+	const data = [
+		{
+			link: 'https://www.instagram.com/direct/t/100957321307224/',
+			logo: 'skill-icons:instagram',
+			name: 'Instagram',
+			_id: '64ca12d5a62d3ad5161f4fad',
+		},
+		{
+			link: `${
+				isMobile
+					? `https://wa.me/${numarDeTelefon}?text=${encodeURIComponent(message)}`
+					: `https://api.whatsapp.com/send?phone=${numarDeTelefon}&text=${encodeURIComponent(message)}`
+			}`,
+			logo: 'logos:whatsapp-icon',
+			name: 'Whatsapp',
+			_id: '64ca12d5a62d3ad5161f4fad',
+		},
+		{
+			link: 'https://www.facebook.com/MariusGageaDJM',
+			logo: 'devicon:facebook',
+			name: 'Facebook',
+			_id: '64ca12d5a62d3ad5161f4fad',
+		},
+	];
 	return (
-		<SliderList  direction='left' duration={35} 
-			sx={{ width: `${250 * (doubleArr(data)?.length ?? 0)}px!important` }} >
+		<SliderList
+			direction='left'
+			duration={35}
+			sx={{ width: `${250 * (doubleArr(data)?.length ?? 0)}px!important` }}
+		>
 			{doubleArr(data)?.map((partener, _index) => (
 				<SliderItem key={`${partener?._id}-${uuid()}`}>
-					<Link sx={{ display: 'flex', alignItems: 'center' }}
+					<Link
+						sx={{ display: 'flex', alignItems: 'center' }}
 						aria-labelledby='our-paretners'
 						aria-label='our-paretners'
 						title='our-paretners'
-						href={partener?.link ? partener.link : ''} target='_blank'>
+						href={partener?.link ? partener.link : ''}
+						target='_blank'
+					>
 						<Icon icon={partener?.logo} />
 					</Link>
 				</SliderItem>
@@ -36,13 +69,12 @@ const PartnersSliderContent: FC = (): JSX.Element => {
 
 const PartnersSlideshow: FC = (): JSX.Element => (
 	<SectionWrapperSG sectionName='parteners-slideshow' half pb={0}>
-		<SectionBadgeSG>Partners</SectionBadgeSG>
+		<SectionBadgeSG>Contact</SectionBadgeSG>
 		<SliderContainer>
 			<PartnersSliderContent />
 		</SliderContainer>
 		<SectionDivider />
 	</SectionWrapperSG>
 );
-
 
 export default PartnersSlideshow;

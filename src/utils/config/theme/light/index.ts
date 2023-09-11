@@ -6,10 +6,14 @@ const lightTheme = (common: Omit<ThemeOptions, 'palette'>): Theme =>
 		palette: {
 			mode: 'light',
 			primary: {
-				main: '#B63E56',
+				// main: '#D03D46',
+				// main: '#EE3190',
+				main: '#19376D',
 			},
 			secondary: {
-				main: '#0E3666',
+				// main: '#0E7071',
+				main: '#0B2447',
+				// main: '#082A3A',
 			},
 			common: {
 				black: '#2B2934',

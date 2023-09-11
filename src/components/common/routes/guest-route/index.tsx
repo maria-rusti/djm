@@ -4,19 +4,19 @@ import LandingHeader from '../../../landing/header';
 import Footer from '../../footer';
 
 const GuestRoute: FC = () => {
-
 	const location = useLocation();
 
 	useEffect(() => {
-		window.scrollTo(0,0);
+		window.scrollTo(0, 0);
 	}, [location]);
 
-	return(
+	return (
 		<>
 			<LandingHeader transparent />
-			<Outlet/>
+			<Outlet />
 			<Footer />
 		</>
-	);};
+	);
+};
 
 export default GuestRoute;

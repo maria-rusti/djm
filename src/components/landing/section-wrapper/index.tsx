@@ -13,8 +13,8 @@ const SectionWrapperSG: FC<SectionWrapperProps> = ({
 	half,
 	...props
 }: SectionWrapperProps): React.ReactElement =>
-	<Flex id={sectionName} component={component as ElementType} minHeight={half ? '50vh' : '100vh'}
-		width='100%' gap={8} justifyCenter {...props} />;
+	<Flex id={sectionName} component={component as ElementType} minHeight={half ? '50vh' : '10vh'}
+		width='100%' justifyCenter {...props} />;
 
 SectionWrapperSG.defaultProps = {
 	half: false,

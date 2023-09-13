@@ -34,32 +34,30 @@ const HeroDetails: FC = () => {
 	}, [currentWordIndex]);
 
 	return (
-		<Flex column gap={theme.spacing(4)}>
-			<Flex gap={theme.spacing(10)}>
+		<Flex column gap={theme.spacing(4)} justifyCenter>
+			<Flex gap={theme.spacing(10)} justifyCenter>
 				<Flex
 					sx={{
-						minHeight: theme.spacing(30),
-						width: theme.spacing(50),
-						alignItems: 'flex-start',
+						minHeight: theme.spacing(15),
+						width: '100%',
 						mt: theme.spacing(3),
 					}}
 					column
 					justifyCenter
 				>
-					<Flex sx={{ paddingLeft: '20px' }}>
+					<Flex>
 						<Typography
 							variant='h1'
 							// eslint-disable-next-line no-nested-ternary
-							sx={{ fontWeight: 500, fontSize: width > 610 ? 100 : width > 410 ? 70 : 50 }}
+							sx={{ fontWeight: 500, fontSize: width > 310 ? 50 : width > 210 ? 70 : 50 }}
 						>
 							<SectionTitleDistinctSG>
 								<Textra
 									effect='press'
 									stopduration='1000'
-									data={['SUNET', 'LUMINI', 'FRESH360', 'COCKTAIL']}
+									data={['SONORIZARE', 'SCHELA DE LUMINI', 'PLATFORMA360', 'COCKTAIL BAR']}
 								/>
 							</SectionTitleDistinctSG>
-				
 						</Typography>
 					</Flex>
 				</Flex>

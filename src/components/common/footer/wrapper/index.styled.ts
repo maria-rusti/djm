@@ -8,7 +8,7 @@ const FooterWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({theme}) => ({
 	justifyContent: 'space-evenly',
 	flexDirection: 'column',
 	position: 'relative',
-	marginTop: theme.spacing(15),
+	marginTop: theme.spacing(1),
 }));
 
 const ColoredSection: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => ({

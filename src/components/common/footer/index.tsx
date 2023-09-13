@@ -1,10 +1,7 @@
 import { FC } from 'react';
-import { ColoredSection, FooterWrapper } from './wrapper/index.styled';
-import FooterSections from './sections';
-import FooterData from './data/footer-data.json';
+import { FooterWrapper } from './wrapper/index.styled';
 import FooterSocials from './socials';
 import FooterSocialsData from './data/socials';
-import FooterPaymentMethods from './payment-methods';
 
 export interface FooterChildren {
 	type: string;
@@ -21,11 +18,7 @@ export interface FooterItem {
 
 const Footer: FC = (): JSX.Element => (
 	<FooterWrapper>
-		<FooterPaymentMethods />
-		<ColoredSection>
-			<FooterSections sections={FooterData} />
-			<FooterSocials socials={FooterSocialsData} />
-		</ColoredSection>
+		<FooterSocials socials={FooterSocialsData} />
 	</FooterWrapper>
 );
 

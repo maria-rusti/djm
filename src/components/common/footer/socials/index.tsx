@@ -32,7 +32,7 @@ const FooterSocials: FC<FooterSocialsProps> = ({ socials }): JSX.Element => {
 				<Typography color={theme.palette.common.white}>SocialGod</Typography>
 				<Typography color={theme.palette.common.white}>{currentYear}</Typography>
 			</Box>
-			<SocialsLinksWrapper >
+			<SocialsLinksWrapper>
 				<ClickableText onClick={(): void => navigate('/privacy-policy')}>
 					{capitalize(t('footer.privacy_policy.title'))}
 				</ClickableText>
@@ -40,9 +40,7 @@ const FooterSocials: FC<FooterSocialsProps> = ({ socials }): JSX.Element => {
 					{capitalize(t('footer.terms_of_service.title'))}
 				</ClickableText>
 				<ClickableText onClick={(): void => navigate('/Faq')}>{capitalize(t('faq'))}</ClickableText>
-				<ClickableText onClick={(): void => navigate('/')}>
-					{capitalize(t('footer.status'))}
-				</ClickableText>
+				<ClickableText onClick={(): void => navigate('/')}>{capitalize(t('footer.status'))}</ClickableText>
 			</SocialsLinksWrapper>
 			<SocialIconWrapper>
 				{socials.map((item: FooterSocial) => (

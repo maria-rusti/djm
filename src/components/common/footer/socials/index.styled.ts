@@ -7,6 +7,7 @@ const SocialsWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => 
 	alignItems: 'center',
 	flexWrap: 'wrap',
 	width: '100%',
+	backgroundColor: theme.palette.primary.main,
 	borderTop: `3px solid ${theme.palette.common.white}`,
 	[theme.breakpoints.up('md')]: {
 		flexDirection: 'row',

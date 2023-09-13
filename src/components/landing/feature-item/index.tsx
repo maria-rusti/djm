@@ -13,12 +13,12 @@ export interface IFeatureItem {
 	fullWidth?: boolean;
 }
 export interface IProps {
-	feature: IFeatureItem,
-	music: string
+	feature: IFeatureItem;
+	music?: string;
 }
 
-const FeatureItem: React.FC<IProps> = ({feature, music }): JSX.Element => {
-	const { icon, title, subTitle, fullWidth} = feature;
+const FeatureItem: React.FC<IProps> = ({ feature, music }): JSX.Element => {
+	const { icon, title, subTitle, fullWidth } = feature;
 	const theme = useTheme();
 	const { play } = useContext(MusicContext);
 	return (
@@ -29,7 +29,7 @@ const FeatureItem: React.FC<IProps> = ({feature, music }): JSX.Element => {
 			alignContent='start'
 		>
 			<IconBackground>
-				<IconButton onClick={(): void => play(music)}>
+				<IconButton onClick={music ? (): void => play(music) : (): void => console.log('ceva')}>
 					<Icon icon={icon} width={theme.spacing(5)} color={theme.palette.primary.main} />
 				</IconButton>
 			</IconBackground>

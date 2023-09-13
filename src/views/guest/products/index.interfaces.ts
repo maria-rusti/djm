@@ -3,6 +3,7 @@ import { InformationSectionProps } from '../../../components/landing/products-pa
 interface ProductsPageSectionPropsImages {
 	information: InformationSectionProps,
 	reverse: boolean
+    service: string
 }
 interface IProductContent {
     title: string,

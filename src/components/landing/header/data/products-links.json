@@ -1,18 +1,18 @@
 [
     {
-        "icon": "solar:calendar-line-duotone",
+        "icon": "entypo:sound-mix",
         "title": "Dj",
-        "description": "Visually plan and schedule your content."
+        "description":"Sunetul Tău Preferat, Pus în Valoare de Talentul lui DJ Marius"
     },{
-        "icon": "octicon:inbox-16",
+        "icon": "teenyicons:360-outline",
         "title": "Fresh360",
-        "description": "Engage with your followers directly from FeedHive."
+        "description":  "Fresh360 - Adaugă Profunzime Povestirilor Tale"
     },{
-        "icon": "arcticons:ask-ai",
+        "icon": "mdi:string-lights",
         "title": "Lights",
         "description": "Pick up your superpowers with a bit of help from AI."
     },{
-        "icon": "ic:outline-analytics",
+        "icon": "fontisto:cocktail",
         "title": "Cocktail bar",
         "description": "Our AI analyzes your followers activity and engagement."
     }

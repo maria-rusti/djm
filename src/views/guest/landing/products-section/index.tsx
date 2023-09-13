@@ -7,18 +7,11 @@ import ServicesCard from './components/services-card';
 import useDrag from '../../../../hooks/use-drag';
 import { SectionBadgeSG } from '../../../../components/landing/section-badge';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
-// Sunt DJ Mariu, un artist al sunetelor cu peste 10 ani
-// de experiență în crearea atmosferei perfecte pentru nunti, botezuri
-//  și majorate. Cu o pasiune profundă pentru muzică și un talent deosebit pentru a
-//   înțelege dorințele publicului, mă angajez să transform fiecare eveniment într-o petrecere de
-//   neuitat. Cu selecții muzicale personalizate și un
-//  echipament de înaltă calitate, garantez un sunet impecabil. Alegerea mea ca
-// //DJ asigură că muzica va fi sufletul evenimentului tău, aducând bucurie și
-// ritm în inimile tuturor celor prezenți. Cu DJ Mariu, distracția este garantată!
+
 const ProductsSection: FC = () => {
 	const services = [
 		{
-			icon: { source: 'Iconify', name: 'tabler:brand-django' },
+			icon: { source: 'Iconify', name: 'entypo:sound-mix' },
 			platform: 'DJ',
 			products: [
 				{

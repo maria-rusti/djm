@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { Box, Typography } from '@mui/material';
-// import { useNavigate } from 'react-router';
 import { useNavigate } from 'react-router';
 import { ButtonSG, Flex } from '../../../../../../components/common';
 import SourceIcon from '../../../../../../components/common/source-icon';
@@ -33,7 +32,7 @@ const ServicesCardContent: FC<IProps> = (props: IProps) => {
 			</Box>
 			<Flex width='100%' justifyCenter gap={2}>
 				<ButtonSG variant='text' onClick={(): void => navigate(`${service.path}`)}>
-					Read more
+					View more
 				</ButtonSG>
 			</Flex>
 		</Flex>

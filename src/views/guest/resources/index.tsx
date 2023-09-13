@@ -65,7 +65,7 @@ const Resources: FC = () => {
 						justifyContent='center'
 						sx={{ width: { lg: 1200, xs: '100%' } }}
 					>
-						<ProductsPageSection {...item} images={arrayImages[index]} />
+						<ProductsPageSection item={item} images={arrayImages[index]} service={item.service} />
 						{index < dataLength && <Divider />}
 					</Box>
 				))}

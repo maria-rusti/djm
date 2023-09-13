@@ -9,14 +9,15 @@ import music3 from '../../../../../assets/video/nunta3.mp3';
 
 interface IProps {
 	features: IFeatureItem[];
+	service: string;
 }
 
-const InformationSectionFeatures: FC<IProps> = ({ features }): JSX.Element => {
+const InformationSectionFeatures: FC<IProps> = ({ features, service }): JSX.Element => {
 	const musicPlay = [music, music1, music2, music3];
 	return (
 		<Flex flexWrap='wrap' width='100%' gap={2}>
 			{features.map((feature, index) => (
-				<FeatureItem key={uuid()} feature={feature} music={musicPlay[index]} />
+				<FeatureItem key={uuid()} feature={feature} music={service === 'dj' ? musicPlay[index] : ''} />
 			))}
 		</Flex>
 	);

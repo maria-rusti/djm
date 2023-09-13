@@ -11,10 +11,14 @@ export interface IFeatureItem {
 	title: string;
 	subTitle?: string;
 	fullWidth?: boolean;
-	music?: string;
+}
+export interface IProps {
+	feature: IFeatureItem,
+	music: string
 }
 
-const FeatureItem: React.FC<IFeatureItem> = ({ icon, title, subTitle, fullWidth, music }): JSX.Element => {
+const FeatureItem: React.FC<IProps> = ({feature, music }): JSX.Element => {
+	const { icon, title, subTitle, fullWidth} = feature;
 	const theme = useTheme();
 	const { play } = useContext(MusicContext);
 	return (
@@ -25,7 +29,7 @@ const FeatureItem: React.FC<IFeatureItem> = ({ icon, title, subTitle, fullWidth,
 			alignContent='start'
 		>
 			<IconBackground>
-				<IconButton onClick={(): void => play(music || '')}>
+				<IconButton onClick={(): void => play(music)}>
 					<Icon icon={icon} width={theme.spacing(5)} color={theme.palette.primary.main} />
 				</IconButton>
 			</IconBackground>

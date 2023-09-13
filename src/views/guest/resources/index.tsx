@@ -9,6 +9,8 @@ import { uuid } from '../../../utils/functions';
 import ProductsPageSection from '../../../components/landing/products-page-section';
 import HeroSection from '../../../components/common/hero-section';
 import { IProductContent } from '../products/index.interfaces';
+import mariusFoto from '../../../assets/images/mariusFoto.jpg';
+import mariusMusic from '../../../assets/images/mariusParty.jpg';
 
 const handlePageContent = (page: string | undefined): IProductContent => {
 	switch (page) {
@@ -31,6 +33,24 @@ const Resources: FC = () => {
 
 	const { title, description, data } = pageContent;
 	const dataLength = data.length;
+	const arrayImages = [
+		[
+			{
+				top: 0,
+				left: '',
+				above: false,
+				width: '70%',
+				src: mariusFoto,
+			},
+			{
+				top: '-40%',
+				left: '50%',
+				above: true,
+				width: '65%',
+				src: mariusMusic,
+			},
+		],
+	];
 
 	return (
 		<Flex column justifyCenter width='100%'>
@@ -45,7 +65,7 @@ const Resources: FC = () => {
 						justifyContent='center'
 						sx={{ width: { lg: 1200, xs: '100%' } }}
 					>
-						<ProductsPageSection {...item} />
+						<ProductsPageSection {...item} images={arrayImages[index]} />
 						{index < dataLength && <Divider />}
 					</Box>
 				))}

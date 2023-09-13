@@ -28,7 +28,7 @@ const FirstSection: React.FC = (): JSX.Element => (
 			</SectionTitleSG>
 			<Flex width='100%' gap={5}>
 				{sectionFeatures.map((item) => (
-					<FeatureItem fullWidth key={uuid()} {...item} />
+					<FeatureItem key={uuid()} feature={item} music='' />
 				))}
 			</Flex>
 		</Flex>

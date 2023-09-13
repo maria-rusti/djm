@@ -12,7 +12,6 @@ export function useMusicContext(): MusicContextType {
 
 function useMusic(): UseMusicReturnType {
 	const [music, setMusic] = useState<string>(() => {
-		// Încercați să obțineți muzica din local storage la încărcarea componentei
 		const storedMusic = localStorage.getItem('music');
 		return storedMusic || '';
 	});
@@ -20,7 +19,6 @@ function useMusic(): UseMusicReturnType {
 	const currentMusicNameRef = useRef<string>('');
 
 	useEffect(() => {
-		// Salvarea stării muzicii în local storage la fiecare actualizare
 		localStorage.setItem('music', music);
 	}, [music]);
 

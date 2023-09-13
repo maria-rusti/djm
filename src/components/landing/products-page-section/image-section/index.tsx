@@ -4,12 +4,12 @@ import { FloatingImageProps } from '../../../../views/guest/landing/second-hero-
 import { ImageSectionWrapper, ProductsImageWrapper } from './index.styled';
 
 export interface ImageSectionProps {
-	images: FloatingImageProps[]
+	images: FloatingImageProps[];
 }
 
 const ImageSection: React.FC<ImageSectionProps> = ({ images }): JSX.Element => (
 	<ImageSectionWrapper>
-		<ProductsImageWrapper >
+		<ProductsImageWrapper>
 			{images.map(({ src, ...rest }) => (
 				<FloatingImage key={`${uuid()}-first-image`} src={src} {...rest} />
 			))}

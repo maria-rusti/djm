@@ -12,6 +12,8 @@ import { uuid } from '../../../utils/functions';
 import ProductsPageSection from '../../../components/landing/products-page-section';
 import HeroSection from '../../../components/common/hero-section';
 import { ProductsPageWrapper } from './index.styled';
+import mariusFoto from '../../../assets/images/mariusFoto.jpg';
+import mariusMusic from '../../../assets/images/mariusParty.jpg';
 
 const handlePageContent = (page: string | undefined): IProductContent => {
 	switch (page) {
@@ -40,13 +42,25 @@ const Products: FC = () => {
 
 	const { title, description, data } = pageContent;
 	const dataLength = data.length;
-	// const newDate = [
-	// 	data[0].information.features.map((item) => ({
-	// 		...item,
-	// 		music: nunta,
-	// 	})),
-	// 	data[1],
-	// ];
+	const arrayImages = [
+		[
+			{
+				top: 0,
+				left: '',
+				above: false,
+				width: '70%',
+				src: mariusFoto,
+			},
+			{
+				top: '-40%',
+				left: '50%',
+				above: true,
+				width: '65%',
+				src: mariusMusic,
+			},
+		],
+	];
+
 	return (
 		<ProductsPageWrapper>
 			<HeroSection title={title} description={description} />
@@ -60,7 +74,7 @@ const Products: FC = () => {
 						justifyContent='center'
 						sx={{ width: { lg: 1200, xs: '100%' } }}
 					>
-						<ProductsPageSection {...item} />
+						<ProductsPageSection {...item} images={arrayImages[index]} />
 						{index < dataLength && <Divider />}
 					</Box>
 				))}

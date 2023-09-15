@@ -8,7 +8,6 @@ const Test = Loadable(lazy(() => import('./guest/test')));
 const PrivacyPolicy = Loadable(lazy(() => import('./common/privacy-policy')));
 const TermsOfService = Loadable(lazy(() => import('./common/terms-of-service')));
 const Products = Loadable(lazy(() => import('./guest/products')));
-const Resources = Loadable(lazy(() => import('./guest/resources')));
 const Prices = Loadable(lazy(() => import('./guest/prices')));
 const Subscriptions = Loadable(lazy(() => import('./guest/subscriptions')));
 const Discounts = Loadable(lazy(() => import('./guest/discounts')));
@@ -29,7 +28,6 @@ const Views: FC = () => (
 				<Route path='/faq' element={<Faq />} />
 				<Route path='/products' element={<Products />} />
 				<Route path='/servicii/:page' element={<Products />} />
-				<Route path='/resources/:page' element={<Resources />} />
 				<Route path='/prices' element={<Prices />} />
 				<Route path='/socials/:platform' element={<Socials />} />
 				<Route path='/subscriptions' element={<Subscriptions />} />

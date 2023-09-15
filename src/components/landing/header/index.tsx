@@ -6,7 +6,6 @@ import { NavButton } from './components/NavButton';
 import { LogoBoxAnimation } from './components/LogoBoxAnimation';
 import { uuid } from '../../../utils/functions';
 import Logo from '../../common/logo';
-import { ButtonSG } from '../../common';
 import {
 	DisappearOnMobile,
 	HeaderContent,
@@ -19,7 +18,6 @@ import PopoverComponent, { DataItem } from '../../common/modal/index';
 import AccordionMenu from './components/accordion-menu';
 import HeaderLinks from './components/products-link';
 import productsLinks from './data/products-links.json';
-import resourcesLinks from './data/resources-links.json';
 
 export interface ILinkButton {
 	title: string;
@@ -33,7 +31,6 @@ interface LandingHeaderFCInterface {
 
 const drawerWidth = '100%';
 const navLinks: ILinkButton[] = [
-	{ title: 'Prices', type: 'link', data: '/prices' },
 	{ title: 'Partnership', type: 'link', data: '/partnership' },
 	{ title: 'Contact', type: 'link', data: '/contact' },
 ];
@@ -43,16 +40,6 @@ const dataArray: DataItem[] = [
 		id: 1,
 		title: <Typography>Servicii</Typography>,
 		content: <HeaderLinks links={productsLinks} page='servicii' />,
-	},
-	{
-		id: 2,
-		title: <Typography>Socials</Typography>,
-		content: 'test',
-	},
-	{
-		id: 3,
-		title: <Typography>Resources</Typography>,
-		content: <HeaderLinks links={resourcesLinks} page='resources' />,
 	},
 ];
 
@@ -114,11 +101,6 @@ const LandingHeader: FC<LandingHeaderFCInterface> = ({ transparent = false }): J
 						<PopoverComponent data={dataArray} displayArrow />
 					</DisappearOnMobile>
 					<DisappearOnMobile gap={2}>
-						<ButtonSG shadow variant='outlined' hover width={150}>
-							<a style={{ color: 'inherit', textDecoration: 'none' }} href='https://app.socialgod.shop'>
-								Login
-							</a>
-						</ButtonSG>
 						<GetStartedButton />
 					</DisappearOnMobile>
 					<IconButton

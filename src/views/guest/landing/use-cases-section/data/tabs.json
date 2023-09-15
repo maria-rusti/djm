@@ -1,18 +1,26 @@
 [
     {
-        "icon": "arcticons:ask-ai",
-        "title": "AI Writing Assistant"
+      "icon": "fluent-emoji-high-contrast:love-letter",
+        "title": "Nunti"
     },
     {
-        "icon": "fad:automation-4p",
-        "title": "Automation"
+      "icon": "mingcute:baby-line",
+        "title": "Botezuri"
     },
     {
-        "icon": "icon-park-solid:inbox",
-        "title": "Social Inbox"
+      "icon": "uil:18-plus",
+        "title": "Majorate"
     },
     {
-        "icon": "raphael:people",
-        "title": "Collaboration & Approval"
+      "icon": "fluent-emoji-high-contrast:birthday-cake",
+        "title": "Aniversari"
+    },
+    {
+        "icon": "mingcute:microphone-fill",
+        "title": "Formatii"
+    },
+    {
+      "icon": "arcticons:photo-pro",
+        "title": "Photo/Video"
     }
 ]

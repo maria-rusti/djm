@@ -9,14 +9,10 @@ import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 const TestimonialSection: React.FC = (): JSX.Element => (
 	<SectionWrapperSG sectionName='testimonials-section' column half>
 		<TestimonialsWrapper>
-			<TestimonialsContent >
+			<TestimonialsContent>
 				<Box>
-					<SectionTitleSG>
-						Don&#39;t take our word for it.
-					</SectionTitleSG>
-					<SectionTitleSG >
-						See what our clients say.
-					</SectionTitleSG>
+					<SectionTitleSG>Experiențele Noastre </SectionTitleSG>
+					<SectionTitleSG>Prin Ochii Clienților</SectionTitleSG>
 				</Box>
 				<Flex>
 					<GetStartedButton />

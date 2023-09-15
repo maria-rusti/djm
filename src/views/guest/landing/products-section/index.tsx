@@ -18,7 +18,7 @@ const ProductsSection: FC = () => {
 					icon: { source: 'Iconify', name: '' },
 					name: `
 	
-DJ Mariu, cu peste 10 ani de 
+DJ Marius, cu peste 10 ani de 
 experiență în muzică, creează atmosfera perfectă la
  nunti, botezuri și majorate, garantând o petrecere memorabilă și plină de ritm.`,
 				},

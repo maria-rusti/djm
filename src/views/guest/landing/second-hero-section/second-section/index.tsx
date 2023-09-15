@@ -43,7 +43,7 @@ const SecondSection: React.FC = (): JSX.Element => {
 				</Typography>
 				<Flex rowGap={2} flexWrap='wrap' justifyBetween maxWidth='550px'>
 					{aiFeatures.map((item) => (
-						<FeatureItem key={uuid()} feature={item} music='' />
+						<FeatureItem key={uuid()} feature={item} music='' service='' />
 					))}
 				</Flex>
 				<Flex flexWrap='wrap' width='100%' gap={5}>

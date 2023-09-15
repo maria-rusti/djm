@@ -25,7 +25,7 @@ const InformationSection: React.FC<IProps> = ({ item, service }): JSX.Element =>
 				<Typography fontSize={theme.typography.h4.fontSize}>{title}</Typography>
 				<Typography color={theme.palette.grey[600]}>{subTitle}</Typography>
 			</Box>
-			<InformationSectionFeatures features={features} service={service} />
+			<InformationSectionFeatures features={features} video={service} />
 		</Flex>
 	);
 };

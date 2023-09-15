@@ -41,7 +41,6 @@ const PopoverComponent: React.FC<PopoverComponentProps> = ({ data, displayArrow 
 
 	const anchors: IAnchor[] = [
 		{ id: 1, anchor: <NavText>Servicii</NavText> },
-		{ id: 2, anchor: <NavText>Resources</NavText> },
 	];
 
 	const selectedItem = data.find((item) => item.id === selectedItemId);

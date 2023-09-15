@@ -11,7 +11,6 @@ interface IProps {
 	item: ProductsPageSectionProps;
 	service: string;
 	images: FloatingImageProps[];
-
 }
 
 const ProductsPageSection: React.FC<IProps> = ({ item, service, images }): JSX.Element => {

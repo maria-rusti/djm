@@ -1,27 +1,17 @@
 [
     {
-        "title": "Scheduling",
-        "description": "Easily manage and organize your social media content with a user-friendly scheduler, saving time and maintaining a consistent online presence.",
+        "title": "Artiști Muzicali",
+        "description": "Colaborăm strâns cu artiști muzicali talentați, creând experiențe sonore unice și pline de energie pentru a vă încânta audiența la fiecare eveniment.",
         "icon": "solar:calendar-broken"
-    },{
-        "title": "Boosting",
-        "description": "Increase interactions on your posts with real, active users through likes, comments, shares, and upvotes, fostering a vibrant online community.",
-        "icon": "octicon:rocket-24"
-    },{
-        "title": "Analytics",
-        "description": "Gain valuable insights into your audience's demographics, behavior, and preferences to optimize your social media strategy for better engagement and growth.",
-        "icon": "ion:analytics-outline"
-    },{
-        "title": "Automation",
-        "description": "Automate various social media tasks such as posting, liking, following, and more to free up time and maximize efficiency in managing your accounts.",
-        "icon": "carbon:workflow-automation"
-    },{
-        "title": "Multi-Account Management",
-        "description": "Efficiently oversee and control multiple social media accounts on a single platform, simplifying the process of monitoring and engaging with diverse audiences",
-        "icon": "gridicons:multiple-users"
-    },{
-        "title": "Social Data Collector",
-        "description": "Utilize a powerful data collector to gain deep insights into audience behavior, content performance, and trends, empowering data-driven decision-making.",
-        "icon": "eos-icons:data-scientist-outlined"
+    },
+    {
+        "title": "Fotografie și Videografie Profesională",
+        "description": "Lucrăm alături de fotografi și videografi profesioniști, capturând și eternizând momentele speciale în imagini și videoclipuri de neuitat.",
+        "icon": "solar:calendar-broken"
+    },
+    {
+        "title": "Colaborări DJ de Top",
+        "description": "Facem echipă cu cei mai talentați DJ din industrie pentru a aduce experiențe muzicale extraordinare. Mixăm ritmurile lor de top cu creația noastră artistică, rezultând petreceri memorabile și evenimente incredibile.",
+        "icon": "solar:calendar-broken"
     }
 ]

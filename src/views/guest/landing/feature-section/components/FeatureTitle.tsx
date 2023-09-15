@@ -6,13 +6,12 @@ import { Flex } from '../../../../../components/common';
 
 const FeatureTitle: FC = () => (
 	<>
-		<SectionBadgeSG>Features</SectionBadgeSG>
+		<SectionBadgeSG>Echipament</SectionBadgeSG>
 		<Flex column>
 			<SectionTitleSG>
-				Advanced features{' '}
-				<SectionTitleDistinctSG>professional</SectionTitleDistinctSG>
+				<SectionTitleDistinctSG>Profesional</SectionTitleDistinctSG>
 			</SectionTitleSG>
-			<SectionTitleSG>marketers will love.</SectionTitleSG>
+			<SectionTitleSG>de Înaltă Performanță</SectionTitleSG>
 		</Flex>
 	</>
 );

@@ -1,30 +1,32 @@
 [
     {
-        "icon": "arcticons:ask-ai",
-        "title": "AI Writing Assistant",
-        "description": "Our fine-tuned AI Writing assistant is only a click away, ready to help you come up with ideas and improve your posts./n Spike new ideas in seconds./br Never get stuck in writer's-block again!",
-        "replaces": ["ChatGPT", "Copy.ai", "PepperType"],
-        "image": "https://images.unsplash.com/photo-1690394472903-23ce57cb5953?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+      "icon": "fluent-emoji-high-contrast:love-letter",
+      "title": "Nunti",
+      "description": "Pentru miri care caută să transforme ziua nunții într-o experiență de vis, suntem aici pentru a crea momente muzicale memorabile. Cu o selecție diversificată de melodii și o iluminare spectaculoasă, vă ajutăm să vă spuneți povestea de dragoste într-un mod unic și personal."
     },
     {
-        "icon": "fad:automation-4p",
-        "title": "Automation",
-        "description": "Create follow-up comments in your best performing posts triggered by number of likes, engagement rate, and more./n Use triggers and notifications to build a content machine using tools like Zapier and Airtable.",
-        "replaces": ["Buffer", "Hootsuite", "IFTTT"],
-        "image": "https://images.unsplash.com/photo-1690394472903-23ce57cb5953?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+      "icon": "mingcute:baby-line",
+      "title": "Botezuri",
+      "description": "Pentru părinții care doresc să facă botezul copilului lor cu adevărat special, creăm o atmosferă unică de sărbătoare. Muzica noastră blândă și jocul luminilor discrete aduc o notă de căldură și bucurie fiecărui moment, transformând botezul într-o amintire de neuitat pentru întreaga familie."
     },
     {
-        "icon": "icon-park-solid:inbox",
-        "title": "Social Inbox",
-        "description": "Turn your followers into true fans./br Collect all comments, replies and mentions across your social channels./n Make sure everyone gets a reply, a like or even a retweet or a quote.",
-        "replaces": [" Sprout Social", "Agorapulse"],
-        "image": "https://images.unsplash.com/photo-1690394472903-23ce57cb5953?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+      "icon": "uil:18-plus",
+      "title": "Majorate",
+      "description": "Pentru cei care doresc petreceri incendiare la majorate, suntem alegerea perfectă. Cu mixuri exclusiviste și efecte luminoase de senzație, vă garantăm o noapte memorabilă pe ritmuri de neoprit."
     },
     {
-        "icon": "raphael:people",
-        "title": "Collaboration & Approval",
-        "description": "Two heads think better than one!/br Invite your entire team to help you create amazing results./n Specify which team members need to approve a post before going live.",
-        "replaces": ["Falcon.io", "Slack", "MS Teams"],
-        "image": "https://images.unsplash.com/photo-1690394472903-23ce57cb5953?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1632&q=80"
+      "icon": "fluent-emoji-high-contrast:birthday-cake",
+      "title": "Aniversari",
+      "description": "Pentru aniversări cu adevărat speciale, aducem muzica perfectă și iluminarea deosebită pentru a face ziua ta specială să strălucească. Cu noi, fiecare aniversare devine o experiență unică și plină de bucurie."
+    },
+    {
+        "icon": "mingcute:microphone-fill",
+        "title": "Formatii",
+        "description": "Pentru cei care caută muzică live autentică și pasiune, colaborăm cu formații talentate care aduc sunete inconfundabile în fiecare eveniment. Transformăm locațiile în studiouri de înregistrare sau în cluburi de noapte, oferind momente muzicale deosebite."
+    },
+    {
+      "icon": "arcticons:photo-pro",
+      "title": "Photo/Video",
+      "description": "Pentru cei care doresc să captureze cele mai frumoase momente ale evenimentelor lor, colaborăm cu profesioniști în domeniul fotografiei și videografiei. Fiecare cadru devine o poveste vizuală de neuitat, fie că este vorba despre o fotografie sau un videoclip."
     }
-]
+  ]

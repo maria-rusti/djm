@@ -8,7 +8,6 @@ interface IProps {
 	icon: string,
 	title: string,
 	description: string,
-	replaces: string[],
 	image: string,
 	currentIndex: number
 };
@@ -17,7 +16,6 @@ const defaultValues = {
 	icon: '',
 	title: '',
 	description: '',
-	replaces: [''],
 	image: ''
 };
 

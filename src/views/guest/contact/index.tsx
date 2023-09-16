@@ -6,16 +6,16 @@ import { CardSG } from '../../../components/common';
 import ContactForm from './components/contact-form';
 import HeroSection from '../../../components/common/hero-section';
 
-
 const Contact: FC = (): JSX.Element => {
 	const { t } = useTranslation();
 
 	return (
 		<ConctactWrapper>
-			<HeroSection 
+			<HeroSection
 				title={capitalize(t('contact'))}
-				description='If you have any questions, dont hesitate to get in touch with us.
-				 We ll get back to you within 48 hours.'
+				description={`Conectează-te Cu 
+				Echipa Noastră - Contactează-ne pentru 
+				Asistență Personalizată și Răspunsuri la Întrebările Tale`}
 			/>
 			<CardSG height='60vh' width='50%'>
 				<ContactForm />

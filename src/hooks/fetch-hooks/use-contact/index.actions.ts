@@ -5,18 +5,15 @@ import { encryptData } from '../../../utils/functions/decript';
 export interface IContact {
     name: string,
 	email: string;
-	message: string
+	content: string,
+	phone: string
 }
 
 async function contact(params: IContact): Promise<{ message: string }> {
 	try {
-		const {name, ...rest} = params;
-		const data = {
-			fullName: name,
-			...rest
-		};
-		const sendData = encryptData(data);
-		const res = await request.post('guests/contact', sendData);
+	
+		const sendData = encryptData(params);
+		const res = await request.post('/contact', sendData);
 		return { message: res?.data?.message || 'Message successfully send!' };
 	} catch (e) {
 		const error = e as AxiosError;

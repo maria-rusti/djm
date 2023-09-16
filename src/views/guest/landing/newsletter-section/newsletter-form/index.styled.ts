@@ -55,30 +55,21 @@ const NewsletterButton: FC<NewsletterButtonProps> = styled(ButtonSG as FC<Newsle
 
 	backgroundColor: inside ? theme.palette.primary.main : theme.palette.common.white,
 	justifySelf: 'center',
+	width: '100%',
+	marginTop: theme.spacing(2),
 	':hover': {
 		backgroundColor: theme.palette.secondary.main,
 		border: `3px solid ${theme.palette.secondary.main}`,
 		color: theme.palette.common.white,
-	},
-	[theme.breakpoints.up('md')]: {
-		borderTopLeftRadius: 0,
-		borderBottomLeftRadius: 0,
-		border: `3px solid ${theme.palette.common.white}`,
-	},
-	[theme.breakpoints.down('md')]: {
-		width: '100%',
-		marginTop: theme.spacing(2)
-	},
+	}
 }));
 
-const NewsletterFormWrapper = styled('form')(({ theme }) => ({
+const NewsletterFormWrapper = styled('form')(() => ({
 	width: '100%',
 	display: 'flex',
 	justifyContent: 'center',
+	flexDirection: 'column',
 	alignItems: 'center',
-	[theme.breakpoints.down('md')]: {
-		flexDirection: 'column',
-	},
 }));
 
 export { StyledNewsletterInput, NewsletterButton, NewsletterFormWrapper, StyledNewsletterSelect };

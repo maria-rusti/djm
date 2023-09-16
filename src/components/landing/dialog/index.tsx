@@ -3,8 +3,7 @@ import Dialog from '@mui/material/Dialog';
 import DialogContent from '@mui/material/DialogContent';
 import DialogTitle from '@mui/material/DialogTitle';
 import CloseIcon from '@mui/icons-material/Close';
-import { Box, DialogActions, IconButton, Typography } from '@mui/material';
-import { ButtonSG } from '../../common';
+import { Box, CardMedia, IconButton } from '@mui/material';
 
 export interface ResDialog {
 	setOpen: React.Dispatch<React.SetStateAction<boolean>>;
@@ -35,11 +34,9 @@ const ResponsiveDialogContent: React.FC<ResDialog> = ({ open, setOpen, service }
 					flexDirection: 'column',
 				}}
 			>
-				<Typography>{service}</Typography>
+				<CardMedia autoPlay component='video' src={service} />
 			</DialogContent>
-			<DialogActions>
-				<ButtonSG>{service}</ButtonSG>
-			</DialogActions>
+		
 		</Dialog>
 	</Box>
 );

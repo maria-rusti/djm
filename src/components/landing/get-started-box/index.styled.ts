@@ -6,9 +6,9 @@ const StyledGetStartedBox: FC<GetStartedBoxProps> = styled(Box as FC<GetStartedB
 	shouldForwardProp: (prop) => prop !== 'big'
 })(({ theme, big }) => ({
 	minHeight: theme.spacing(45),
-	height: theme.spacing(45),
+	height: theme.spacing(55),
 	width: theme.spacing(145),
-	background: theme.palette.primary.main,
+	background: theme.palette.background.paper,
 	borderRadius: theme.spacing(6),
 	padding: theme.spacing(2),
 	margin: theme.spacing(6),

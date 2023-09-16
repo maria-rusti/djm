@@ -15,7 +15,6 @@ const StyledTab: FC<TabProps> = styled(Tab)(({ theme }) => ({
 	display: 'flex',
 	color: theme.palette.common.white,
 	[theme.breakpoints.down('md')]: {
-		// justifyContent: 'flex-end',
 		color: theme.palette.text.secondary,
 		width: '10%',
 		borderBottom: `1px solid ${theme.palette.grey[500]}`,

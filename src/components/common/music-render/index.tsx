@@ -25,7 +25,6 @@ const MusicRenderer: FC<IProps> = ({ music, setMusic }): JSX.Element => {
 						width='660'
 						height='115'
 						src={music}
-						title='YouTube video player'
 						allow={`accelerometer; autoplay; clipboard-write;
 								 encrypted-media; gyroscope; picture-in-picture; web-share`}
 						allowFullScreen

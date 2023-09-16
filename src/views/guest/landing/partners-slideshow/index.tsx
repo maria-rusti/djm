@@ -11,6 +11,22 @@ import { uuid } from '../../../../utils/functions';
 import { IPartner } from '../../../../hooks/fetch-hooks/use-partners/index.interfaces';
 
 const doubleArr = (data: IPartner[]): IPartner[] => [...data, ...data, ...data, ...data];
+const sliderContainerStyle = {
+	display: 'flex',
+	overflowX: 'auto',
+	WebkitOverflowScrolling: 'touch', // Adaugă suport pentru scrolling pe dispozitivele iOS
+	scrollSnapType: 'x mandatory', // Specifică scrolling orizontal obligatoriu
+	msOverflowStyle: 'none', // Ascunde barele de derulare în Internet Explorer
+	scrollbarWidth: 'none', // Ascunde barele de derulare în Firefox
+	'&::-webkit-scrollbar': {
+		display: 'none', // Ascunde barele de derulare în Chrome și Safari
+	},
+};
+
+const sliderItemStyle = {
+	flex: '0 0 auto',
+	scrollSnapAlign: 'start', // Asigură că fiecare element se va opri la începutul vizual
+};
 
 const PartnersSliderContent: FC = (): JSX.Element => {
 	const numarDeTelefon = '+40730375108';
@@ -47,10 +63,10 @@ const PartnersSliderContent: FC = (): JSX.Element => {
 		<SliderList
 			direction='left'
 			duration={35}
-			sx={{ width: `${250 * (doubleArr(data)?.length ?? 0)}px!important` }}
+			sx={{ ...sliderContainerStyle, width: `${250 * (doubleArr(data)?.length ?? 0)}px!important` }}
 		>
 			{doubleArr(data)?.map((partener, _index) => (
-				<SliderItem key={`${partener?._id}-${uuid()}`}>
+				<SliderItem sx={{ sliderItemStyle }} key={`${partener?._id}-${uuid()}`}>
 					<Link
 						sx={{ display: 'flex', alignItems: 'center' }}
 						aria-labelledby='our-paretners'

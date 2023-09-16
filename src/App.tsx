@@ -8,17 +8,13 @@ import ThemeContext from './utils/context/theme';
 import Loading from './components/common/loading';
 import MusicContext from './utils/context/video';
 import MusicRenderer from './components/common/music-render';
-// import useMusic from './hooks/use-music';
-// import useConsoleLog from './hooks/use-console-log';
 
 const App: FC = () => {
 	const [themeMode, toggleThemeMode] = useThemeToggle();
 	const themeContext = useMemo(() => ({ themeMode, toggleThemeMode }), [themeMode, toggleThemeMode]);
-	// const { play, music, setMusic } = useMusic();
 	const [music, setMusic] = useState<string>('');
 	const isPlayingRef = useRef(false);
 	const currentMusicNameRef = useRef<string>('');
-	// useConsoleLog(music);
 
 	const play = useCallback((musicName: string) => {
 		if (!isPlayingRef.current || currentMusicNameRef.current !== musicName) {

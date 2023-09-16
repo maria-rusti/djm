@@ -6,7 +6,7 @@ const BoxNewsletter: FC<BoxProps> = styled(Box)(({ theme }) => ({
 	display: 'flex',
 	flexDirection: 'row',
 	borderRadius: theme.shape.borderRadius,
-	backgroundColor: `${theme?.palette?.primary?.main}`,
+	backgroundColor: `${theme?.palette?.background?.default}`,
 	justifyContent: 'space-around',
 	paddingTop: theme.spacing(3),
 	paddingBottom: theme.spacing(3),
@@ -40,17 +40,10 @@ const NewsletterImage = styled('img')(({ theme }) => ({
 const NewsletterContent: FC<BoxProps> = styled(Box)(({ theme }) => ({
 	display: 'flex',
 	flexDirection: 'column',
-	justifyContent: 'space-around',
-	paddingTop: theme.spacing(3),
-	paddingBottom: theme.spacing(3),
-	height: '100%',
-	[theme.breakpoints.up('md')]: {
-		paddingLeft: theme.spacing(25),
-	},
-	[theme.breakpoints.down('md')]: {
-		justifyContent: 'center',
-		gap: theme.spacing(5),
-	}
+	justifyContent: 'center',
+	paddingTop: theme.spacing(20),
+	paddingBottom: theme.spacing(20),
+	height: '100%'
 }));
 
 interface NewsletterTextProps extends TypographyProps {
@@ -61,7 +54,7 @@ interface NewsletterTextProps extends TypographyProps {
 const NewsletterText: FC<NewsletterTextProps> = styled(Typography, {
 	shouldForwardProp: (prop) => prop !== 'size'
 })(({ theme, size }: NewsletterTextProps) => ({
-	color: theme.palette.common.white,
+	color: theme.palette.secondary.main,
 	fontSize: size === 'large' ? theme.typography.h4.fontSize : theme.typography.h5.fontSize,
 	fontStyle: 'normal',
 	fontWeight: size === 'large' ? '700' : '400',

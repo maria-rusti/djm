@@ -24,6 +24,7 @@ const FeatureItem: React.FC<IProps> = ({ feature, music, service }): JSX.Element
 	const theme = useTheme();
 	const { play } = useContext(MusicContext);
 	const [open, setOpen] = useState<boolean>(false);
+	
 	return (
 		<Flex
 			width={fullWidth ? '100%' : theme.spacing(subTitle ? 50 : 33)}

@@ -55,7 +55,7 @@ const HeroDetails: FC = () => {
 								<Textra
 									effect='press'
 									stopduration='1000'
-									data={['SONORIZARE', 'SCHELA DE LUMINI', 'PLATFORMA360', 'COCKTAIL BAR']}
+									data={['SONORIZARE', 'SCHELA LUMINI', 'PLATFORMA360', 'COCKTAIL BAR']}
 								/>
 							</SectionTitleDistinctSG>
 						</Typography>

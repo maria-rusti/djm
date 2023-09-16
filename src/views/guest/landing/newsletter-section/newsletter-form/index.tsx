@@ -3,13 +3,15 @@ import { useForm } from 'react-hook-form';
 import { CircularProgress, FormControl, ListSubheader, MenuItem, TextField } from '@mui/material';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
-import { StyledNewsletterInput, NewsletterFormWrapper, NewsletterButton } from './index.styled';
+import { NewsletterFormWrapper, NewsletterButton } from './index.styled';
 import useReview from '../../../../../hooks/fetch-hooks/use-review';
+import { FormInputSG } from '../../../../../components/common/input';
+import { useWindowSize } from '../../../../../hooks/use-window-size';
 
 export interface IValueReview {
 	name: string;
 	content: string;
-	service: string;
+	services: string[];
 }
 // dj = 'Deejay',
 // fresh360 = 'Fresh360',
@@ -35,24 +37,28 @@ const SendButton: React.FC<SendButtonProps> = ({ loadingSubscribe, inside }): JS
 
 const NewsletterForm: React.FC = (): JSX.Element => {
 	const { addReview, loadingAdd } = useReview();
+	const { width } = useWindowSize();
 
-	const [value, setValue] = useState<string>('Fresh360');
-	const { handleSubmit, register, reset } = useForm<IValueReview>({
+	const [value, setValue] = useState<string[]>([]);
+
+	const { handleSubmit, control, reset } = useForm<IValueReview>({
 		mode: 'onBlur',
 		reValidateMode: 'onChange',
 	});
+	const widthCurrent = width > 600;
 
 	const submitAction = (values: IValueReview): void => {
-		const sendData = { ...values, service: value };
+		const sendData = { ...values, services: value };
 		addReview(sendData);
+		setValue([]);
 		console.log(sendData);
 		reset();
 	};
 
 	return (
 		<NewsletterFormWrapper onSubmit={handleSubmit(submitAction, console.error)}>
-			<StyledNewsletterInput placeholder='Name' {...register('name')} sx={{ width: '50%' }} />
-			<FormControl sx={{ width: '100%' }}>
+			<FormInputSG name='name' control={control} width={widthCurrent ? '50%' : '100%'} />
+			<FormControl sx={{ width: widthCurrent ? '50%' : '100%' }}>
 				<TextField
 					sx={{
 						background: '#fff',
@@ -64,12 +70,12 @@ const NewsletterForm: React.FC = (): JSX.Element => {
 					}}
 					id='outlined-select-currency'
 					select
-					label='Select Service'
+					label='Alege un serviciu'
 					value={value}
-					// SelectProps={{ multiple: true }}
-					onChange={(e): void => setValue(e.target.value as unknown as string)}
+					SelectProps={{ multiple: true }}
+					onChange={(e): void => setValue(e.target.value as unknown as string[])}
 				>
-					<ListSubheader>Select Service</ListSubheader>
+					<ListSubheader>Serviciul oferit</ListSubheader>
 					{['Deejay', 'Fresh360', 'Lights', 'Cocktail Bar']?.map((option) => (
 						<MenuItem key={option} value={option}>
 							{option}
@@ -77,7 +83,7 @@ const NewsletterForm: React.FC = (): JSX.Element => {
 					))}
 				</TextField>
 			</FormControl>
-			<StyledNewsletterInput placeholder='Review' {...register('content')} />
+			<FormInputSG name='content' control={control} width={widthCurrent ? '50%' : '100%'} />
 			<SendButton loadingSubscribe={loadingAdd} />
 		</NewsletterFormWrapper>
 	);

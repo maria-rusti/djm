@@ -137,7 +137,7 @@ const Products: FC = () => {
 						<ProductsPageSection
 							item={item}
 							images={getIfKeyIsSomething(arrayImages, url.page ? url.page : '')}
-							service={item.service}
+							service={item.service !== 'dj' ? item.service : ''}
 						/>
 						{index < dataLength && <Divider />}
 					</Box>

@@ -1,7 +1,7 @@
 import { FC, lazy } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { GuestRoute, Loadable } from '../components/common';
-// GUEST
+
 const NotFound = Loadable(lazy(() => import('./common/not-found')));
 const Landing = Loadable(lazy(() => import('./guest/landing')));
 const Test = Loadable(lazy(() => import('./guest/test')));
@@ -19,7 +19,7 @@ const Socials = Loadable(lazy(() => import('./guest/socials')));
 const Views: FC = () => (
 	<BrowserRouter>
 		<Routes>
-			<Route path='/test' element={<Test />}/>
+			<Route path='/test' element={<Test />} />
 			<Route path='*' element={<NotFound />} />
 			<Route path='/' element={<GuestRoute />}>
 				<Route path='/' element={<Landing />} />

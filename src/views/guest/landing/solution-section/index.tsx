@@ -30,10 +30,8 @@ const SolutionSection: React.FC = (): JSX.Element => {
 			</Flex>
 			<SolutionWrapper>
 				<Flex flexWrap='wrap' justifyCenter maxWidth={theme.spacing(145)}>
-					{SolutionsCards.map(
-						(card: ISolutionCard): JSX.Element => (
-							<SolutionCard key={`${uuid()}-solution-card`} {...card} />
-						)
+					{SolutionsCards?.map(
+						(card: ISolutionCard): JSX.Element => <SolutionCard key={`${uuid()}-solution-card`} {...card} />
 					)}
 				</Flex>
 			</SolutionWrapper>

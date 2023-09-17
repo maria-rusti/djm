@@ -25,7 +25,7 @@ const RenderCardService = ({
 		>
 			<Icon icon={service.icon.name} width={50} height={40} />
 			<Typography variant='h6' component='h3' sx={{ paddingLeft: '10px' }}>
-				{t(service.platform, [index])}
+				{t(service.platform, String([index]))}
 			</Typography>
 		</StyledCardPlatform>
 	);

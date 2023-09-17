@@ -1,0 +1,29 @@
+{
+    "title": "Sunetul Călătoriei Tale",
+    "description": "Experimentează Audiofonia de Calitate Superioară cu Serviciile Noastre de Sonorizare",
+    "data": [
+        {
+            "information": {
+                "badge": "Sunet Impecabil",
+                "title":  "Spectacol Sonor",
+                "subTitle":  "Creând Atmosfera Potrivită pentru Fiecare Moment",
+                "features": [
+                    {
+                        "icon": "fluent:microphone-28-filled",
+                        "title": "Echipament Profesional"
+                    },
+                    {
+                        "icon": "bi:volume-up-fill",
+                        "title": "Calitate Audio de Top"
+                    },
+                    {
+                        "icon": "fluent:music-note-2-20-filled",
+                        "title": "Playlist-uri Personalizate"
+                    }
+                ]
+            },
+            "reverse": false,
+            "service": "sonorizare"
+        }
+    ]
+}

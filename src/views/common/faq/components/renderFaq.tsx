@@ -12,23 +12,20 @@ const RenderCardFaq = ({ faq, index }: { faq: IFaq; index: number }): JSX.Elemen
 	const { t } = useTranslation();
 
 	return (
-		<StyledCard
-			key={`${faq.question}`}
-			onClick={(): void => setExpanded((prevValue) => !prevValue)}
-		>
+		<StyledCard key={`${faq.question}`} onClick={(): void => setExpanded((prevValue) => !prevValue)}>
 			<CardHeader
 				title={t(faq.question)}
 				action={
-					<IconButton aria-expanded={expanded} aria-label="show more">
+					<IconButton aria-expanded={expanded} aria-label='show more'>
 						{expanded ? <ExpandLessIcon /> : <ExpandMoreIcon />}
 					</IconButton>
 				}
 			/>
-			<Collapse in={expanded} timeout="auto" unmountOnExit>
+			<Collapse in={expanded} timeout='auto' unmountOnExit>
 				<CardContent>
 					<Fragment key={`${faq.answer}`}>
-						<Typography variant="h6" component="h3">
-							{t(faq.answer, [index])}
+						<Typography variant='h6' component='h3'>
+							{index}
 						</Typography>
 					</Fragment>
 				</CardContent>

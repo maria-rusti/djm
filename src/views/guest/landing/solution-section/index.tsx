@@ -28,7 +28,7 @@ const SolutionSection: React.FC = (): JSX.Element => {
 					<SectionTitleDistinctSG>Colaborările Noastre</SectionTitleDistinctSG>.
 				</SectionTitleSG>
 			</Flex>
-			<SolutionWrapper>
+			<SolutionWrapper sx={{ marginTop: theme.spacing(3), paddingTop: theme.spacing(3) }}>
 				<Flex flexWrap='wrap' justifyCenter maxWidth={theme.spacing(145)}>
 					{SolutionsCards?.map(
 						(card: ISolutionCard): JSX.Element => <SolutionCard key={`${uuid()}-solution-card`} {...card} />

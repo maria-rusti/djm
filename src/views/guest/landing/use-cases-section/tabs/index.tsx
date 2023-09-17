@@ -25,7 +25,14 @@ const UseCasesTabs: React.FC<IProps> = ({ setCurrentIndex, currentIndex }): JSX.
 
 	return (
 		<TabsWrapper>
-			<StyledTabs value={currentIndex} onChange={handleChange} orientation='vertical'>
+			<StyledTabs
+				variant='scrollable'
+				scrollButtons='auto'
+				aria-label='scrollable auto tabs example'
+				value={currentIndex}
+				onChange={handleChange}
+				orientation='horizontal'
+			>
 				{(tabs as ITab[]).map(
 					({ icon, title }: ITab, index: number): JSX.Element => (
 						<StyledTab

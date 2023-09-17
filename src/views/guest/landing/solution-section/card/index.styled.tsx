@@ -65,8 +65,8 @@ const SolutionCardSubtitle: FC<TypographyProps> = styled(Typography as FC<Typogr
 }));
 
 const StyledSolutionCard: FC<CardPropsSG> = styled(CardSG)(({ theme }) => ({
-	height: `${theme.spacing(41)}!important`,
-	width: `${theme.spacing(44)}!important`,
+	height: `${theme.spacing(50)}!important`,
+	width: `${theme.spacing(34)}!important`,
 	transition: theme.transitions.create(['transform']),
 	':hover': {
 		cursor: 'pointer',

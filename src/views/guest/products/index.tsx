@@ -5,6 +5,7 @@ import { Flex } from '../../../components/common';
 import { IProductContent } from './index.interfaces';
 import DJContent from './data/DJContent.json';
 import FreshContent from './data/FreshContent.json';
+import Sonorizare from './data/Sonorizare.json';
 import LightsContent from './data/LightsContent.json';
 import BarContent from './data/BarContent.json';
 import DefaultContent from './data/default.json';
@@ -18,6 +19,8 @@ import fresh1 from '../../../assets/images/fresh.jpeg';
 import fresh2 from '../../../assets/images/fresh360.jpg';
 import lights1 from '../../../assets/images/lights1.jpg';
 import lights2 from '../../../assets/images/lights2.jpg';
+import bar1 from '../../../assets/images/bar1.jpg';
+import bar2 from '../../../assets/images/bar2.jpg';
 
 const handlePageContent = (page: string | undefined): IProductContent => {
 	switch (page) {
@@ -30,8 +33,11 @@ const handlePageContent = (page: string | undefined): IProductContent => {
 		case 'lights': {
 			return LightsContent;
 		}
-		case 'cocktail-bar': {
+		case 'cocktail': {
 			return BarContent;
+		}
+		case 'sonorizare': {
+			return Sonorizare;
 		}
 		default: {
 			return DefaultContent;
@@ -63,7 +69,22 @@ const Products: FC = () => {
 				src: mariusMusic,
 			},
 		],
-
+		sonorizare: [
+			{
+				top: 0,
+				left: '',
+				above: false,
+				width: '70%',
+				src: mariusFoto,
+			},
+			{
+				top: '-40%',
+				left: '50%',
+				above: true,
+				width: '65%',
+				src: mariusMusic,
+			},
+		],
 		fresh360: [
 			{
 				top: 0,
@@ -80,7 +101,6 @@ const Products: FC = () => {
 				src: fresh2,
 			},
 		],
-
 		lights: [
 			{
 				top: 0,
@@ -97,21 +117,20 @@ const Products: FC = () => {
 				src: lights1,
 			},
 		],
-
 		cocktail: [
 			{
 				top: 0,
 				left: '',
 				above: false,
 				width: '70%',
-				src: fresh1,
+				src: bar1,
 			},
 			{
 				top: '-40%',
 				left: '50%',
 				above: true,
 				width: '65%',
-				src: fresh2,
+				src: bar2,
 			},
 		],
 	};

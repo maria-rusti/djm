@@ -26,22 +26,6 @@
                     }
                 ]
             },
-            "images": [
-                {
-                    "top": 0,
-                    "left": "",
-                    "above": false,
-                    "width": "",
-                    "src": ""
-                },
-                {
-                    "top": "-",
-                    "left": "",
-                    "above": true,
-                    "width": "",
-                    "src": ""
-                }
-            ],
             "reverse": true,
             "service":""
         }

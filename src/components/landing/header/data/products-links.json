@@ -4,6 +4,10 @@
         "title": "Dj",
         "description":"Sunetul Tău Preferat, Pus în Valoare de Talentul lui DJ Marius"
     },{
+        "icon": "icon-park-outline:sound-one",
+        "title": "Sonorizare",
+        "description":"Sunet impecabil pentru orice eveniment. Experiența noastră, sunetul perfect."
+    },{
         "icon": "teenyicons:360-outline",
         "title": "Fresh360",
         "description":  "Fresh360 - Adaugă Profunzime Povestirilor Tale"
@@ -13,7 +17,7 @@
         "description": "Pick up your superpowers with a bit of help from AI."
     },{
         "icon": "fontisto:cocktail",
-        "title": "Cocktail bar",
+        "title": "Cocktail",
         "description": "Our AI analyzes your followers activity and engagement."
     }
 ]

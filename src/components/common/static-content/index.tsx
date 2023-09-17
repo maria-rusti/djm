@@ -7,12 +7,11 @@ import { useTranslation } from 'react-i18next';
 import { useLocation } from 'react-router';
 import Flex from '../wrapper/flex';
 
-export const StyledCard: FC<CardProps> = styled(Card)
-(({ theme }) => ({
+export const StyledCard: FC<CardProps> = styled(Card)(({ theme }) => ({
 	maxWidth: theme.spacing(100),
 	width: '100%',
 	minWidth: theme.spacing(27),
-	margin:theme.spacing(2, 0),
+	margin: theme.spacing(2, 0),
 	cursor: 'pointer',
 	border: `${theme.palette.primary.main} solid 1px`,
 	'&:hover': {

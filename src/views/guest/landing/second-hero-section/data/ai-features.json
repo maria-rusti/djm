@@ -1,15 +1,16 @@
 [
     {
-        "title": "Inbuilt AI chat",
-        "icon": "fluent:chat-12-filled"
+        "title": "Lumini și Vibrații în Sfera 360°",
+        "icon": "radix-icons:video"
     }, {
-        "title": "Trained for writing",
-        "icon": "mingcute:pen-fill"
+        "title": "Explorați Universul 360°",
+        "icon": "radix-icons:video"
     }, {
-        "title": "Fine-tuned AI model",
-        "icon": "arcticons:ask-ai"
+        "title": "Magia 360°",
+        "icon": "radix-icons:video"
     }, {
-        "title": "Based on GPT-4",
-        "icon": "arcticons:gptassist"
+        "title": "Descoperiți Lumea Noastră 360° ",
+        "icon": "radix-icons:video"
+    
     }
 ]

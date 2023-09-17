@@ -48,14 +48,21 @@ const HeroDetails: FC = () => {
 					<Flex>
 						<Typography
 							variant='h1'
-							// eslint-disable-next-line no-nested-ternary
-							sx={{ fontWeight: 500, fontSize: width > 310 ? 50 : width > 210 ? 70 : 50 }}
+							sx={{
+								display: 'flex',
+								flexDirection: 'row',
+								alignItems: 'center',
+								justifyContent: 'center',
+								fontWeight: 500,
+								// eslint-disable-next-line no-nested-ternary
+								fontSize: width > 310 ? 50 : width > 210 ? 70 : 50,
+							}}
 						>
 							<SectionTitleDistinctSG>
 								<Textra
 									effect='press'
 									stopduration='1000'
-									data={['SONORIZARE', 'SCHELA LUMINI', 'PLATFORMA360', 'COCKTAIL BAR']}
+									data={['DJ', 'SONORIZARE', 'LUMINI', 'FRESH 360', 'COCKTAIL']}
 								/>
 							</SectionTitleDistinctSG>
 						</Typography>

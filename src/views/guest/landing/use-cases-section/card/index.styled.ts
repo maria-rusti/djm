@@ -41,7 +41,7 @@ const UseCardContent: FC<BoxProps> = styled(Box)(({ theme }) => ({
 		gap: theme.spacing(2)
 	},
 	[theme.breakpoints.down('md')]: {
-		flexDirection: 'column'
+		flexDirection: 'column-reverse'
 	}
 }));
 

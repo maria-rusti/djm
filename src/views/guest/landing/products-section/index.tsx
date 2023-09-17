@@ -27,6 +27,19 @@ experiență în muzică, creează atmosfera perfectă la
 			path: '/servicii/dj',
 		},
 		{
+			icon: { source: 'Iconify', name: 'icon-park-outline:sound-one' },
+			platform: 'Sonorizare',
+			products: [
+				{
+					icon: { source: 'Iconify', name: '' },
+					name: `Sunet de excepție pentru orice eveniment. Experimentați calitatea sonoră la 
+					superlativ cu Dj Marius. Transformăm sunetul în magie.`,
+				},
+			],
+			_id: '64c36ea54egfdf0804e45r2359ef',
+			path: '/servicii/sonorizare',
+		},
+		{
 			icon: { source: 'Iconify', name: 'teenyicons:360-outline' },
 			platform: 'Fresh360',
 			products: [

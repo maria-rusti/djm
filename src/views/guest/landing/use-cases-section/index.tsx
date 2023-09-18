@@ -15,7 +15,7 @@ import sectionNunta from '../../../../assets/images/sectionNunta.jpg';
 
 const UseCasesSection: React.FC = (): JSX.Element => {
 	const [currentIndex, setCurrentIndex] = useState<number>(0);
-	const imagesArray = [sectionNunta, botezBaby, majorat,aniversare, formatii, photo];
+	const imagesArray = [sectionNunta, botezBaby, majorat, aniversare, formatii, photo];
 
 	return (
 		<SectionWrapperSG sectionName='use-cases-section'>

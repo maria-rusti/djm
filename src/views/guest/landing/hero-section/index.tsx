@@ -5,6 +5,7 @@ import { AnimatedSection, HeroSectionWrapper, StyledHeroImage } from './index.st
 import { Flex } from '../../../../components/common';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 import MainImage from '../../../../assets/images/main.jpg';
+import SecondHeroSection from '../second-hero-section';
 
 const LandingHeroSection: React.FC = (): JSX.Element => {
 	const theme = useTheme();
@@ -14,7 +15,9 @@ const LandingHeroSection: React.FC = (): JSX.Element => {
 			<HeroSectionWrapper>
 				<Flex column maxWidth={theme.spacing(150)}>
 					<HeroDetails />
-					<AnimatedSection>
+					<SecondHeroSection />
+
+					<AnimatedSection sx={{ display: 'none' }}>
 						<StyledHeroImage src={MainImage} alt='img not found' />
 					</AnimatedSection>
 				</Flex>

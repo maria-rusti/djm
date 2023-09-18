@@ -13,6 +13,7 @@ import {
 import { FooterSocial } from '../data/socials';
 import { capitalize, uuid } from '../../../../utils/functions';
 import BackToTop from '../../back-to-top';
+import { HeroSectionWrapper } from '../../hero-section/index.styled';
 
 interface FooterSocialsProps {
 	socials: FooterSocial[];
@@ -25,40 +26,42 @@ const FooterSocials: FC<FooterSocialsProps> = ({ socials }): JSX.Element => {
 	const { t } = useTranslation();
 
 	return (
-		<SocialsWrapper>
-			<Box display='flex' gap={1}>
-				<Typography color={theme.palette.common.white}>Copyright</Typography>
-				<Copyright sx={{ color: theme.palette.common.white }} />
-				<Typography color={theme.palette.common.white}>SocialGod</Typography>
-				<Typography color={theme.palette.common.white}>{currentYear}</Typography>
-			</Box>
-			<SocialsLinksWrapper>
-				<ClickableText onClick={(): void => navigate('/privacy-policy')}>
-					{capitalize(t('footer.privacy_policy.title'))}
-				</ClickableText>
-				<ClickableText onClick={(): void => navigate('/terms-of-service')}>
-					{capitalize(t('footer.terms_of_service.title'))}
-				</ClickableText>
-				<ClickableText onClick={(): void => navigate('/Faq')}>{capitalize(t('faq'))}</ClickableText>
-				<ClickableText onClick={(): void => navigate('/')}>{capitalize(t('footer.status'))}</ClickableText>
-			</SocialsLinksWrapper>
-			<SocialIconWrapper>
-				{socials.map((item: FooterSocial) => (
-					<StyledIconButton
-						aria-labelledby='SmartBoxDigital-socials'
-						aria-label='SmartBoxDigital-socials'
-						title='SmartBoxDigital-socials'
-						href={`https://www.${item.url}`}
-						target='_blank'
-						rel='noopener'
-						key={`socials-${uuid()}`}
-					>
-						{item.icon}
-					</StyledIconButton>
-				))}
-			</SocialIconWrapper>
-			<BackToTop />
-		</SocialsWrapper>
+		<HeroSectionWrapper reverseGradient>
+			<SocialsWrapper>
+				<Box display='flex' gap={1}>
+					<Typography color={theme.palette.primary.main}>Copyright</Typography>
+					<Copyright sx={{ color: theme.palette.primary.main }} />
+					<Typography color={theme.palette.primary.main}>SocialGod</Typography>
+					<Typography color={theme.palette.primary.main}>{currentYear}</Typography>
+				</Box>
+				<SocialsLinksWrapper>
+					<ClickableText onClick={(): void => navigate('/privacy-policy')}>
+						{capitalize(t('footer.privacy_policy.title'))}
+					</ClickableText>
+					<ClickableText onClick={(): void => navigate('/terms-of-service')}>
+						{capitalize(t('footer.terms_of_service.title'))}
+					</ClickableText>
+					<ClickableText onClick={(): void => navigate('/Faq')}>{capitalize(t('faq'))}</ClickableText>
+					<ClickableText onClick={(): void => navigate('/')}>{capitalize(t('footer.status'))}</ClickableText>
+				</SocialsLinksWrapper>
+				<SocialIconWrapper>
+					{socials.map((item: FooterSocial) => (
+						<StyledIconButton
+							aria-labelledby='SmartBoxDigital-socials'
+							aria-label='SmartBoxDigital-socials'
+							title='SmartBoxDigital-socials'
+							href={`https://www.${item.url}`}
+							target='_blank'
+							rel='noopener'
+							key={`socials-${uuid()}`}
+						>
+							{item.icon}
+						</StyledIconButton>
+					))}
+				</SocialIconWrapper>
+				<BackToTop />
+			</SocialsWrapper>
+		</HeroSectionWrapper>
 	);
 };
 

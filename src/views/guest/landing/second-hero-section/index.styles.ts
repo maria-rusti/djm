@@ -36,7 +36,7 @@ const HeroSectionWrapper: FC<HeroSectionWrapperProps> = styled(Box as FC<HeroSec
 })(({ theme, reverse }: { theme: Theme, reverse?: boolean }) => ({
 	display: 'flex',
 	justifyContent: 'space-between',
-	maxWidth: theme.spacing(150),
+	maxWidth: '100%',
 	width: '100%',
 	[theme.breakpoints.down('md')]: {
 		flexDirection: reverse ? 'column-reverse' : 'column',
@@ -82,7 +82,7 @@ export const SecondHeroSectionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>
 	minHeight: 'auto',
 	width: '100%',
 	maxWidth: theme.spacing(150),
-	margin: theme.spacing(10, 0),
+	margin: theme.spacing(0),
 	overflow: 'hidden',
 	position: 'relative',
 	padding: theme.spacing(2),

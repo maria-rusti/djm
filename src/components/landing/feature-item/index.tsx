@@ -17,14 +17,15 @@ export interface IProps {
 	feature: IFeatureItem;
 	music?: string;
 	service: string;
+	landing?: boolean;
 }
 
-const FeatureItem: React.FC<IProps> = ({ feature, music, service }): JSX.Element => {
+const FeatureItem: React.FC<IProps> = ({ feature, music, service, landing }): JSX.Element => {
 	const { icon, title, subTitle, fullWidth } = feature;
 	const theme = useTheme();
 	const { play } = useContext(MusicContext);
 	const [open, setOpen] = useState<boolean>(false);
-	
+
 	return (
 		<Flex
 			width={fullWidth ? '100%' : theme.spacing(subTitle ? 50 : 33)}
@@ -38,7 +39,11 @@ const FeatureItem: React.FC<IProps> = ({ feature, music, service }): JSX.Element
 				</IconButton>
 			</IconBackground>
 			<Flex maxWidth='calc(100% - 90px)' gap={1}>
-				<Typography fontWeight='bold' fontSize={18}>
+				<Typography
+					fontWeight='bold'
+					color={landing ? theme?.palette.common.white : theme?.palette.common.black}
+					fontSize={18}
+				>
 					{title}
 				</Typography>
 				{subTitle && <Typography color={theme?.palette?.text?.secondary}>{subTitle}</Typography>}

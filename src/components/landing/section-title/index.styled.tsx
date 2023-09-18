@@ -12,7 +12,7 @@ const SectionTitleTypho: FC<TypographyProps> = styled(Typography as FC<Typograph
 const SectionTitleDistinctSG = styled('span')(({ theme }) => ({
 	position: 'relative',
 	width: '100%',
-	color: theme.palette.primary.main,
+	color: theme.palette.common.white,
 	display: 'flex',
 	alignSelf: 'flex-start',
 }));

@@ -4,7 +4,7 @@ import { FC } from 'react';
 const FooterWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({theme}) => ({
 	width: '100%',
 	display: 'flex',
-	alignItems: 'center',
+	alignItems: 'flex-end',
 	justifyContent: 'space-evenly',
 	flexDirection: 'column',
 	position: 'relative',

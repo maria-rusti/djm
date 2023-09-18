@@ -55,7 +55,7 @@ const HeroDetails: FC = () => {
 								justifyContent: 'center',
 								fontWeight: 500,
 								// eslint-disable-next-line no-nested-ternary
-								fontSize: width > 310 ? 50 : width > 210 ? 70 : 50,
+								fontSize: width > 410 ? 45 : width > 210 ? 50 : 45,
 							}}
 						>
 							<SectionTitleDistinctSG>

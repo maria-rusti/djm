@@ -85,7 +85,6 @@ experiență în muzică, creează atmosfera perfectă la
 	];
 	const data = isArray(services) ? services : [];
 	const { isDragged, handleNext, handleDrag, handleDragStart, handleDragStop } = useDrag(data?.length);
-
 	return (
 		<SectionWrapperSG sx={{ m: 0 }} sectionName='services-section'>
 			<SectionBadgeSG>Servicii</SectionBadgeSG>

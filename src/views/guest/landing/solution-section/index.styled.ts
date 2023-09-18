@@ -1,25 +1,45 @@
 import { FC } from 'react';
-import { Box, BoxProps, alpha, styled } from '@mui/material';
+import { Box, BoxProps, styled } from '@mui/material';
+import serviciiLanding from '../../../../assets/landingSection/serviciiLanding.jpg';
 
 export const SolutionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => ({
 	display: 'flex',
-	flexDirection: 'column',
-	maxWidth: theme.spacing(150),
-	marginBottom: theme.spacing(3),
-	paddingBottom: theme.spacing(3),
 	alignItems: 'center',
 	justifyContent: 'center',
 	minHeight: 'auto',
 	width: '100%',
 	overflow: 'hidden',
 	position: 'relative',
+	marginTop: '10px',
+	background: `url(${serviciiLanding}) center/cover no-repeat fixed`,
+	animation: 'wave 10s linear infinite',
+	zIndex: '1',
+
+	'@keyframes wave': {
+		'0%': {
+			backgroundPosition: '0 50%',
+		},
+		'50%': {
+			backgroundPosition: '100% 50%',
+		},
+		'100%': {
+			backgroundPosition: '0 50%',
+		},
+	},
+
+	[theme.breakpoints.down('md')]: {
+		backgroundSize: 'cover',
+	},
+	flexDirection: 'column',
+	maxWidth: theme.spacing(150),
+	marginBottom: theme.spacing(3),
+	paddingBottom: theme.spacing(3),
 	'::before': {
 		content: '\'\'',
 		position: 'absolute',
 		top: '40%',
 		left: '50%',
 		transform: 'rotateZ(15deg) translate(-50%)',
-		backgroundColor: alpha(theme.palette.secondary.light, 0.5),
 		width: '900px',
 		minHeight: '400px',
 		zIndex: '-1',

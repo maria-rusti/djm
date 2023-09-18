@@ -6,13 +6,13 @@ const lightTheme = (common: Omit<ThemeOptions, 'palette'>): Theme =>
 		palette: {
 			mode: 'light',
 			primary: {
-				// main: '#D03D46',
-				// main: '#EE3190',
-				main: '#19376D',
+				main: '#150050',
+				// main: '#E90064',
+				// main: '#D21312',
 			},
 			secondary: {
-				// main: '#0E7071',
-				main: '#0B2447',
+				main: '#3F0071',
+				// main: '#070A52',
 				// main: '#082A3A',
 			},
 			common: {
@@ -24,7 +24,7 @@ const lightTheme = (common: Omit<ThemeOptions, 'palette'>): Theme =>
 				paper: '#F6FAF8',
 			},
 			text: {
-				primary: '#2B2934',
+				primary: '#000000',
 				secondary: '#696969',
 			},
 		},

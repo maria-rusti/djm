@@ -1,6 +1,6 @@
 import { Typography } from '@mui/material';
 import React, { FC } from 'react';
-import { HeroSectionWrapper, StyledTitle } from './index.styled';
+import { StyledTitle } from './index.styled';
 
 interface IProps {
 	title: string;
@@ -8,12 +8,12 @@ interface IProps {
 }
 
 const HeroSection: FC<IProps> = ({ title, description }) => (
-	<HeroSectionWrapper>
-		<StyledTitle>
-			{title}
-		</StyledTitle>
-		<Typography variant='h6' color='grey'>{description}</Typography>
-	</HeroSectionWrapper>
+	<>
+		<StyledTitle>{title}</StyledTitle>
+		<Typography variant='h6' color='grey'>
+			{description}
+		</Typography>
+	</>
 );
 
 export default HeroSection;

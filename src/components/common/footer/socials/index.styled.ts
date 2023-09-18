@@ -7,8 +7,6 @@ const SocialsWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => 
 	alignItems: 'center',
 	flexWrap: 'wrap',
 	width: '100%',
-	backgroundColor: theme.palette.primary.main,
-	borderTop: `3px solid ${theme.palette.common.white}`,
 	[theme.breakpoints.up('md')]: {
 		flexDirection: 'row',
 	},
@@ -27,13 +25,13 @@ const SocialIconWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(() => ({
 }));
 
 const ClickableText: FC<TypographyProps> = styled(Typography)(({ theme }) => ({
-	color: theme.palette.common.white,
+	color: theme.palette.primary.main,
 	cursor: 'pointer',
 	fontSize: '1rem',
 }));
 
 const StyledIconButton: FC<LinkProps> = styled(Link as FC<LinkProps>)(({ theme }) => ({
-	color: '#fff',
+	color: theme.palette.primary.main,
 	width: theme.spacing(5),
 	height: theme.spacing(5),
 	display: 'flex',

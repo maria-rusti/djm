@@ -4,8 +4,6 @@ import { FC } from 'react';
 const HeaderWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => ({
 	display: 'flex',
 	width: '100%',
-	paddingBottom: theme.spacing(2),
-	justifyContent: 'center',
 	[theme.breakpoints.up('lg')]: {
 		width: theme.spacing(150)
 	},
@@ -17,9 +15,6 @@ const HeaderWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => (
 	},
 	[theme.breakpoints.down('sm')]: {
 		marginTop: theme?.spacing(0)
-	},
-	'& .MuiToolbar-root': {
-		margin: theme.spacing(2)
 	}
 }));
 
@@ -28,7 +23,7 @@ const HeaderContent: FC<BoxProps & {transparent?: boolean}> = styled(Box as FC<B
 	width: '100%',
 	display: 'flex',
 	justifyContent: 'center',
-	zIndex: '99'
+	zIndex: '99',
 }));
 
 const StyledHeaderToolbar: FC<ToolbarProps> = styled(Toolbar as FC<ToolbarProps>)(({ theme }) => ({

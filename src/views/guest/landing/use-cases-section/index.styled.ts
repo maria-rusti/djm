@@ -1,4 +1,4 @@
-import { Box, BoxProps, alpha, styled } from '@mui/material';
+import { Box, BoxProps, styled } from '@mui/material';
 import { FC } from 'react';
 
 const UseCaseSectionWrapper: FC<BoxProps> = styled(Box)(({ theme }) => ({
@@ -14,7 +14,6 @@ const UseCaseSectionWrapper: FC<BoxProps> = styled(Box)(({ theme }) => ({
 		content: '\'\'',
 		position: 'absolute',
 		bottom: 0,
-		backgroundColor: alpha(theme.palette.secondary.light, 0.5),
 		width: '100%',
 		height: '100%',
 		minHeight: theme.spacing(50),

@@ -4,11 +4,12 @@ import { Link } from '@mui/material';
 import { SliderContainer } from '../components/slide-show/SliderContiner';
 import { SliderList } from '../components/slide-show/SliderList';
 import { SliderItem } from '../components/slide-show/SliderItem';
-import { SectionBadgeSG } from '../../../../components/landing/section-badge';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 import { SectionDivider } from '../components/section-divider/index.styled';
 import { uuid } from '../../../../utils/functions';
 import { IPartner } from '../../../../hooks/fetch-hooks/use-partners/index.interfaces';
+import { SolutionWrapper } from '../solution-section/index.styled';
+import image from '../../../../assets/landingSection/contact.jpg';
 
 const doubleArr = (data: IPartner[]): IPartner[] => [...data, ...data];
 const sliderContainerStyle = {
@@ -26,7 +27,7 @@ const sliderContainerStyle = {
 
 const sliderItemStyle = {
 	flex: '0 0 auto',
-	scrollSnapAlign: 'start', // Asigură că fiecare element se va opri la începutul vizual
+	scrollSnapAlign: 'start',
 };
 
 const PartnersSliderContent: FC = (): JSX.Element => {
@@ -107,12 +108,13 @@ const PartnersSliderContent: FC = (): JSX.Element => {
 };
 
 const PartnersSlideshow: FC = (): JSX.Element => (
-	<SectionWrapperSG sectionName='parteners-slideshow' half pb={0}>
-		<SectionBadgeSG>Contact</SectionBadgeSG>
-		<SliderContainer>
-			<PartnersSliderContent />
-		</SliderContainer>
-		<SectionDivider />
+	<SectionWrapperSG sectionName='parteners-slideshow' pb={0}>
+		<SolutionWrapper image={image}>
+			<SliderContainer>
+				<PartnersSliderContent />
+			</SliderContainer>
+			<SectionDivider />
+		</SolutionWrapper>
 	</SectionWrapperSG>
 );
 

@@ -7,6 +7,8 @@ import ServicesCard from './components/services-card';
 import useDrag from '../../../../hooks/use-drag';
 import { SectionBadgeSG } from '../../../../components/landing/section-badge';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
+import { SolutionWrapper } from '../solution-section/index.styled';
+import image from '../../../../assets/landingSection/backServicii.jpg';
 
 const ProductsSection: FC = () => {
 	const services = [
@@ -87,17 +89,19 @@ experiență în muzică, creează atmosfera perfectă la
 	const { isDragged, handleNext, handleDrag, handleDragStart, handleDragStop } = useDrag(data?.length);
 	return (
 		<SectionWrapperSG sx={{ m: 0 }} sectionName='services-section'>
-			<SectionBadgeSG>Servicii</SectionBadgeSG>
-			<TitleComponent dataLength={data?.length} isDragged={isDragged} handleNext={handleNext} />
-			<DraggCarouselWraper
-				handleDrag={handleDrag}
-				handleDragStart={handleDragStart}
-				handleDragStop={handleDragStop}
-				isDragged={isDragged}
-				childrens={data?.map((service: IServiceResponse) => (
-					<ServicesCard key={service?._id} service={service} />
-				))}
-			/>
+			<SolutionWrapper image={image}>
+				<SectionBadgeSG>Servicii</SectionBadgeSG>
+				<TitleComponent dataLength={data?.length} isDragged={isDragged} handleNext={handleNext} />
+				<DraggCarouselWraper
+					handleDrag={handleDrag}
+					handleDragStart={handleDragStart}
+					handleDragStop={handleDragStop}
+					isDragged={isDragged}
+					childrens={data?.map((service: IServiceResponse) => (
+						<ServicesCard key={service?._id} service={service} />
+					))}
+				/>
+			</SolutionWrapper>
 		</SectionWrapperSG>
 	);
 };

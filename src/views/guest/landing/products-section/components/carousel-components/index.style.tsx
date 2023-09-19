@@ -1,8 +1,7 @@
 import { Box, BoxProps, styled } from '@mui/material';
 import { FC } from 'react';
-import serviciiLanding from '../../../../../../assets/landingSection/servicii.jpg';
 
-export const Wrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => ({
+export const Wrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(() => ({
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
@@ -11,25 +10,8 @@ export const Wrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => 
 	overflow: 'hidden',
 	position: 'relative',
 	marginTop: '10px',
-	background: `url(${serviciiLanding}) center/cover no-repeat fixed`,
 	animation: 'wave 10s linear infinite',
-	zIndex: '1',
-
-	'@keyframes wave': {
-		'0%': {
-			backgroundPosition: '0 50%',
-		},
-		'50%': {
-			backgroundPosition: '100% 50%',
-		},
-		'100%': {
-			backgroundPosition: '0 50%',
-		},
-	},
-
-	[theme.breakpoints.down('md')]: {
-		backgroundSize: 'cover',
-	},
+	zIndex: '1'
 }));
 
 interface CarouselBoxProps extends BoxProps {

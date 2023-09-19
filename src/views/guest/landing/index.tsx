@@ -19,8 +19,8 @@ const Landing: FC = () => (
 			<SolutionSection />
 			<UseCasesSection />
 			<FeatureSection />
-			<TestimonialSection />
 			<BlogSection />
+			<TestimonialSection />
 			<NewsletterSection />
 		</LandingPageContent>
 	</LandingPageWrapper>

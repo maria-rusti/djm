@@ -6,8 +6,6 @@ const LandingPageContent: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme })
 	display: 'flex',
 	alignItems: 'center',
 	flexDirection: 'column',
-	gap: theme.spacing(10),
-	paddingBottom: theme.spacing(10),
 	height: 'auto',
 	overflow: 'hidden'
 }));

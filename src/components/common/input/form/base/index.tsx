@@ -24,8 +24,16 @@ import { StyledInputSG } from '../../index.styled';
  * @returns a JSX.Element that represent the Form Input component - reusable component
  */
 
-const FormInputSG: FC<FormInputPropsSG> = 
-({ name, label, control, autoFocus, width, type, muiInputProps, ...props }) => (
+const FormInputSG: FC<FormInputPropsSG> = ({
+	name,
+	label,
+	control,
+	autoFocus,
+	width,
+	type,
+	muiInputProps,
+	...props
+}) => (
 	<Controller
 		name={name}
 		control={control}
@@ -36,6 +44,7 @@ const FormInputSG: FC<FormInputPropsSG> =
 				type={type}
 				autoFocus={autoFocus}
 				value={value}
+				id={name}
 				label={label || capitalize(normalizeCamelCase(parsedName))}
 				onChange={onChange}
 				onBlur={onBlur}

@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { CircularProgress, FormControl, ListSubheader, MenuItem, TextField } from '@mui/material';
+import { CircularProgress, FormControl, InputLabel, ListSubheader, MenuItem, TextField } from '@mui/material';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
 import { NewsletterFormWrapper, NewsletterButton } from './index.styled';
@@ -57,7 +57,9 @@ const NewsletterForm: React.FC = (): JSX.Element => {
 
 	return (
 		<NewsletterFormWrapper onSubmit={handleSubmit(submitAction, console.error)}>
-			<FormInputSG name='name' control={control} width={widthCurrent ? '50%' : '100%'} />
+			<InputLabel id='name'>Name</InputLabel>
+
+			<FormInputSG aria-label='name' name='name' control={control} width={widthCurrent ? '50%' : '100%'} />
 			<FormControl sx={{ width: widthCurrent ? '50%' : '100%' }}>
 				<TextField
 					sx={{
@@ -83,7 +85,14 @@ const NewsletterForm: React.FC = (): JSX.Element => {
 					))}
 				</TextField>
 			</FormControl>
-			<FormInputSG name='content' control={control} width={widthCurrent ? '50%' : '100%'} />
+			<InputLabel id='content'>Content</InputLabel>
+			<FormInputSG
+				type='text'
+				aria-label='content'
+				name='content'
+				control={control}
+				width={widthCurrent ? '50%' : '100%'}
+			/>
 			<SendButton loadingSubscribe={loadingAdd} />
 		</NewsletterFormWrapper>
 	);

@@ -34,7 +34,10 @@ const FeatureItem: React.FC<IProps> = ({ feature, music, service, landing }): JS
 			alignContent='start'
 		>
 			<IconBackground>
-				<IconButton onClick={music ? (): void => play(music) : (): void => setOpen(true)}>
+				<IconButton
+					aria-label='show more'
+					onClick={music ? (): void => play(music) : (): void => setOpen(true)}
+				>
 					<Icon icon={icon} width={theme.spacing(5)} color={theme.palette.primary.main} />
 				</IconButton>
 			</IconBackground>

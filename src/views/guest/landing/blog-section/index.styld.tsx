@@ -1,4 +1,4 @@
-import { Box, BoxProps, alpha, styled } from '@mui/material';
+import { Box, BoxProps, styled } from '@mui/material';
 import { FC } from 'react';
 
 const BlogSectionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)
@@ -20,7 +20,6 @@ const BlogSectionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)
 		position: 'absolute',
 		top: 0,
 		clipPath: 'polygon(0 5%, 100% 0%, 100% 95%, 0% 100%)',
-		backgroundColor: alpha(theme.palette.secondary.main, 0.5),
 		width: '100%',
 		height: '100%',
 		zIndex: '-1',

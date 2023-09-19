@@ -5,26 +5,25 @@ import { Icon, IconProps } from '@iconify/react';
 interface CommonProps {
 	small?: boolean;
 	hover?: boolean;
+	landing?: 1 | 0;
 }
 
 const commonProps = ['small', 'hover'];
 
-const StyledFeatureTitle: FC<TypographyProps> = styled(Typography as FC<TypographyProps>)(
-	({ theme }) => ({
-		maxWidth: theme.spacing(90),
-		textAlign: 'center',
-		fontSize: theme.spacing(5),
-		fontWeight: 600,
-		marginBottom: theme.spacing(8),
-		[theme.breakpoints.down('sm')]: {
-			marginBottom: theme.spacing(1),
-		},
-		paddingInline: theme.spacing(1),
-		'::first-line ': {
-			color: theme.palette.primary.light,
-		},
-	})
-);
+const StyledFeatureTitle: FC<TypographyProps> = styled(Typography as FC<TypographyProps>)(({ theme }) => ({
+	maxWidth: theme.spacing(90),
+	textAlign: 'center',
+	fontSize: theme.spacing(5),
+	fontWeight: 600,
+	marginBottom: theme.spacing(8),
+	[theme.breakpoints.down('sm')]: {
+		marginBottom: theme.spacing(1),
+	},
+	paddingInline: theme.spacing(1),
+	'::first-line ': {
+		color: theme.palette.primary.light,
+	},
+}));
 
 interface StyledIconProps extends CommonProps, IconProps {}
 
@@ -38,12 +37,9 @@ const StyledIcon: FC<StyledIconProps> = styled(Icon as FC<StyledIconProps>, {
 
 interface FeatureCardContinerProps extends CommonProps, GridProps {}
 
-const FeatureCardContiner: FC<FeatureCardContinerProps> = styled(
-	Grid as FC<FeatureCardContinerProps>,
-	{
-		shouldForwardProp: (propName: string): boolean => !commonProps.includes(propName),
-	}
-)(({ theme, small }) => ({
+const FeatureCardContiner: FC<FeatureCardContinerProps> = styled(Grid as FC<FeatureCardContinerProps>, {
+	shouldForwardProp: (propName: string): boolean => !commonProps.includes(propName),
+})(({ theme, small, landing }) => ({
 	display: 'flex',
 	flexDirection: 'row',
 	padding: theme.spacing(1),
@@ -60,7 +56,7 @@ const FeatureCardContiner: FC<FeatureCardContinerProps> = styled(
 	},
 	transition: theme.transitions.create(['background-color']),
 	':hover': {
-		backgroundColor: alpha(theme.palette.secondary.light, 0.5),
+		backgroundColor: landing ? alpha(theme.palette.common.black, 0.9) : alpha(theme.palette.secondary.light, 0.5),
 		...(small && {
 			cursor: 'pointer',
 		}),
@@ -72,32 +68,26 @@ const FeatureCardContiner: FC<FeatureCardContinerProps> = styled(
 
 interface StyledtypographyProps extends CommonProps, TypographyProps {}
 
-const FeatureCardTitle: FC<StyledtypographyProps> = styled(
-	Typography as FC<StyledtypographyProps>,
-	{
-		shouldForwardProp: (propName: string): boolean => !commonProps.includes(propName),
-	}
-)(({ theme, small, hover }) => ({
+const FeatureCardTitle: FC<StyledtypographyProps> = styled(Typography as FC<StyledtypographyProps>, {
+	shouldForwardProp: (propName: string): boolean => !commonProps.includes(propName),
+})(({ theme, small, hover, landing }) => ({
 	fontSize: theme.spacing(small ? 2 : 3),
-	color: theme.palette.text.primary,
+	color: landing ? theme?.palette?.common.white : theme.palette.text.primary,
 	fontWeight: theme?.typography?.fontWeightBold,
 	transition: theme.transitions.create(['transform', 'color']),
 	...(hover && {
 		transform: 'scale(1.1)',
-		color: theme.palette.primary.main,
+		color: landing ? theme?.palette?.common.white : theme.palette.primary.main,
 	}),
 }));
 
-const FeatureCardSubtitle: FC<StyledtypographyProps> = styled(
-	Typography as FC<StyledtypographyProps>,
-	{
-		shouldForwardProp: (propName: string): boolean => !commonProps.includes(propName),
-	}
-)(({ theme, small, hover }) => ({
-	color: theme?.palette?.text?.secondary,
+const FeatureCardSubtitle: FC<StyledtypographyProps> = styled(Typography as FC<StyledtypographyProps>, {
+	shouldForwardProp: (propName: string): boolean => !commonProps.includes(propName),
+})(({ theme, small, hover, landing }) => ({
+	color: landing ? theme?.palette?.common.white : theme?.palette?.text?.secondary,
 	transition: theme.transitions.create(['transform', 'color']),
 	...(hover && {
-		color: theme?.palette?.text?.primary,
+		color: landing ? theme?.palette?.common.white : theme?.palette?.text?.primary,
 		transform: 'scale(1.05)',
 	}),
 	...(small && {
@@ -105,10 +95,4 @@ const FeatureCardSubtitle: FC<StyledtypographyProps> = styled(
 	}),
 }));
 
-export {
-	StyledFeatureTitle,
-	FeatureCardContiner,
-	StyledIcon,
-	FeatureCardTitle,
-	FeatureCardSubtitle,
-};
+export { StyledFeatureTitle, FeatureCardContiner, StyledIcon, FeatureCardTitle, FeatureCardSubtitle };

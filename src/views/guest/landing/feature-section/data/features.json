@@ -1,46 +1,46 @@
 [
 	{
-		"icon": "fluent-mdl2:robot",
+		"icon": "",
 		"title": "Topuri",
 		"description": "2 x FBT MITUS 215A, 2 x FBT MITUS 115A, 2 x FBT MITUS 152, 2 x FBT MITUS 112, 2 x MACKIE HD 1531"
 	},
 	{
-		"icon": "grommet-icons:plan",
+		"icon": "",
 		"title": "Subwoofer",
 		"description": "2 x WHARFEDALE PRO DELTA 218B, 2 x WHARFEDALE PRO DELTA X18B"
 	},
 	{
-		"icon": "fad:automation-4p",
+		"icon": "",
 		"title": "Schela Lumini",
 		"description": "6 x BEAM 7R 230W, BEAMZ SHOWBAR "
 	},
 	{
-		"icon": "ri:grid-fill",
+		"icon": "",
 		"title": "Microfoane",
 		"description": "SHURE GLX, SHURE SLX, 4 x SHURE ULXP4"
 	},
 	{
-		"icon": "bx:analyse",
+		"icon": "",
 		"title": "Mixer",
 		"description": "POWERMATE 1000-3, RCF F 12 XR"
 	},
 	{
-		"icon": "tabler:template",
+		"icon": "",
 		"title": "Amplificari",
 		"description": "CROWN IT 4000, CROWN IT 6000"
 	},
 	{
-		"icon": "icon-park-outline:toolkit",
+		"icon": "",
 		"title": "Consola",
 		"description": "PIONEER DDJ-SX2 4-CHANNEL CONTROLLER"
 	},
 	{
-		"icon": "solar:hashtag-chat-linear",
+		"icon": "",
 		"title": "Efecte speciale",
 		"description": "MASINA DE FUM VERTICALA, MASINA DE FUM ORIZONTALA, HAZER, ARTIFICII INTERIOR"
 	},
 	{
-		"icon": "clarity:recycle-line",
+		"icon": "",
 		"title": "Platforma360",
 		"description": "PLATFORMA CAPACITATE 4-6 PERSOANE, RING LIGHT, CoPro HERO 11"
 	}

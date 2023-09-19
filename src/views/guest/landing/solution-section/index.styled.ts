@@ -1,17 +1,22 @@
 import { FC } from 'react';
 import { Box, BoxProps, styled } from '@mui/material';
-import serviciiLanding from '../../../../assets/landingSection/serviciiLanding.jpg';
 
-export const SolutionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => ({
+interface IProps extends BoxProps {
+	image?: string
+}
+
+export const SolutionWrapper: FC<IProps> = styled(Box as FC<IProps>, {
+	shouldForwardProp: (prop: string) => prop !== 'image',
+})(({ theme, image }) => ({
 	display: 'flex',
 	alignItems: 'center',
 	justifyContent: 'center',
 	minHeight: 'auto',
 	width: '100%',
 	overflow: 'hidden',
+	paddingTop: theme.spacing(2),
 	position: 'relative',
-	marginTop: '10px',
-	background: `url(${serviciiLanding}) center/cover no-repeat fixed`,
+	background: `url(${image}) center/cover no-repeat fixed`,
 	animation: 'wave 10s linear infinite',
 	zIndex: '1',
 
@@ -28,11 +33,10 @@ export const SolutionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ them
 	},
 
 	[theme.breakpoints.down('md')]: {
-		backgroundSize: 'cover',
+		background: `url(${image}) center/cover no-repeat`,
 	},
 	flexDirection: 'column',
-	maxWidth: theme.spacing(150),
-	marginBottom: theme.spacing(3),
+	maxWidth: '100%',
 	paddingBottom: theme.spacing(3),
 	'::before': {
 		content: '\'\'',
@@ -40,7 +44,7 @@ export const SolutionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ them
 		top: '40%',
 		left: '50%',
 		transform: 'rotateZ(15deg) translate(-50%)',
-		width: '900px',
+		width: '100%',
 		minHeight: '400px',
 		zIndex: '-1',
 		borderRadius: theme.shape.borderRadius,

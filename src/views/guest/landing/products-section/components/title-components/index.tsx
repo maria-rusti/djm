@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
 import { useMediaQuery, useTheme } from '@mui/material';
 import { Flex } from '../../../../../../components/common';
-import { ServicesSubtitle } from './index.styled';
 import { DragSG } from '../../../../../../hooks/use-drag/index.interfaces';
 import { SectionTitleSG } from '../../../../../../components/landing/section-title';
 import { NextButton } from './move-button/index.styled';
+import { SectionTitleDistinctSG } from '../../../../../../components/landing/section-title/index.styled';
 
 interface ITitleProps {
 	isDragged: DragSG;
@@ -21,8 +21,11 @@ const TitleComponent: FC<ITitleProps> = (props: ITitleProps) => {
 	return (
 		<Flex width='100%' justifyCenter alignItems='center' gap={{ xs: 2, sm: 5 }}>
 			<Flex column>
-				<SectionTitleSG>Descoperiți serviciile noastre</SectionTitleSG>
-				<ServicesSubtitle>Explorați diversele noastre servicii!</ServicesSubtitle>
+				<SectionTitleSG>
+					<SectionTitleDistinctSG sx={{ color: '#000' }}>
+						Descoperiți serviciile noastre
+					</SectionTitleDistinctSG>
+				</SectionTitleSG>
 			</Flex>
 			<Flex gap={3}>
 				<NextButton

@@ -7,11 +7,10 @@ import { Flex } from '../../../../../components/common';
 const FeatureTitle: FC = () => (
 	<>
 		<SectionBadgeSG>Echipament</SectionBadgeSG>
-		<Flex column>
+		<Flex sx={{paddingTop: '10px'}} column>
 			<SectionTitleSG>
-				<SectionTitleDistinctSG>Profesional</SectionTitleDistinctSG>
+				<SectionTitleDistinctSG>Profesional de Înaltă Performanță</SectionTitleDistinctSG>
 			</SectionTitleSG>
-			<SectionTitleSG>de Înaltă Performanță</SectionTitleSG>
 		</Flex>
 	</>
 );

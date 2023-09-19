@@ -12,6 +12,7 @@ import formatii from '../../../../assets/images/formatii.jpg';
 import majorat from '../../../../assets/images/majorat.jpg';
 import photo from '../../../../assets/images/photo.jpg';
 import sectionNunta from '../../../../assets/images/sectionNunta.jpg';
+import { SolutionWrapper } from '../solution-section/index.styled';
 
 const UseCasesSection: React.FC = (): JSX.Element => {
 	const [currentIndex, setCurrentIndex] = useState<number>(0);
@@ -19,17 +20,19 @@ const UseCasesSection: React.FC = (): JSX.Element => {
 
 	return (
 		<SectionWrapperSG sectionName='use-cases-section'>
-			<CasesTitle />
-			<UseCaseSectionWrapper>
-				<Flex width='100%'>
-					<UseCaseCard
-						currentIndex={currentIndex}
-						{...cards[currentIndex]}
-						image={imagesArray[currentIndex]}
-					/>
-				</Flex>
-				<UseCasesTabs currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
-			</UseCaseSectionWrapper>
+			<SolutionWrapper image={imagesArray[currentIndex]}>
+				<CasesTitle />
+				<UseCaseSectionWrapper>
+					<Flex width='100%'>
+						<UseCaseCard
+							currentIndex={currentIndex}
+							{...cards[currentIndex]}
+							image={imagesArray[currentIndex]}
+						/>
+					</Flex>
+					<UseCasesTabs currentIndex={currentIndex} setCurrentIndex={setCurrentIndex} />
+				</UseCaseSectionWrapper>
+			</SolutionWrapper>
 		</SectionWrapperSG>
 	);
 };

@@ -25,7 +25,7 @@ const lightTheme = (common: Omit<ThemeOptions, 'palette'>): Theme =>
 			},
 			text: {
 				primary: '#000000',
-				secondary: '#696969',
+				secondary: '#413f3f',
 			},
 		},
 	});

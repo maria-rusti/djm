@@ -1,6 +1,6 @@
-import { Typography } from '@mui/material';
 import React, { FC } from 'react';
 import { StyledTitle } from './index.styled';
+import { SolutionCardSubtitle } from '../../../views/guest/landing/solution-section/card/index.styled';
 
 interface IProps {
 	title: string;
@@ -10,9 +10,7 @@ interface IProps {
 const HeroSection: FC<IProps> = ({ title, description }) => (
 	<>
 		<StyledTitle>{title}</StyledTitle>
-		<Typography variant='h6' color='grey'>
-			{description}
-		</Typography>
+		<SolutionCardSubtitle>{description}</SolutionCardSubtitle>
 	</>
 );
 

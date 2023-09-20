@@ -7,16 +7,17 @@ import { useHover } from '../../../../../../hooks/use-hovered';
 
 interface IProps {
 	blog: BlogObjectProps
+	image: string
 }
 
 const BlogCard: FC<IProps> = (props: IProps) => {
-	const { blog } = props;
+	const { blog, image } = props;
 
 	const { hovered, elementRef } = useHover();
 
 	return (
 		<BlogCardContiner ref={elementRef} hovered={hovered}>
-			<BlogImage hovered={hovered} image={blog?.image} platform={blog?.platform} />
+			<BlogImage hovered={hovered} image={image} platform={blog?.platform} />
 			<BlogCardDetails date={blog?.date} title={blog?.title} hovered={hovered} />
 		</BlogCardContiner>
 	);

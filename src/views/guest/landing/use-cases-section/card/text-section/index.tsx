@@ -1,7 +1,7 @@
 import { Icon } from '@iconify/react';
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
 import { Flex } from '../../../../../../components/common';
-import { IconBackground } from '../../../solution-section/card/index.styled';
+import { IconBackground, SolutionCardSubtitle } from '../../../solution-section/card/index.styled';
 import { HeadingText } from '../../../components/hero-details/index.styled';
 import { uuid } from '../../../../../../utils/functions';
 import GetStartedButton from '../../../../../../components/landing/buttons/get-started-button';
@@ -25,9 +25,7 @@ const TextSection: React.FC<IProps> = ({ icon, title, description }): JSX.Elemen
 					<Box key={`${uuid()}-parent`}>
 						{paragraph.split('/br').map(
 							(sentence: string): JSX.Element => (
-								<Typography color='grey' fontSize={19} key={`${uuid()}-child`}>
-									{sentence}
-								</Typography>
+								<SolutionCardSubtitle key={`${uuid()}-child`}>{sentence}</SolutionCardSubtitle>
 							)
 						)}
 					</Box>

@@ -17,7 +17,7 @@ export const SolutionWrapper: FC<IProps> = styled(Box as FC<IProps>, {
 	paddingTop: theme.spacing(2),
 	position: 'relative',
 	background: `url(${image}) center/cover no-repeat fixed`,
-	animation: 'wave 10s linear infinite',
+	animation: 'wave 30s linear infinite',
 	zIndex: '1',
 
 	'@keyframes wave': {

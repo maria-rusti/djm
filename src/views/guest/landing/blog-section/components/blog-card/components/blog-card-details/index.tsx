@@ -1,25 +1,24 @@
 import React, { FC } from 'react';
-import { Divider, Typography } from '@mui/material';
+import { Divider } from '@mui/material';
 import { Flex } from '../../../../../../../../components/common';
 import { BlogCardActionContiner, BlogCardTitle } from './index.styled';
-import ReadMoreButton from '../../../blog-details/ReadMoreButton';
+import { SolutionCardSubtitle } from '../../../../../solution-section/card/index.styled';
 
 interface IProps {
-	title: string
-	date: string
-	hovered: boolean
+	title: string;
+	date: string;
+	hovered: boolean;
 }
 
 const BlogCardDetails: FC<IProps> = (props: IProps) => {
 	const { title, date, hovered } = props;
 
 	return (
-		<Flex width='100%' p={4} my={{sm: 0, md: 2}} gap={2}>
+		<Flex width='100%' p={4} my={{ sm: 0, md: 2 }} gap={2}>
 			<BlogCardTitle hovered={hovered}>{title}</BlogCardTitle>
 			<Divider sx={{ width: '100%', my: 1 }} />
 			<BlogCardActionContiner>
-				<Typography color='gray' fontSize='20px'>{date}</Typography>
-				<ReadMoreButton hovered={hovered} />
+				<SolutionCardSubtitle>{date}</SolutionCardSubtitle>
 			</BlogCardActionContiner>
 		</Flex>
 	);

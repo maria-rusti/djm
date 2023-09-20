@@ -17,7 +17,7 @@ const Contact: FC = (): JSX.Element => {
 				Echipa Noastră - Contactează-ne pentru 
 				Asistență Personalizată și Răspunsuri la Întrebările Tale`}
 			/>
-			<CardSG height='80vh' width='50%'>
+			<CardSG height='65vh' width='50%'>
 				<ContactForm />
 			</CardSG>
 		</ConctactWrapper>

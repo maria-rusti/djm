@@ -6,11 +6,12 @@ const SectionTitleSG: FC<TypographyProps> = ({
 	variant = 'h4',
 	textAlign,
 	...props
-}: TypographyProps): React.ReactElement => 
-	<SectionTitleTypho variant={variant} textAlign={textAlign} {...props} />;
+}: TypographyProps): React.ReactElement => (
+	<SectionTitleTypho component='p' variant={variant} textAlign={textAlign} {...props} />
+);
 
 SectionTitleSG.defaultProps = {
-	textAlign: 'center'
+	textAlign: 'center',
 };
 
 export { SectionTitleSG };

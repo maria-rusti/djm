@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { Controller } from 'react-hook-form';
 import { SystemStyleObject } from '@mui/system';
-import { Theme } from '@mui/material';
+import { InputLabel, Theme } from '@mui/material';
 import { capitalize, normalizeCamelCase } from '../../../../../utils/functions';
 import { FormInputPropsSG } from './index.interfaces';
 import { StyledInputSG } from '../../index.styled';
@@ -38,21 +38,26 @@ const FormInputSG: FC<FormInputPropsSG> = ({
 		name={name}
 		control={control}
 		render={({ field: { name: parsedName, value, onChange, onBlur }, fieldState: { error } }): JSX.Element => (
-			<StyledInputSG
-				name={parsedName.split(' ').join('-')}
-				InputProps={{ ...muiInputProps, id: parsedName.split(' ').join('-') }}
-				type={type}
-				autoFocus={autoFocus}
-				value={value}
-				id={name}
-				label={label || capitalize(normalizeCamelCase(parsedName))}
-				onChange={onChange}
-				onBlur={onBlur}
-				helperText={error?.message || ''}
-				error={!!error}
-				sx={({ spacing }): SystemStyleObject<Theme> => ({ width: width || spacing(30) })}
-				{...props}
-			/>
+			<>
+				<InputLabel sx={{ display: 'none' }} id={`${name}-label`}>
+					{name}
+				</InputLabel>
+				<StyledInputSG
+					name={parsedName.split(' ').join('-')}
+					InputProps={{ ...muiInputProps, id: `${name}-input` }}
+					type={type}
+					autoFocus={autoFocus}
+					value={value}
+					id={`${name}-input`}
+					label={label || capitalize(normalizeCamelCase(parsedName))}
+					onChange={onChange}
+					onBlur={onBlur}
+					helperText={error?.message || ''}
+					error={!!error}
+					sx={({ spacing }): SystemStyleObject<Theme> => ({ width: width || spacing(30) })}
+					{...props}
+				/>
+			</>
 		)}
 	/>
 );

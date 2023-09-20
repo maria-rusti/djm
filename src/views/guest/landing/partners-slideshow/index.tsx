@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import { Icon } from '@iconify/react';
 import { Link } from '@mui/material';
-import { SliderContainer } from '../components/slide-show/SliderContiner';
+import { SliderContainer } from '../components/slide-show/SliderContiner.styled';
 import { SliderList } from '../components/slide-show/SliderList';
 import { SliderItem } from '../components/slide-show/SliderItem';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
@@ -9,7 +9,7 @@ import { SectionDivider } from '../components/section-divider/index.styled';
 import { uuid } from '../../../../utils/functions';
 import { IPartner } from '../../../../hooks/fetch-hooks/use-partners/index.interfaces';
 import { SolutionWrapper } from '../solution-section/index.styled';
-import image from '../../../../assets/landingSection/contact.jpg';
+import image from '../../../../assets/landingSection/contact1.jpg';
 
 const doubleArr = (data: IPartner[]): IPartner[] => [...data, ...data];
 const sliderContainerStyle = {

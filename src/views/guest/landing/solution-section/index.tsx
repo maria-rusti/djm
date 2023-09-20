@@ -24,7 +24,7 @@ const SolutionSection: React.FC = (): JSX.Element => {
 		<SectionWrapperSG sectionName='solutions-section' column>
 			<SolutionWrapper image={serviciiImage} sx={{ paddingTop: theme.spacing(3) }}>
 				<Flex sx={{ paddingTop: '10px' }} column maxWidth={theme.spacing(62)} gap={3}>
-					<SectionBadgeSG variant='h3'>Parteneri</SectionBadgeSG>
+					<SectionBadgeSG>Parteneri</SectionBadgeSG>
 					<SectionTitleSG>Alături de Sunet:</SectionTitleSG>
 				</Flex>
 				<Flex width='100%' flexWrap='wrap' justifyCenter minWidth='100%' maxWidth='100%'>

@@ -1,14 +1,16 @@
 import React, { FC } from 'react';
 import { isArray } from '../../../../utils/functions';
 import { IServiceResponse } from '../../../../hooks/fetch-hooks/use-services/index.interfaces';
-import DraggCarouselWraper from './components/carousel-components/DraggCarouselWraper';
-import TitleComponent from './components/title-components';
+// import DraggCarouselWraper from './components/carousel-components/DraggCarouselWraper';
+// import TitleComponent from './components/title-components';
 import ServicesCard from './components/services-card';
-import useDrag from '../../../../hooks/use-drag';
+// import useDrag from '../../../../hooks/use-drag';
 import { SectionBadgeSG } from '../../../../components/landing/section-badge';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 import { SolutionWrapper } from '../solution-section/index.styled';
 import image from '../../../../assets/landingSection/backServicii.jpg';
+import { Flex } from '../../../../components/common';
+import { SectionTitleSG } from '../../../../components/landing/section-title';
 
 const ProductsSection: FC = () => {
 	const services = [
@@ -82,16 +84,17 @@ experiență în muzică, creează atmosfera perfectă la
 				},
 			],
 			_id: '64c36ea54e0df08gdf4e2359ef',
-			path: '/servicii/cocktail-bar',
+			path: '/servicii/cocktail',
 		},
 	];
 	const data = isArray(services) ? services : [];
-	const { isDragged, handleNext, handleDrag, handleDragStart, handleDragStop } = useDrag(data?.length);
+	// const { isDragged, handleNext, handleDrag, handleDragStart, handleDragStop } = useDrag(data?.length);
 	return (
 		<SectionWrapperSG sx={{ m: 0 }} sectionName='services-section'>
 			<SolutionWrapper image={image}>
 				<SectionBadgeSG>Servicii</SectionBadgeSG>
-				<TitleComponent dataLength={data?.length} isDragged={isDragged} handleNext={handleNext} />
+				<SectionTitleSG> Descoperiți serviciile noastre</SectionTitleSG>
+				{/* <TitleComponent dataLength={data?.length} isDragged={isDragged} handleNext={handleNext} />
 				<DraggCarouselWraper
 					handleDrag={handleDrag}
 					handleDragStart={handleDragStart}
@@ -100,7 +103,10 @@ experiență în muzică, creează atmosfera perfectă la
 					childrens={data?.map((service: IServiceResponse) => (
 						<ServicesCard key={service?._id} service={service} />
 					))}
-				/>
+				/> */}
+				<Flex width='100%' flexWrap='wrap' justifyCenter minWidth='100%' maxWidth='100%'>
+					{data?.map((service: IServiceResponse) => <ServicesCard key={service?._id} service={service} />)}
+				</Flex>
 			</SolutionWrapper>
 		</SectionWrapperSG>
 	);

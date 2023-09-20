@@ -11,7 +11,7 @@ const ServicesCard: FC<IProps> = (props: IProps) => {
 	const { service } = props;
 
 	return (
-		<CardSG width={350} height={360} hover sx={{ cursor: 'pointer' }}>
+		<CardSG width={270} height={360} hover sx={{ cursor: 'pointer' }}>
 			<ServicesCardContent service={service} />
 		</CardSG>
 	);

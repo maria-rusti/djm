@@ -21,7 +21,7 @@ const darkTheme = (common: Omit<ThemeOptions, 'palette'>): Theme =>
 			},
 			text: {
 				primary: '#F6FAF8',
-				secondary: '#696969',
+				secondary: '#413f3f',
 			},
 		},
 	});

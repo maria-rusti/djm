@@ -1,7 +1,7 @@
 import { Box, BoxProps, styled } from '@mui/material';
 import { FC } from 'react';
 
-const LandingPageContent: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => ({
+const LandingPageContent: FC<BoxProps> = styled(Box as FC<BoxProps>)(() => ({
 	width: '100%',
 	display: 'flex',
 	alignItems: 'center',

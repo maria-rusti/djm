@@ -3,6 +3,7 @@ import { Flex } from '../../../common';
 import { IFeatureItem } from '../../feature-item';
 import { SectionBadgeSG } from '../../section-badge';
 import InformationSectionFeatures from '../components/information-section-features';
+import { SolutionCardSubtitle } from '../../../../views/guest/landing/solution-section/card/index.styled';
 
 export interface InformationSectionProps {
 	badge: string;
@@ -23,7 +24,7 @@ const InformationSection: React.FC<IProps> = ({ item, service }): JSX.Element =>
 			<SectionBadgeSG>{badge}</SectionBadgeSG>
 			<Box>
 				<Typography fontSize={theme.typography.h4.fontSize}>{title}</Typography>
-				<Typography color={theme.palette.grey[600]}>{subTitle}</Typography>
+				<SolutionCardSubtitle>{subTitle}</SolutionCardSubtitle>
 			</Box>
 			<InformationSectionFeatures features={features} video={service} />
 		</Flex>

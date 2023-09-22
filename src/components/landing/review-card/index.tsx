@@ -1,5 +1,5 @@
 import { Box, ListItem, Rating, Typography } from '@mui/material';
-import DummyImage from '../../../assets/images/dummy-review.jpg';
+// import DummyImage from '../../../assets/images/dummy-review.jpg';
 import { CardSG, Flex } from '../../common';
 import { IReview } from '../../../hooks/fetch-hooks/use-review';
 import { ReviewCardText } from './index.styled';
@@ -11,7 +11,7 @@ const ReviewCard: React.FC<IReview> = ({ name, content, position }): JSX.Element
 				<Box width={40} height={40}>
 					<Box
 						component='img'
-						src={`${DummyImage}`}
+						src='https://storage.googleapis.com/sbdcloud/djm-1695385215322-dummy-review.jpg'
 						alt='Image not found'
 						borderRadius='50%'
 						width='100%'

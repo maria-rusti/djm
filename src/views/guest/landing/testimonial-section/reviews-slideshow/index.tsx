@@ -8,6 +8,19 @@ import { ReviewsSlideshowContainer } from './index.styled';
 const ReviewsSlideshow: React.FC = (): JSX.Element => {
 	const { data: reviews } = useReview();
 	console.log({ reviews });
+	const sliderContainerStyle = {
+		display: 'flex',
+		overflowX: 'auto',
+		width: '100%',
+		WebkitOverflowScrolling: 'touch',
+		scrollSnapType: 'x mandatory',
+		msOverflowStyle: 'none',
+		scrollbarWidth: 'none',
+		'&::-webkit-scrollbar': {
+			display: 'none',
+		},
+	};
+	
 
 	const reviewsHalf: number | null = reviews && Math.ceil(reviews.length / 2);
 	const upperReviews: IReview[] = reviews && reviewsHalf ? reviews?.slice(0, reviewsHalf) : [];
@@ -19,7 +32,7 @@ const ReviewsSlideshow: React.FC = (): JSX.Element => {
 				<SliderList
 					direction='right'
 					duration={50}
-					sx={{ width: `${800 * (upperReviews?.length ?? 0)}px!important` }}
+					sx={{...sliderContainerStyle, width: `${800 * (upperReviews?.length ?? 0)}px!important` }}
 				>
 					{[...upperReviews, ...upperReviews].map(
 						(review: IReview): JSX.Element => (
@@ -33,7 +46,7 @@ const ReviewsSlideshow: React.FC = (): JSX.Element => {
 					<SliderList
 						direction='left'
 						duration={50}
-						sx={{ width: `${800 * (lowerReviews?.length ?? 0)}px!important` }}
+						sx={{...sliderContainerStyle, width: `${800 * (lowerReviews?.length ?? 0)}px!important` }}
 					>
 						{[...lowerReviews, ...lowerReviews].map(
 							(review: IReview): JSX.Element => (

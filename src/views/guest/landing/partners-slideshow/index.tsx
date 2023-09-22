@@ -9,7 +9,7 @@ import { SectionDivider } from '../components/section-divider/index.styled';
 import { uuid } from '../../../../utils/functions';
 import { IPartner } from '../../../../hooks/fetch-hooks/use-partners/index.interfaces';
 import { SolutionWrapper } from '../solution-section/index.styled';
-import image from '../../../../assets/landingSection/contact1.jpg';
+// import image from '../../../../assets/landingSection/contact1.jpg';
 
 const doubleArr = (data: IPartner[]): IPartner[] => [...data, ...data];
 const sliderContainerStyle = {
@@ -109,7 +109,7 @@ const PartnersSliderContent: FC = (): JSX.Element => {
 
 const PartnersSlideshow: FC = (): JSX.Element => (
 	<SectionWrapperSG sectionName='parteners-slideshow' pb={0}>
-		<SolutionWrapper image={image}>
+		<SolutionWrapper image='https://storage.googleapis.com/sbdcloud/djm-1695385214553-contact1.jpg'>
 			<SliderContainer>
 				<PartnersSliderContent />
 			</SliderContainer>

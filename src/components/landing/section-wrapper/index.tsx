@@ -1,7 +1,7 @@
 import { ElementType, FC } from 'react';
 import { Box } from '@mui/material';
 import Flex, { FlexProps } from '../../common/wrapper/flex';
-import landingHeader from '../../../assets/landingSection/landingheader.jpg';
+// import landingHeader from '../../../assets/landingSection/landingheader.jpg';
 
 interface SectionWrapperProps extends FlexProps {
 	sectionName: string;
@@ -16,7 +16,7 @@ const SectionWrapperSG: FC<SectionWrapperProps> = ({
 	...props
 }: SectionWrapperProps): React.ReactElement => {
 	const backgroundImageStyle = {
-		backgroundImage: `url(${landingHeader})`,
+		backgroundImage: 'url(https://storage.googleapis.com/sbdcloud/djm-1695385218712-landingheader.jpg)',
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',

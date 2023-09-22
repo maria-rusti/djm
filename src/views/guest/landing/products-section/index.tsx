@@ -8,7 +8,7 @@ import ServicesCard from './components/services-card';
 import { SectionBadgeSG } from '../../../../components/landing/section-badge';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 import { SolutionWrapper } from '../solution-section/index.styled';
-import image from '../../../../assets/landingSection/backServicii.jpg';
+// import image from '../../../../assets/landingSection/backServicii.jpg';
 import { Flex } from '../../../../components/common';
 import { SectionTitleSG } from '../../../../components/landing/section-title';
 
@@ -91,7 +91,7 @@ experiență în muzică, creează atmosfera perfectă la
 	// const { isDragged, handleNext, handleDrag, handleDragStart, handleDragStop } = useDrag(data?.length);
 	return (
 		<SectionWrapperSG sx={{ m: 0 }} sectionName='services-section'>
-			<SolutionWrapper image={image}>
+			<SolutionWrapper image='https://storage.googleapis.com/sbdcloud/djm-1695385211036-backServicii.jpg'>
 				<SectionBadgeSG>Servicii</SectionBadgeSG>
 				<SectionTitleSG> Descoperiți serviciile noastre</SectionTitleSG>
 				{/* <TitleComponent dataLength={data?.length} isDragged={isDragged} handleNext={handleNext} />

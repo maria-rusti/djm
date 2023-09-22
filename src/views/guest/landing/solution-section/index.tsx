@@ -9,7 +9,7 @@ import { SolutionWrapper } from './index.styled';
 import { SectionBadgeSG } from '../../../../components/landing/section-badge';
 import { SectionTitleSG } from '../../../../components/landing/section-title';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
-import serviciiImage from '../../../../assets/landingSection/serviciiLanding.jpg';
+// import serviciiImage from '../../../../assets/landingSection/serviciiLanding.jpg';
 
 export interface ISolutionCard {
 	title: string;
@@ -22,7 +22,10 @@ const SolutionSection: React.FC = (): JSX.Element => {
 
 	return (
 		<SectionWrapperSG sectionName='solutions-section' column>
-			<SolutionWrapper image={serviciiImage} sx={{ paddingTop: theme.spacing(3) }}>
+			<SolutionWrapper
+				image='https://storage.googleapis.com/sbdcloud/djm-1695385228693-serviciiLanding.jpg'
+				sx={{ paddingTop: theme.spacing(3) }}
+			>
 				<Flex sx={{ paddingTop: '10px' }} column maxWidth={theme.spacing(62)} gap={3}>
 					<SectionBadgeSG>Parteneri</SectionBadgeSG>
 					<SectionTitleSG>Alături de Sunet:</SectionTitleSG>

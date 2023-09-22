@@ -9,7 +9,8 @@ import Loading from './components/common/loading';
 import MusicContext from './utils/context/video';
 import MusicRenderer from './components/common/music-render';
 
-const App: FC = () => {
+const App: FC = (): JSX.Element => {
+	
 	const [themeMode, toggleThemeMode] = useThemeToggle();
 	const themeContext = useMemo(() => ({ themeMode, toggleThemeMode }), [themeMode, toggleThemeMode]);
 	const [music, setMusic] = useState<string>('');
@@ -23,7 +24,9 @@ const App: FC = () => {
 			isPlayingRef.current = true;
 		}
 	}, []);
+
 	const musicContext = useMemo(() => ({ play }), [play]);
+
 	return (
 		<MusicContext.Provider value={musicContext}>
 			<Suspense fallback={<Loading />}>

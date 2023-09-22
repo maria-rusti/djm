@@ -41,6 +41,7 @@ const HeroDetails: FC = () => {
 						minHeight: theme.spacing(15),
 						width: '100%',
 						mt: theme.spacing(3),
+						marginBottom: width > 600 ? '75px' : '0px'
 					}}
 					column
 					justifyCenter

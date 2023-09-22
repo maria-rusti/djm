@@ -8,7 +8,7 @@ import { IFeature } from './index.interfaces';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 import { FeatureCardContiner, FeatureCardSubtitle, FeatureCardTitle, StyledIcon } from './components/index.styled';
 import { SolutionWrapper } from '../solution-section/index.styled';
-import featureImage from '../../../../assets/landingSection/feature.jpg';
+// import featureImage from '../../../../assets/landingSection/feature.jpg';
 
 interface IFeatureCardProps extends GridProps {
 	feature: IFeature;
@@ -51,7 +51,7 @@ const FeatureSection: FC = () => {
 
 	return (
 		<SectionWrapperSG sectionName='feature-secions' column>
-			<SolutionWrapper image={featureImage}>
+			<SolutionWrapper image='https://storage.googleapis.com/sbdcloud/djm-1695385216110-feature.jpg'>
 				<FeatureTitle />
 				<Flex width='100%' maxWidth='1200px' column justifySelf='center' justifyCenter p={1} gap={4}>
 					<Grid container rowGap={4} columnSpacing={4}>

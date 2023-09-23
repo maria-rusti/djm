@@ -1,6 +1,5 @@
 import React, { FC } from 'react';
 import { isArray } from '../../../../utils/functions';
-import { IServiceResponse } from '../../../../hooks/fetch-hooks/use-services/index.interfaces';
 // import DraggCarouselWraper from './components/carousel-components/DraggCarouselWraper';
 // import TitleComponent from './components/title-components';
 import ServicesCard from './components/services-card';
@@ -11,6 +10,7 @@ import { SolutionWrapper } from '../solution-section/index.styled';
 // import image from '../../../../assets/landingSection/backServicii.jpg';
 import { Flex } from '../../../../components/common';
 import { SectionTitleSG } from '../../../../components/landing/section-title';
+import { IServiceResponse } from '../../../../hooks/fetch-hooks/use-services/index.interfaces';
 
 const ProductsSection: FC = () => {
 	const services = [

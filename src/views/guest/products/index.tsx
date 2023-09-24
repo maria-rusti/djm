@@ -13,14 +13,6 @@ import { uuid } from '../../../utils/functions';
 import ProductsPageSection from '../../../components/landing/products-page-section';
 import HeroSection from '../../../components/common/hero-section';
 import { ProductsPageWrapper } from './index.styled';
-import mariusFoto from '../../../assets/images/mariusFoto.jpg';
-import mariusMusic from '../../../assets/images/mariusParty.jpg';
-import fresh1 from '../../../assets/images/fresh.jpeg';
-import fresh2 from '../../../assets/images/fresh360.jpg';
-import lights1 from '../../../assets/images/lights1.jpg';
-import lights2 from '../../../assets/images/lights2.jpg';
-import bar1 from '../../../assets/images/bar1.jpg';
-import bar2 from '../../../assets/images/bar2.jpg';
 
 const handlePageContent = (page: string | undefined): IProductContent => {
 	switch (page) {
@@ -59,14 +51,14 @@ const Products: FC = () => {
 				left: '',
 				above: false,
 				width: '70%',
-				src: mariusFoto,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385223036-mariusFoto.jpg',
 			},
 			{
 				top: '-40%',
 				left: '50%',
 				above: true,
 				width: '65%',
-				src: mariusMusic,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385224230-mariusParty.jpg',
 			},
 		],
 		sonorizare: [
@@ -75,14 +67,14 @@ const Products: FC = () => {
 				left: '',
 				above: false,
 				width: '70%',
-				src: mariusFoto,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385223036-mariusFoto.jpg',
 			},
 			{
 				top: '-40%',
 				left: '50%',
 				above: true,
 				width: '65%',
-				src: mariusMusic,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385224230-mariusParty.jpg',
 			},
 		],
 		fresh360: [
@@ -91,14 +83,14 @@ const Products: FC = () => {
 				left: '',
 				above: false,
 				width: '70%',
-				src: fresh1,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385217507-fresh.jpeg',
 			},
 			{
 				top: '-40%',
 				left: '50%',
 				above: true,
 				width: '65%',
-				src: fresh2,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385218014-fresh360.jpg',
 			},
 		],
 		lights: [
@@ -107,14 +99,14 @@ const Products: FC = () => {
 				left: '',
 				above: false,
 				width: '70%',
-				src: lights2,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385220330-lights2.jpg',
 			},
 			{
 				top: '-40%',
 				left: '50%',
 				above: true,
 				width: '65%',
-				src: lights1,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385219301-lights1.jpg',
 			},
 		],
 		cocktail: [
@@ -123,14 +115,14 @@ const Products: FC = () => {
 				left: '',
 				above: false,
 				width: '70%',
-				src: bar1,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385212640-bar2.jpg',
 			},
 			{
 				top: '-40%',
 				left: '50%',
 				above: true,
 				width: '65%',
-				src: bar2,
+				src: 'https://storage.googleapis.com/sbdcloud/djm-1695385211961-bar1.jpg',
 			},
 		],
 	};

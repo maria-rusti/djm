@@ -117,7 +117,6 @@ const Canvas: React.FC = (props): JSX.Element => {
 
 		const context = canvas?.getContext('2d');
 
-		// let frameCount = 0;
 		let animationFrameId: number;
 
 		if (canvas && !isMobile) {
@@ -125,7 +124,6 @@ const Canvas: React.FC = (props): JSX.Element => {
 		}
 
 		const render = (): void => {
-			// frameCount++;
 			if (inScreen && canvas) {
 				drawImage(context, [0, 0], 0, true);
 				drawImage(context, [rw, rh], 5);

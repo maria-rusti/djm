@@ -18,9 +18,9 @@ const StyledTabs: FC<TabsProps> = styled(Tabs)(({ theme }) => ({
 			display: 'none'
 		},
 		'&.scrolling': {
-			animation: '$scrollTabs 10s linear infinite', // Durata animației și iterațiile pot fi ajustate
-			whiteSpace: 'nowrap', // Face ca taburile să fie pe aceeași linie
-			overflowX: 'auto', // Permite scroll orizontal
+			animation: '$scrollTabs 10s linear infinite', 
+			whiteSpace: 'nowrap', 
+			overflowX: 'auto',
 		  },
 		  '@keyframes scrollTabs': {
 			'0%': {

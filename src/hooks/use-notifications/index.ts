@@ -29,7 +29,6 @@ function useNotifications(): UseNotificationsReturnType {
 		(message: string) => {
 			setNotifications((prev) => {
 				const temp = [...prev];
-				// TO REMOVE WHEN MULTIPLE NOTIFICATIONS ARE POSSIBLE
 				if (temp.length) temp.splice(0);
 				temp.push({ message, type: notifify.success });
 				return temp;
@@ -42,7 +41,6 @@ function useNotifications(): UseNotificationsReturnType {
 		(message: string) => {
 			setNotifications((prev) => {
 				const temp = [...prev];
-				// TO REMOVE WHEN MULTIPLE NOTIFICATIONS ARE POSSIBLE
 				if (temp.length) temp.splice(0);
 				temp.push({ message, type: notifify.error });
 				return temp;

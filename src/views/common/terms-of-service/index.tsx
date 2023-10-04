@@ -5,7 +5,6 @@ import HeroSection from '../../../components/common/hero-section';
 import StaticContent, { DataPropType } from '../../../components/common/static-content';
 import TermsOfServiceWrapper from './index.styled';
 import { Flex } from '../../../components/common';
-// data ending as *_arr_item should be threathed as item of an array, replace 'arr' with the index + 1
 
 const TermsOfService: FC = (): JSX.Element => {
 	const { t } = useTranslation();

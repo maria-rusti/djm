@@ -25,10 +25,6 @@ export interface IValueReview {
 	content: string;
 	services: string[];
 }
-// dj = 'Deejay',
-// fresh360 = 'Fresh360',
-// lights = 'Lights',
-// bar = 'Cocktail Bar',
 
 interface SendButtonProps {
 	loadingSubscribe: boolean;

@@ -24,7 +24,6 @@ export const useHover = (): UseHoverReturnType => {
 			};
 		}
 
-		// Return a no-op function if target is falsy
 		return () => { };
 	}, [elementRef, handleMouseEnter, handleMouseLeave]);
 

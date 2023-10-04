@@ -95,7 +95,6 @@ export const SecondHeroSectionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>
 		content: '\'\'',
 		position: 'absolute',
 		clipPath: 'polygon(0 5%, 100% 0%, 100% 90%, 0% 95%)',
-		// backgroundColor: alpha(theme.palette.secondary.light, 0.4),
 		width: '100%',
 		height: '100%',
 		zIndex: '-1',

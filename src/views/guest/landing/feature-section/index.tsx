@@ -1,14 +1,12 @@
 import React, { FC, useState } from 'react';
 import { Grid, GridProps } from '@mui/material';
 import { Flex } from '../../../../components/common';
-// import { uuid } from '../../../../utils/functions';
 import features from './data/features.json';
 import FeatureTitle from './components/FeatureTitle';
 import { IFeature } from './index.interfaces';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 import { FeatureCardContiner, FeatureCardSubtitle, FeatureCardTitle, StyledIcon } from './components/index.styled';
 import { SolutionWrapper } from '../solution-section/index.styled';
-// import featureImage from '../../../../assets/landingSection/feature.jpg';
 
 interface IFeatureCardProps extends GridProps {
 	feature: IFeature;

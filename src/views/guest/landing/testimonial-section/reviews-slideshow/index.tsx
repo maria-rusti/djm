@@ -13,20 +13,6 @@ const ReviewsSlideshow: React.FC = (): JSX.Element => {
 	const upperReviews: IReview[] = reviews && reviewsHalf ? reviews?.slice(0, reviewsHalf) : [];
 	const lowerReviews: IReview[] = reviews && reviewsHalf ? reviews?.slice(reviewsHalf) : [];
 
-	// Calculați lățimea containerului SliderList în funcție de numărul de elemente
-	// const sliderContainerStyle = {
-	// 	display: 'flex',
-	// 	overflowX: 'auto',
-	// 	width: `${800 * (upperReviews?.length ?? 0)}px`, // Modificați dimensiunea containerului
-	// 	WebkitOverflowScrolling: 'touch',
-	// 	scrollSnapType: 'x mandatory',
-	// 	msOverflowStyle: 'none',
-	// 	scrollbarWidth: 'none',
-	// 	'&::-webkit-scrollbar': {
-	// 		display: 'none',
-	// 	},
-	// };
-
 	return (
 		<Flex column justifyCenter alignItems='center' gap={2}>
 			<ReviewsSlideshowContainer>

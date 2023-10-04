@@ -6,9 +6,6 @@ import { BlogObjectProps } from './index.interfaces';
 import BlogCard from './components/blog-card';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 import { SolutionWrapper } from '../solution-section/index.styled';
-// import newImage from '../../../../assets/landingSection/new.jpg';
-// import co from '../../../../assets/landingSection/co2.jpg';
-// import artificii from '../../../../assets/landingSection/artificii.jpg';
 
 const BlogSection: FC = () => {
 	const arrayImage = [

@@ -10,7 +10,6 @@ import { SectionBadgeSG } from '../../../../components/landing/section-badge';
 import { SectionTitleSG } from '../../../../components/landing/section-title';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
 import { SectionTitleDistinctSG } from '../../../../components/landing/section-title/index.styled';
-// import serviciiImage from '../../../../assets/landingSection/serviciiLanding.jpg';
 
 export interface ISolutionCard {
 	title: string;

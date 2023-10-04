@@ -16,11 +16,6 @@ function ifIsArray<T>(el: any): T[] {
 	return (isArray(el) ? [...el] : []) as T[];
 }
 
-// This function can be used to get the form values without creating a new state
-// to control them as MUI with Formik is giving issues on that side.
-//    ⚠️ ATTENTION
-// On Select component if the value is from a multiple select the next prop has to be used
-// inputProps = {{ id: * you can use any id but it has to contain the word 'multiplesel' * }}
 const submitForm = (e: FormEvent): Record<string, string | string[]> => {
 	e.preventDefault();
 	const targetKeys = Object.keys(e.target).filter((key) => !Number.isNaN(parseInt(key)));

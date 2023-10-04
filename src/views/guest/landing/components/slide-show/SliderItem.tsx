@@ -6,12 +6,12 @@ export const SliderItem = styled('li')(({ theme }) => ({
 	display: 'flex',
 	justifyContent: 'center',
 	alignItems: 'center',
-	padding: '0', // Schimbați padding-ul la 0 pentru a evita spațiul suplimentar
+	padding: '0', 
 	height: '60px',
 	borderRadius: theme.shape.borderRadius,
 	cursor: 'pointer',
 	':hover': {
 		backgroundColor: '#fafafa',
-		transform: 'scale(1.1)', // Schimbați 'scale' în 'transform'
+		transform: 'scale(1.1)', 
 	},
 }));

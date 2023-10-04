@@ -23,7 +23,6 @@ function useDrag(dataLength: number): UseDragReturnType {
 		const dragObject: DragSG =
 			{ isDragged: true, prevPageX: e.pageX, prevScrollLeft: isDragged?.prevScrollLeft, position: 0 };
 		setIsDragged((dragObject));
-		console.log('start');
 
 	};
 
@@ -37,7 +36,6 @@ function useDrag(dataLength: number): UseDragReturnType {
 
 	const handleDragStop = (): void => {
 		setIsDragged((prev) => ({ ...prev, isDragged: false }));
-		console.log('stop');
 		
 	};
 

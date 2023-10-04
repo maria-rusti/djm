@@ -10,7 +10,7 @@ interface IProps {
 const HeroSection: FC<IProps> = ({ title, description }) => (
 	<>
 		<StyledTitle>{title}</StyledTitle>
-		<SolutionCardSubtitle>{description}</SolutionCardSubtitle>
+		<SolutionCardSubtitle sx={{ paddingBottom: '24px' }}>{description}</SolutionCardSubtitle>
 	</>
 );
 

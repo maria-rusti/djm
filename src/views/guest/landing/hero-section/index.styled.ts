@@ -36,6 +36,7 @@ const HeroSectionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme })
 	overflow: 'hidden',
 	position: 'relative',
 	height: '100%',
+	paddingBottom: '90px',
 	'::before': {
 		content: '\'\'',
 		position: 'absolute',

@@ -7,7 +7,6 @@ import { ReviewsSlideshowContainer } from './index.styled';
 
 const ReviewsSlideshow: React.FC = (): JSX.Element => {
 	const { data: reviews } = useReview();
-	console.log({ reviews });
 
 	const reviewsHalf: number | null = reviews && Math.ceil(reviews.length / 2);
 	const upperReviews: IReview[] = reviews && reviewsHalf ? reviews?.slice(0, reviewsHalf) : [];

@@ -10,8 +10,8 @@ const HeroSectionWrapper: FC<IProps> = styled(Box, {
 })(({ reverseGradient, theme }: { reverseGradient?: boolean; theme: Theme }) => ({
 	height: 'auto',
 	width: '100%',
-	marginTop: reverseGradient ?  theme.spacing(10) : theme.spacing(3),
-	marginBottom: reverseGradient ?  theme.spacing(0) : theme.spacing(5),
+	marginTop: reverseGradient ?  theme.spacing(10) : theme.spacing(0),
+	marginBottom: reverseGradient ?  theme.spacing(0) : theme.spacing(0),
 	maxWidth: '100%',
 	textAlign: 'center',
 	display: 'flex',

@@ -13,7 +13,6 @@ export const decryptJS = (encrypted: string): string => {
 };
 
 export const encryptData = (sentData: any): { data: string } => {
-	console.log(sentData);
 	const stringData = JSON.stringify(sentData);
 	const encData = encryptJS(stringData);
 
@@ -25,6 +24,5 @@ export const decryptData = (dataResponse: AxiosResponse): any => {
 	const enc = String(dataResponse?.data?.data);
 	const dec = decryptJS(enc);
 	const data = JSON.parse(dec);
-	console.log('received data:', data);
 	return data;
 };

@@ -18,7 +18,7 @@ const ProductsPageSectionWrapper: FC<ProductsPageSectionWrapperProps> =
 		}),
 		[theme.breakpoints.down('lg')]: {
 			flexDirection: 'column-reverse',
-			maxWidth: '100%',
+			maxWidth: '100vh',
 			width: '100%',
 			gap: theme.spacing(5),
 		}

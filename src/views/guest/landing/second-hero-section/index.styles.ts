@@ -91,14 +91,14 @@ export const SecondHeroSectionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>
 		width: '100%',
 		marginRight: theme.spacing(2),
 	},
-	'::before': {
-		content: '\'\'',
-		position: 'absolute',
-		clipPath: 'polygon(0 5%, 100% 0%, 100% 90%, 0% 95%)',
-		width: '100%',
-		height: '100%',
-		zIndex: '-1',
-	}
+	// '::before': {
+	// 	content: '\'\'',
+	// 	position: 'absolute',
+	// 	clipPath: 'polygon(0 5%, 100% 0%, 100% 90%, 0% 95%)',
+	// 	width: '100%',
+	// 	height: '100%',
+	// 	zIndex: '-1',
+	// }
 }));
 
 export { FloatingImageComponent, HeroSectionWrapper, ImageWrapper, AbsoluteImage };

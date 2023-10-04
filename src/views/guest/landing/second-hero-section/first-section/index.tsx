@@ -20,7 +20,7 @@ const FirstSection: React.FC = (): JSX.Element => {
 
 	const arrayMap = width > 400 ? sectionFeatures : [sectionFeatures[0], sectionFeatures[1]];
 	return (
-		<HeroSectionWrapper sx={{ paddingBottom: width > 600 ? '133px' : '0' }}>
+		<HeroSectionWrapper sx={{ paddingBottom: width > 600 ? '85px' : '0' }}>
 			<Flex column alignEnd justifyCenter gap={{ xs: 8, md: 6 }} maxWidth='550px'>
 				<Typography component='h2'> </Typography>
 				<SectionTitleSG>

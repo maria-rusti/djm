@@ -16,7 +16,6 @@ async function fetchReviews(): Promise<IReview[] | string> {
 	}
 }
 async function postReview(params: IValueReview): Promise<{ message: string }> {
-	console.log(params);
 	try {
 		const encData = encryptData(params);
 		const res = await request.post('reviews', encData);

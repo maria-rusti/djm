@@ -36,7 +36,6 @@ const PopoverComponent: React.FC<PopoverComponentProps> = ({ data, displayArrow 
 		setOpen(false);
 		setAnchorEl(null);
 		setSelectedItemId(null);
-		console.log('test');
 	};
 
 	const anchors: IAnchor[] = [{ id: 1, anchor: <NavText>Servicii</NavText> }];

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Grid, GridProps, Typography, TypographyProps, alpha, styled } from '@mui/material';
+import { Grid, GridProps, Typography, TypographyProps, styled } from '@mui/material';
 import { Icon, IconProps } from '@iconify/react';
 
 interface CommonProps {
@@ -39,7 +39,7 @@ interface FeatureCardContinerProps extends CommonProps, GridProps {}
 
 const FeatureCardContiner: FC<FeatureCardContinerProps> = styled(Grid as FC<FeatureCardContinerProps>, {
 	shouldForwardProp: (propName: string): boolean => !commonProps.includes(propName),
-})(({ theme, small, landing }) => ({
+})(({ theme, small }) => ({
 	display: 'flex',
 	flexDirection: 'row',
 	padding: theme.spacing(1),
@@ -55,12 +55,12 @@ const FeatureCardContiner: FC<FeatureCardContinerProps> = styled(Grid as FC<Feat
 		marginLeft: theme.spacing(0.6),
 	},
 	transition: theme.transitions.create(['background-color']),
-	':hover': {
-		backgroundColor: landing ? alpha(theme.palette.common.black, 0.9) : alpha(theme.palette.secondary.light, 0.5),
-		...(small && {
-			cursor: 'pointer',
-		}),
-	},
+	// ':hover': {
+	// 	backgroundColor: landing ? alpha(theme.palette.common.black, 0.9) : alpha(theme.palette.secondary.light, 0.5),
+	// 	...(small && {
+	// 		cursor: 'pointer',
+	// 	}),
+	// },
 	...(small && {
 		maxWidth: theme.spacing(40),
 	}),

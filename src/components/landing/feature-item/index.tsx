@@ -1,4 +1,4 @@
-import { IconButton, Typography, useTheme } from '@mui/material';
+import { IconButton, Typography, alpha, useTheme } from '@mui/material';
 import { Icon } from '@iconify/react';
 import { useContext, useState } from 'react';
 import { Flex } from '../../common';
@@ -30,14 +30,19 @@ const FeatureItem: React.FC<IProps> = ({ feature, music, service, landing }): JS
 		<Flex
 			width={fullWidth ? '100%' : theme.spacing(subTitle ? 50 : 33)}
 			gap={3}
+			onClick={music ? (): void => play(music) : (): void => setOpen(true)}
 			key={`${uuid()}-ai-features`}
 			alignContent='start'
+			sx={{
+				':hover': {
+					backgroundColor: alpha(theme.palette.common.black, 0.9),
+					cursor: 'pointer',
+				},
+				borderRadius: theme.shape.borderRadius,
+			}}
 		>
 			<IconBackground>
-				<IconButton
-					aria-label='show more'
-					onClick={music ? (): void => play(music) : (): void => setOpen(true)}
-				>
+				<IconButton aria-label='show more'>
 					<Icon icon={icon} width={theme.spacing(5)} color={theme.palette.primary.main} />
 				</IconButton>
 			</IconBackground>

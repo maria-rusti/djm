@@ -21,7 +21,7 @@ const SectionWrapperSG: FC<SectionWrapperProps> = ({
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',
 		width: '100%',
-		height: '100%',
+		height: 'calc(100vh + 168px)',
 		position: 'absolute',
 		top: 0,
 		left: 0,

@@ -1,19 +1,17 @@
 import { styled } from '@mui/material';
 
-export const SliderItem = styled('li')
-(({ theme }) => ({
-	width :'200px',
-	fontSize : '3rem',
-	display :'flex',
-	justifyContent : 'center',
+export const SliderItem = styled('li')(({ theme }) => ({
+	width: '200px',
+	fontSize: '3rem',
+	display: 'flex',
+	justifyContent: 'center',
 	alignItems: 'center',
-	margin: '0 25px',
-	padding: '0px',
+	padding: '0', // Schimbați padding-ul la 0 pentru a evita spațiul suplimentar
 	height: '60px',
 	borderRadius: theme.shape.borderRadius,
 	cursor: 'pointer',
 	':hover': {
 		backgroundColor: '#fafafa',
-		scale: '1.1'
-	}
+		transform: 'scale(1.1)', // Schimbați 'scale' în 'transform'
+	},
 }));

@@ -27,7 +27,6 @@ interface LandingHeaderFCInterface {
 
 const drawerWidth = '100%';
 const navLinks: ILinkButton[] = [
-	{ title: 'Partnership', type: 'link', data: '/partnership' },
 	{ title: 'Contact', type: 'link', data: '/contact' },
 ];
 

@@ -88,22 +88,11 @@ experiență în muzică, creează atmosfera perfectă la
 		},
 	];
 	const data = isArray(services) ? services : [];
-	// const { isDragged, handleNext, handleDrag, handleDragStart, handleDragStop } = useDrag(data?.length);
 	return (
 		<SectionWrapperSG sx={{ m: 0 }} sectionName='services-section'>
 			<SolutionWrapper image='https://storage.googleapis.com/sbdcloud/djm-1695385211036-backServicii.jpg'>
 				<SectionBadgeSG>Servicii</SectionBadgeSG>
 				<SectionTitleSG> Descoperiți serviciile noastre</SectionTitleSG>
-				{/* <TitleComponent dataLength={data?.length} isDragged={isDragged} handleNext={handleNext} />
-				<DraggCarouselWraper
-					handleDrag={handleDrag}
-					handleDragStart={handleDragStart}
-					handleDragStop={handleDragStop}
-					isDragged={isDragged}
-					childrens={data?.map((service: IServiceResponse) => (
-						<ServicesCard key={service?._id} service={service} />
-					))}
-				/> */}
 				<Flex width='100%' flexWrap='wrap' justifyCenter minWidth='100%' maxWidth='100%'>
 					{data?.map((service: IServiceResponse) => <ServicesCard key={service?._id} service={service} />)}
 				</Flex>

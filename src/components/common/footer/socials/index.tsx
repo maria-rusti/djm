@@ -3,6 +3,7 @@ import { FC } from 'react';
 import { Copyright } from '@mui/icons-material';
 import { NavigateFunction, useNavigate } from 'react-router';
 import { useTranslation } from 'react-i18next';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import {
 	ClickableText,
 	SocialIconWrapper,
@@ -24,6 +25,23 @@ const FooterSocials: FC<FooterSocialsProps> = ({ socials }): JSX.Element => {
 	const navigate: NavigateFunction = useNavigate();
 	const theme = useTheme<Theme>();
 	const { t } = useTranslation();
+	const numarDeTelefon = '+40730375108';
+
+	const message = 'Salut, am o întrebare!';
+
+	const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+	const newSocials = [
+		...socials,
+		{
+			url: `${
+				isMobile
+					? `https://wa.me/${numarDeTelefon}?text=${encodeURIComponent(message)}`
+					: `https://api.whatsapp.com/send?phone=${numarDeTelefon}&text=${encodeURIComponent(message)}`
+			}`,
+			icon: <WhatsAppIcon />,
+		},
+	];
 
 	return (
 		<HeroSectionWrapper reverseGradient>
@@ -35,22 +53,17 @@ const FooterSocials: FC<FooterSocialsProps> = ({ socials }): JSX.Element => {
 					<Typography color={theme.palette.primary.main}>{currentYear}</Typography>
 				</Box>
 				<SocialsLinksWrapper>
-					<ClickableText onClick={(): void => navigate('/privacy-policy')}>
-						{capitalize(t('footer.privacy_policy.title'))}
-					</ClickableText>
 					<ClickableText onClick={(): void => navigate('/terms-of-service')}>
 						{capitalize(t('footer.terms_of_service.title'))}
 					</ClickableText>
-					<ClickableText onClick={(): void => navigate('/Faq')}>{capitalize(t('faq'))}</ClickableText>
-					<ClickableText onClick={(): void => navigate('/')}>{capitalize(t('footer.status'))}</ClickableText>
 				</SocialsLinksWrapper>
 				<SocialIconWrapper>
-					{socials.map((item: FooterSocial) => (
+					{newSocials.map((item: FooterSocial) => (
 						<StyledIconButton
 							aria-labelledby='SmartBoxDigital-socials'
 							aria-label='SmartBoxDigital-socials'
 							title='SmartBoxDigital-socials'
-							href={`https://www.${item.url}`}
+							href={item.url}
 							target='_blank'
 							rel='noopener'
 							key={`socials-${uuid()}`}

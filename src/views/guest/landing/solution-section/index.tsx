@@ -9,6 +9,7 @@ import { SolutionWrapper } from './index.styled';
 import { SectionBadgeSG } from '../../../../components/landing/section-badge';
 import { SectionTitleSG } from '../../../../components/landing/section-title';
 import SectionWrapperSG from '../../../../components/landing/section-wrapper';
+import { SectionTitleDistinctSG } from '../../../../components/landing/section-title/index.styled';
 // import serviciiImage from '../../../../assets/landingSection/serviciiLanding.jpg';
 
 export interface ISolutionCard {
@@ -28,7 +29,10 @@ const SolutionSection: React.FC = (): JSX.Element => {
 			>
 				<Flex sx={{ paddingTop: '10px' }} column maxWidth={theme.spacing(62)} gap={3}>
 					<SectionBadgeSG>Parteneri</SectionBadgeSG>
-					<SectionTitleSG>Alături de Sunet:</SectionTitleSG>
+					<SectionTitleSG>
+						{' '}
+						<SectionTitleDistinctSG>Alături de Sunet:</SectionTitleDistinctSG>
+					</SectionTitleSG>
 				</Flex>
 				<Flex width='100%' flexWrap='wrap' justifyCenter minWidth='100%' maxWidth='100%'>
 					{SolutionsCards?.map(

@@ -39,9 +39,7 @@ const PopoverComponent: React.FC<PopoverComponentProps> = ({ data, displayArrow 
 		console.log('test');
 	};
 
-	const anchors: IAnchor[] = [
-		{ id: 1, anchor: <NavText>Servicii</NavText> },
-	];
+	const anchors: IAnchor[] = [{ id: 1, anchor: <NavText>Servicii</NavText> }];
 
 	const selectedItem = data.find((item) => item.id === selectedItemId);
 
@@ -70,7 +68,6 @@ const PopoverComponent: React.FC<PopoverComponentProps> = ({ data, displayArrow 
 						{displayArrow && (
 							<IconButton
 								size='small'
-								color='primary'
 								aria-label='expand menu'
 								sx={{
 									transform: open && selectedItemId === data[index].id ? 'rotate(180deg)' : 'none',
@@ -78,6 +75,7 @@ const PopoverComponent: React.FC<PopoverComponentProps> = ({ data, displayArrow 
 									mt: theme.spacing(2),
 									p: theme.spacing(0),
 									display: { xs: 'none', lg: 'block' },
+									color: theme.palette.background.default,
 								}}
 							>
 								<ArrowDropDownIcon />

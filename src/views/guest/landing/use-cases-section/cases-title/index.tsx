@@ -10,9 +10,7 @@ const CasesTitle: FC = () => {
 	return (
 		<Flex justifyCenter maxWidth={theme.spacing(62)} gap={3}>
 			<SectionBadgeSG>Frecvent</SectionBadgeSG>
-			<SectionTitleSG>
-				 Cele mai Intense Moment de Distrație
-			</SectionTitleSG>
+			<SectionTitleSG sx={{ color: 'fff' }}>Cele mai Intense Moment de Distrație</SectionTitleSG>
 		</Flex>
 	);
 };

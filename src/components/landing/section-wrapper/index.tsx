@@ -16,7 +16,7 @@ const SectionWrapperSG: FC<SectionWrapperProps> = ({
 	...props
 }: SectionWrapperProps): React.ReactElement => {
 	const backgroundImageStyle = {
-		backgroundImage: 'url(https://storage.googleapis.com/sbdcloud/djm-1695385218712-landingheader.jpg)',
+		backgroundImage: 'url(https://storage.googleapis.com/sbdcloud/djm-1695385221384-main.jpg)',
 		backgroundSize: 'cover',
 		backgroundPosition: 'center',
 		backgroundRepeat: 'no-repeat',

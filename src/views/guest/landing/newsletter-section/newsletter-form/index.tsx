@@ -1,12 +1,24 @@
-import { useForm } from 'react-hook-form';
+import { Resolver, useForm } from 'react-hook-form';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { CircularProgress, FormControl, ListSubheader, MenuItem, TextField } from '@mui/material';
 import { Icon } from '@iconify/react';
 import { useState } from 'react';
+import * as yup from 'yup';
+import { yupResolver } from '@hookform/resolvers/yup';
 import { NewsletterFormWrapper, NewsletterButton } from './index.styled';
 import useReview from '../../../../../hooks/fetch-hooks/use-review';
 import { FormInputSG } from '../../../../../components/common/input';
 import { useWindowSize } from '../../../../../hooks/use-window-size';
+
+const schema = yup
+	.object({
+		name: yup.string().required('Name must be entered!'),
+		content: yup
+			.string()
+			.required('Please provide a message!')
+			.min(3, 'Message must be at least 3 characters long!'),
+	})
+	.required();
 
 export interface IValueReview {
 	name: string;
@@ -21,10 +33,11 @@ export interface IValueReview {
 interface SendButtonProps {
 	loadingSubscribe: boolean;
 	inside?: boolean;
+	isValid: boolean;
 }
 
-const SendButton: React.FC<SendButtonProps> = ({ loadingSubscribe, inside }): JSX.Element => (
-	<NewsletterButton type='submit' variant={inside ? 'contained' : 'outlined'} inside={!!inside}>
+const SendButton: React.FC<SendButtonProps> = ({ isValid, loadingSubscribe, inside }): JSX.Element => (
+	<NewsletterButton type='submit' disabled={!isValid} variant={inside ? 'contained' : 'outlined'} inside={!!inside}>
 		{loadingSubscribe ? (
 			<CircularProgress size='24px' />
 		) : (
@@ -41,9 +54,15 @@ const NewsletterForm: React.FC = (): JSX.Element => {
 
 	const [value, setValue] = useState<string[]>([]);
 
-	const { handleSubmit, control, reset } = useForm<IValueReview>({
+	const {
+		handleSubmit,
+		control,
+		formState: { isValid },
+		reset,
+	} = useForm<IValueReview>({
 		mode: 'onBlur',
 		reValidateMode: 'onChange',
+		resolver: yupResolver(schema) as unknown as Resolver<IValueReview>,
 	});
 	const widthCurrent = width > 600;
 
@@ -51,7 +70,6 @@ const NewsletterForm: React.FC = (): JSX.Element => {
 		const sendData = { ...values, services: value };
 		addReview(sendData);
 		setValue([]);
-		console.log(sendData);
 		reset();
 	};
 
@@ -90,7 +108,8 @@ const NewsletterForm: React.FC = (): JSX.Element => {
 				control={control}
 				width={widthCurrent ? '50%' : '100%'}
 			/>
-			<SendButton loadingSubscribe={loadingAdd} />
+
+			<SendButton isValid={isValid && !!value} loadingSubscribe={loadingAdd} />
 		</NewsletterFormWrapper>
 	);
 };

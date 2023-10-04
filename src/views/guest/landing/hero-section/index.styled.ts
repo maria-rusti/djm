@@ -30,7 +30,7 @@ const StyledHeroImage = styled('img')(({ theme }) => ({
 const HeroSectionWrapper: FC<BoxProps> = styled(Box as FC<BoxProps>)(({ theme }) => ({
 	display: 'flex',
 	flexDirection: 'column',
-	alignItems: 'center',
+	alignItems: 'flex-end',
 	justifyContent: 'center',
 	width: '100%',
 	overflow: 'hidden',

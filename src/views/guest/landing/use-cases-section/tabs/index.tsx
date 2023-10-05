@@ -4,6 +4,7 @@ import { useMediaQuery, useTheme } from '@mui/material';
 import { StyledTab, StyledTabs, TabsWrapper } from './index.styled';
 import tabs from '../data/tabs.json';
 import { uuid } from '../../../../../utils/functions';
+// import SliderListEvents from './tabsLeft';
 
 interface IProps {
 	setCurrentIndex: Dispatch<SetStateAction<number>>;

@@ -9,7 +9,7 @@ export interface FooterSocial {
 
 const FooterSocialsData: FooterSocial[] = [
 	{
-		url: 'https://www.instagram.com/direct/t/100957321307224/',
+		url: 'https://www.instagram.com/marius_gagea/',
 		icon: <InstagramIcon />,
 	},
 	{

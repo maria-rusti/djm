@@ -20,7 +20,7 @@ const InformationSectionFeatures: FC<IProps> = ({ features, video }): JSX.Elemen
 	const musicPlay = [music, music1, music2, music3];
 	const videoArray = [nunta, nunta2, nunta3, nunta4];
 	return (
-		<Flex flexWrap='wrap' width='100%' gap={2}>
+		<Flex rowGap={6} flexWrap='wrap' justifyBetween>
 			{features.map((feature, index) => (
 				<FeatureItem
 					key={uuid()}

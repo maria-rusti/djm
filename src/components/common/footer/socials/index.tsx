@@ -1,4 +1,4 @@
-import { Box, Theme, Typography, useTheme } from '@mui/material';
+import { Box, Link, Theme, Typography, useTheme } from '@mui/material';
 import { FC } from 'react';
 import { Copyright } from '@mui/icons-material';
 import { NavigateFunction, useNavigate } from 'react-router';
@@ -49,7 +49,27 @@ const FooterSocials: FC<FooterSocialsProps> = ({ socials }): JSX.Element => {
 				<Box display='flex' gap={1}>
 					<Typography color={theme.palette.primary.main}>Copyright</Typography>
 					<Copyright sx={{ color: theme.palette.primary.main }} />
-					<Typography color={theme.palette.primary.main}>SocialGod</Typography>
+					<Link
+						sx={{ width: '100%' }}
+						aria-labelledby='our-paretners'
+						aria-label='our-paretners'
+						title='our-paretners'
+						href='https://www.linkedin.com/in/mariarusti/'
+						target='_blank'
+					>
+						<Typography color={theme.palette.primary.main}>Maria Ruști</Typography>
+					</Link>
+					<Typography color={theme.palette.primary.main}>&</Typography>
+					<Link
+						sx={{ width: '100%' }}
+						aria-labelledby='our-paretners'
+						aria-label='our-paretners'
+						title='our-paretners'
+						href='https://www.linkedin.com/in/andreifolfa/'
+						target='_blank'
+					>
+						<Typography color={theme.palette.primary.main}>Folfă Denis</Typography>
+					</Link>
 					<Typography color={theme.palette.primary.main}>{currentYear}</Typography>
 				</Box>
 				<SocialsLinksWrapper>

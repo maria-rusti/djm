@@ -26,9 +26,7 @@ interface LandingHeaderFCInterface {
 }
 
 const drawerWidth = '100%';
-const navLinks: ILinkButton[] = [
-	{ title: 'Contact', type: 'link', data: '/contact' },
-];
+const navLinks: ILinkButton[] = [{ title: 'Contact', type: 'link', data: '/contact' }];
 
 const dataArray: DataItem[] = [
 	{
@@ -105,7 +103,7 @@ const LandingHeader: FC<LandingHeaderFCInterface> = ({ transparent = false }): J
 							onClick={handleDrawerToggle}
 							sx={{ mr: 2, display: { lg: 'none' } }}
 						>
-							<Menu />
+							<Menu sx={{color: '#fff'}} />
 						</IconButton>
 					</StyledHeaderToolbar>
 					<Box component='nav'>

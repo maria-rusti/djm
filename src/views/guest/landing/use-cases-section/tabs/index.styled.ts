@@ -4,32 +4,41 @@ import { FC } from 'react';
 const StyledTabs: FC<TabsProps> = styled(Tabs)(({ theme }) => ({
 	width: '100%',
 	display: 'flex',
-	flexDirection: 'row',
 	flexWrap: 'wrap',
 	justifyContent: 'center',
 	'.MuiTabs-indicator': {
-		top: 0,
-		color: theme.palette.primary.main,
-		display: 'flex',
-		flexDirection: 'row',
-		flexWrap: 'wrap',
-	    justifyContent: 'center',
-		[theme.breakpoints.down('md')]: {
-			display: 'none'
-		},
-		'&.scrolling': {
-			animation: '$scrollTabs 10s linear infinite', 
-			whiteSpace: 'nowrap', 
+	  top: 0,
+	  color: theme.palette.primary.main,
+	  display: 'flex',
+	  flexWrap: 'wrap',
+	  justifyContent: 'center',
+	  [theme.breakpoints.down('md')]: {
+			display: 'none',
+	  },
+	  '&.scrolling': {
+			animation: '$scrollTabs 10s linear infinite',
+			whiteSpace: 'nowrap',
 			overflowX: 'auto',
-		  },
-		  '@keyframes scrollTabs': {
+	  },
+	  '@keyframes scrollTabs': {
 			'0%': {
-			  transform: 'translateX(0)',
+		  transform: 'translateX(0)',
 			},
 			'100%': {
-			  transform: 'translateX(-100%)',
+		  transform: 'translateX(-100%)',
 			},
-		  },
+	  },
+	  width: 'fit-content',
+	  animation: 'slideLeft 50s linear infinite',
+	},
+	overflowX: 'scroll',
+	WebkitOverflowScrolling: 'touch',
+	position: 'relative',
+	flexDirection: 'row',
+	'@media (min-width: 601px)': {
+	  '& .MuiTabs-indicator.scrolling': {
+			animation: 'scrollTabs 10s linear infinite', 
+	  },
 	},
 }));
 

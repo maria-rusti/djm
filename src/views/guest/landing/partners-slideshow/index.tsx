@@ -26,7 +26,7 @@ const PartnersSliderContent: FC = (): JSX.Element => {
 
 	const data = [
 		{
-			link: 'https://www.instagram.com/direct/t/100957321307224/',
+			link: 'https://www.instagram.com/marius_gagea/',
 			logo: 'skill-icons:instagram',
 			name: 'Instagram',
 			_id: '64ca12d5a62d3ad5161f4fad',
@@ -48,7 +48,7 @@ const PartnersSliderContent: FC = (): JSX.Element => {
 			_id: '64ca12d5a62d3ad5161f4fad',
 		},
 		{
-			link: 'https://www.instagram.com/direct/t/100957321307224/',
+			link: 'https://www.instagram.com/marius_gagea/',
 			logo: 'skill-icons:instagram',
 			name: 'Instagram',
 			_id: '64ca12d5a62d3ad5161f4fad',
@@ -71,10 +71,7 @@ const PartnersSliderContent: FC = (): JSX.Element => {
 		},
 	];
 	return (
-		<SliderList
-			direction='left'
-			duration={105}
-		>
+		<SliderList direction='left' duration={105}>
 			{doubleArr(data)?.map((partener, _index) => (
 				<SliderItem sx={{ sliderItemStyle }} key={`${partener?._id}-${uuid()}`}>
 					<Link
